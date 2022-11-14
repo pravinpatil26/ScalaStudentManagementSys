@@ -1,0 +1,216 @@
+
+
+@(jsonMap: Map[String,Any],stu_name: Map[String,Any],stu_Id:Int,jsonMap1: Map[String,Any],jsonMap2: Map[String,Any],jsonMap3: Map[String,Any],jsonMap4: Map[String,Any],updateView:Boolean)
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    header {
+        z-index: 4;
+        position: fixed;
+        background: #22242A;
+        padding: 20px;
+        width: calc(100% - 0%);
+        top: 0;
+        height: 43px;
+    }
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+   background-color: lightblue;
+}
+input{
+  padding: 10px;
+  margin: 20px 0 30px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.container {
+  padding: 50px;
+
+
+
+}
+
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+label{
+  padding: 8px;
+}
+input[type=submit] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+table,
+
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+
+    td {
+        padding: 10px;
+    }
+
+
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <form method="get" action="/instituteForm">
+
+        <h4> Previous Institute Details </h4>
+
+        <!-- ---------------------- Name OF Student -------------------------------------         -->
+        <h4>Name of Student</h4>
+        <label >First name:</label>
+        <input type="text" name="student_first_name" placeholder= "firstName" value='@stu_name.get("first_name")'/>
+        <label>Middle name:</label>
+        <input type="text" name="student_mid_name" placeholder= "middleName" value='@stu_name.get("middle_name")' />
+        <label >Last name:</label>
+        <input type="text" name="student_last_name" placeholder= "lastName" value='@stu_name.get("last_name")'/>
+
+        <br>
+        <h4>Student Registration Id</h4>
+        <label>Registration Id:</label>
+        <input type="number" name="stu_registration_Id" placeholder="student registration Id" value='@stu_Id'>
+        <br>
+        <hr>
+        <label> Name </label>
+        <input type="text" name="prev_name" placeholder= "name" id="prev_name3" value='@jsonMap1.get("Name")' size="42" required />
+        <label> Unique Code: </label>
+        <input type="text" name="prev_code" placeholder="code" id="prev_code4" pattern="[A-Za-z0-9]{}" value='@jsonMap1.get("Unique Code")' title="Alphabet and Digits only" size="25" required />
+
+        <label>Email Id:</label>
+        <input type="email" placeholder="Email" name="prev_email" id="prev_email3" size="42" value='@jsonMap1.get("Email ID")' title="Type a valid Email" required>
+
+        <label> Contact Number: </label>
+        <input type="text" name="prev_contact" placeholder="ContactNumber" pattern="[0-9]{10}" value='@jsonMap1.get("Contact Number")' title="Ten digits code" id="prev_contact" required />
+
+        <br>
+        <label>
+            Address:
+            <br>
+
+            <label> Line 1: </label>
+            <input type="text" name="prev_line1" id="prev_line3" placeholder= "Line 1" value='@jsonMap3.get("Line 1")' size="49" required />
+
+            <label> Line 2: </label>
+            <input type="text" name="prev_line2" id="prev_line4" placeholder= "Line 2" size="49" value='@jsonMap3.get("Line 2")' required />
+
+            <label> City: </label>
+            <input type="text" name="prev_city" id="prev_city2" value='@jsonMap3.get("City")' placeholder= "City" required />
+
+            <br>
+            <label> District: </label>
+            <input type="text" name="prev_district" id="prev_district1" value='@jsonMap3.get("District")' placeholder= "District" size="25" required />
+
+            <label> State: </label>
+            <input type="text" name="prev_state" id="prev_state1" value='@jsonMap3.get("State")' placeholder= "State" size="25" required />
+
+            <label> Country: </label>
+            <input type="text" name="prev_country" id="prev_country1"  value='@jsonMap3.get("Country")' placeholder= "Country" size="25" required />
+
+            <label> Pin-code: </label>
+            <input type="number" name="prev_pin" id="prev_pin1" value='@jsonMap3.get("Pin-code")' placeholder= "PinCode" size="25" required />
+
+        </label>
+
+        <br>
+
+        <label> Passing Year: </label>
+        <input type="date" name="prev_year"  id="prev_year1" value='@jsonMap1.get("Passing year")'
+               min="2010-01-01" max="2022-07-31" required />
+        <h4> Current Institute Details </h4>
+
+
+        <label> Name </label>
+        <input type="text" name="current_name" placeholder= "name" id="current_name1" value='@jsonMap2.get("Name")' size="42" required />
+
+        <label> Unique Code: </label>
+        <input type="text" name="current_code" placeholder="code" size="25" id="current_code4" value='@jsonMap2.get("Unique Code")' pattern="[A-Za-z0-9]{}" title="Alphabet and Digits only" required />
+
+        <label>Email Id:</label>
+        <input type="email" placeholder="Email" name="current_email" size="42"   title="Type a valid Email"  value='@jsonMap2.get("Email ID")' id="current_email1" required>
+
+        <label> Contact Number: </label>
+        <input type="text" name="current_contact" id="current_contact1" pattern="[0-9]{10}" value='@jsonMap2.get("Contact Number")' title="Ten digits code" placeholder="ContactNumber"  required />
+
+        <br>
+        <label>
+            Address:
+
+            <br>
+            <label> Line 1: </label>
+            <input type="text" name="current_line1" id="current_line3" value='@jsonMap4.get("Line 1")' placeholder= "Line 1" size="49" required />
+
+            <label> Line 2: </label>
+            <input type="text" name="current_line2" id="current_line4" value='@jsonMap4.get("Line 2")' placeholder= "Line 2" size="49" required />
+
+            <label> City: </label>
+            <input type="text" name="current_city" id="current_city1" value='@jsonMap4.get("City")' placeholder= "City" required />
+
+            <br>
+            <label> District: </label>
+            <input type="text" name="current_district" id="current_district1" value='@jsonMap4.get("District")' placeholder= "District" title="Alphabet and Digits only" size="25" required />
+            <label> State: </label>
+            <input type="text" name="current_state" id="current_state1" value='@jsonMap4.get("State")' placeholder= "State"  size="25" required />
+
+            <label> Country: </label>
+            <input type="text" name="current_country" id="current_country1" value='@jsonMap4.get("Country")' placeholder= "Country" size="25" required />
+
+            <label> Pin-code: </label>
+            <input type="number" name="current_pin" id="current_pin1" value='@jsonMap4.get("Pin-code")' placeholder= "PinCode" size="25" required />
+
+        </label>
+        <input type="hidden"  name="get_id" value=@jsonMap.get("$oid")>
+
+        <br>
+
+        @if(updateView){
+        <input type="submit" name="submit" value="Submit" formaction="/instituteUpdate" class="btn">
+        } else {
+        <input type="submit" name="Submit" value="Submit" class="btn" />
+        }
+
+        <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
+
+    </form>
+</div>
+</body>
+</html>

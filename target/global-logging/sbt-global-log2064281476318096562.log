@@ -1,0 +1,21 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: not enough arguments for method main: (args: Array[String]): Unit.
+[error] Unspecified value parameter args.
+[error] GET  /                                      controllers.HomeController.main()
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: not enough arguments for method main: (args: Array[String]): Unit.
+[error] Unspecified value parameter args.
+[error] GET  /                                      controllers.HomeController.main()
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

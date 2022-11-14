@@ -1,0 +1,68 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: value explore is not a member of controllers.HomeController
+[error] GET     /explore                            controllers.HomeController.explore()
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:9:1: value tutorial is not a member of controllers.HomeController
+[error] GET     /tutorial                           controllers.HomeController.tutorial()
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\views\index.scala.html:3:2: not found: value main
+[error] @main("Welcome") {
+[error]  ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\views\index.scala.html:3:2: not found: value main
+[error] @main("Welcome") {
+[error]  ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: value explore is not a member of controllers.HomeController
+[error] GET     /explore                            controllers.HomeController.explore()
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

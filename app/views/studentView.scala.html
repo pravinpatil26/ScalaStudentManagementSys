@@ -1,0 +1,48 @@
+@(jsonMap: Map[String,Any],stud_contact_details: Map[String,Any])
+<html lang="en">
+<head>
+    <style>
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<table style="width:100%">
+    <tr>
+        <th>Fields</th>
+        <th>Values</th>
+    </tr>
+    @for((k,v) <- jsonMap) {
+    <tr>
+        <td>@k</td>
+
+        <td>@v</td><br>
+    </tr>
+    }
+    @for((k,v) <- stud_contact_details) {
+    <tr>
+        <td>@k</td>
+        <td>@v</td>
+    </tr>
+    }
+</table>
+
+
+
+
+
+</body>
+</html>

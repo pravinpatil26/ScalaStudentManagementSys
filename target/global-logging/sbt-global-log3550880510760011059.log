@@ -1,0 +1,8 @@
+[debug] > Exec(ompile, None, None)
+[error] Not a valid command: ompile (similar: completions, onFailure)
+[error] Not a valid project ID: ompile
+[error] Expected ':'
+[error] Not a valid key: ompile (similar: compile, compilers, compileJava)
+[error] ompile
+[error]       ^
+[debug] > Exec(idea-shell, None, None)

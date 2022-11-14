@@ -1,0 +1,17 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:35:37: too many arguments (found 3, expected 2) for method apply: (idMap: Map[String,Any], name: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,mobileno))
+[error]                                     ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:134:43: too many arguments (found 3, expected 2) for method apply: (idMap: Map[String,Any], name: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]       Ok(views.html.finalUpdate(demo,demo,demo))
+[error]                                           ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\views\finalUpdate.scala.html:116:38: not found: value mobileno
+[error]         <input type="number" value='@mobileno' size="16"/> <br> <br>
+[error]                                      ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 0 s, completed Oct 6, 2022 11:23:21 AM
+[debug] > Exec(idea-shell, None, None)

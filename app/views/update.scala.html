@@ -1,0 +1,136 @@
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>update</title>-->
+<!--    <style>-->
+<!--body{-->
+<!--  font-family: Calibri, Helvetica, sans-serif;-->
+<!--  background-color: #f1f1f1;-->
+<!--}-->
+<!--input{-->
+
+<!--  padding: 20px;-->
+<!--  margin: 150px 0 40px 0;-->
+<!--  display: inline-block;-->
+<!--  border: none;-->
+<!--  background: #f1f1f1;-->
+<!--}-->
+<!--.container {-->
+<!--  padding: 50px;-->
+<!--  background-color: lightblue;-->
+
+<!--}-->
+
+<!-- div {-->
+
+<!--   padding: px;-->
+<!--         }-->
+<!--hr {-->
+<!--  border: 1px solid #f1f1f1;-->
+<!--  margin-bottom: 25px;-->
+<!--}-->
+<!--label{-->
+<!--  padding: 8px;-->
+
+
+<!--}-->
+<!--input[type=submit] {-->
+<!--  background-color: #529AE1;-->
+<!--  border: none;-->
+<!--  color: white;-->
+<!--  padding: 16px 32px;-->
+<!--  text-decoration: none;-->
+<!--  margin: 4px 2px;-->
+<!--  cursor: pointer;-->
+<!--}-->
+<!--ul {-->
+<!--  list-style-type: none;-->
+<!--  margin: 0;-->
+<!--  padding: 0;-->
+<!--  overflow: hidden;-->
+<!--  background-color: #333;-->
+<!--}-->
+
+<!--li {-->
+<!--  float: left;-->
+<!--}-->
+
+<!--li a {-->
+<!--  display: block;-->
+<!--  color: white;-->
+<!--  text-align: center;-->
+<!--  padding: 14px 16px;-->
+<!--  text-decoration: none;-->
+<!--}-->
+
+<!--li a:hover {-->
+<!--  background-color: #111;-->
+<!--}-->
+
+
+<!--</style>-->
+
+<!--</head>-->
+
+<!--<body>-->
+
+<!--<form method="get" action="/view">-->
+<!--    <div class="container" align="center">-->
+<!--    <input type="number" name="prn" id="prn" size="50" placeholder="Enter your PRN" required/> <br> <br>-->
+
+<!--    <input type="submit" value="Submit" id="sub"/>-->
+<!--    </div>-->
+
+<!--</form>-->
+
+<!--&lt;!&ndash;<form method="get" action="/udate2">&ndash;&gt;-->
+<!--&lt;!&ndash;    <input type="submit" value="Submit"/>&ndash;&gt;-->
+<!--&lt;!&ndash;</form>&ndash;&gt;-->
+<!--</body>-->
+<!--</html>-->
+
+
+<html>
+<head>
+    <style>
+.center {
+    margin: auto;
+    width: 60%;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hideform {
+    display: none;
+}
+</style>
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div class="center hideform">
+    <button id="close" style="float: right;">X</button>
+    <form action="/action_page.php">
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey">
+        <br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+<button id="show">Show form</button>
+<script>
+$('#show').on('click', function () {
+    $('.center').show();
+    $(this).hide();
+})
+
+$('#close').on('click', function () {
+    $('.center').hide();
+    $('#show').show();
+})
+</script>
+</body>
+</html>

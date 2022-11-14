@@ -1,0 +1,78 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET /                                   controllers.Application.login
+GET /index1                             controllers.Application.index1()
+GET     /index                          controllers.Application.index()
+GET  /viewbutton                        controllers.Application.viewbutton()
+GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Int,emailid)
+GET /update                     controllers.Application.updatepage()
+GET /cancel                             controllers.Application.cancel()
+GET /update1                            controllers.Application.getValues(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Int,emailid)
+GET  /update2                      controllers.Application.updatevalues(prn:Int)
+GET  /delete                       controllers.Application.deleterecord(prn)
+GET /udate2                             controllers.Application.finalUpdate(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Int,emailid)
+GET /login1                             controllers.Application.login()
+GET /validate1                          controllers.Application.validatelogin(username,password)
+#GET /popup                              controllers.Application.popup()
+GET /logout1                            controllers.Application.logout()
+GET /view                                 controllers.Application.view(prn:Int)
+#GET  /form                      controllers.Application.updatevalues(firstname)
+#GET  /                                      controllers.HomeController.main()
+#GET     /explore                            controllers.HomeController.explore()
+#GET     /tutorial                           controllers.HomeController.tutorial()
+GET    /examList                   controllers.Application.examStudentList(currentPage: Int ?= 0)
+GET    /examList/:currentPage      controllers.Application.examStudentList(currentPage: Int)
+GET    /examSearch                 controllers.Application.examSearch()
+
+
+
+
+
+#GET     /admissionList                 controllers.Application.admissionStudentList()
+GET     /admissionIndex                 controllers.Application.admissionIndex()
+GET     /admissionForm                  controllers.Application.admissionGetValues(stu_firstname ,stu_middlename, stu_lastname, stu_per_l1, stu_per_l2, stu_per_city, stu_per_district, stu_per_state, stu_per_country, stu_per_pin:Int, stu_curr_l1, stu_curr_l2, stu_curr_city,stu_curr_district ,stu_curr_state, stu_curr_country, stu_curr_pin:Int, pre_college, pre_grade, pre_rollNo:Int, pass_year:Int, gua_firstName, gua_mid_name, gua_last_name, gua_mob_no, gua_email, gua_add_l1, gua_add_l2, gua_add_city, gua_add_district, gua_add_state, gua_add_country, gua_add_pin:Int, branch, stu_aadhar_no, fee_total:Int, fee_paid:Int, stu_category, admission_year:Int, hostel_need)
+GET     /admissionDelete                controllers.Application.admissionFinalDelete(student_aadhaar)
+GET     /admissionFinalDelete           controllers.Application.admissionFinalDelete(student_aadhaar)
+GET     /admissionView                  controllers.Application.admissionView(student_aadhaar)
+GET     /admissionUpdateData            controllers.Application.admissionUpdate(stu_firstname ,stu_middlename, stu_lastname, stu_per_l1, stu_per_l2, stu_per_city, stu_per_district, stu_per_state, stu_per_country, stu_per_pin:Int, stu_curr_l1, stu_curr_l2, stu_curr_city,stu_curr_district ,stu_curr_state, stu_curr_country, stu_curr_pin:Int, pre_college, pre_grade, pre_rollNo:Int, pass_year:Int, gua_firstName, gua_mid_name, gua_last_name, gua_mob_no, gua_email, gua_add_l1, gua_add_l2, gua_add_city, gua_add_district, gua_add_state, gua_add_country, gua_add_pin:Int, branch, fee_total:Int, fee_paid:Int, stu_category, admission_year:Int, hostel_need,student_id)
+
+GET    /admissionList                   controllers.Application.admissionStudentList(currentPage: Int ?= 0)
+GET    /admissionList/:currentPage      controllers.Application.admissionStudentList(currentPage: Int)
+GET    /admissionSearch                 controllers.Application.admissionSearch()
+
+
+
+
+
+GET    /studentIndex                      controllers.Application.studentIndex()
+GET    /studentForm                       controllers.Application.studentGetValues(student_first_name,student_mid_name,student_last_name,line1,line2,city,district,state,country,pincode,student_dob,student_mob_no,student_email,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mob_no,mother_email,govt_id_details)
+GET    /studentDeletePage                 controllers.Application.studentRedirectDelete()
+GET    /studentDeleteValues               controllers.Application.studentValuesDelete(govt_id)
+GET    /studentViewPage                   controllers.Application.studentView(govt_id)
+GET    /studentUpdateFullData             controllers.Application.studentUpdateData(student_first_name,student_middle_name,student_last_name,line1,line2,city,district,state,country,pincode,student_mob_no,student_email,student_dob,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mob_no,mother_email,govt_id_details,student_id)
+
+GET    /studentList                   controllers.Application.studentList(currentPage: Int ?= 0)
+GET    /studentList/:currentPage      controllers.Application.studentList(currentPage: Int)
+GET    /studentSearch                 controllers.Application.studentSearch()
+
+
+
+
+
+GET     /instituteIndex                 controllers.Application.instituteIndex()
+GET     /instituteForm                  controllers.Application.instituteGetValues(student_first_name,student_mid_name,student_last_name,stu_registration_Id:Int,prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin)
+GET     /instituteDelete                controllers.Application.instituteDelete(stu_registration_Id:Int)
+GET     /instituteView                  controllers.Application.instituteView(stu_registration_Id:Int)
+GET     /instituteUpdate                controllers.Application.instituteUpdate(student_first_name,student_mid_name,student_last_name,stu_registration_Id:Int,prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin,get_id)
+
+GET    /instituteList                   controllers.Application.instituteList(currentPage: Int ?= 0)
+GET    /instituteList/:currentPage      controllers.Application.instituteList(currentPage: Int)
+GET    /instituteSearch                 controllers.Application.instituteSearch()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

@@ -1,0 +1,8 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[success] Total time: 2 s, completed Sep 15, 2022 4:38:11 PM
+[debug] > Exec(idea-shell, None, None)

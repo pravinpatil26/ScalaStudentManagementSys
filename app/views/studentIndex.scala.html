@@ -1,0 +1,206 @@
+
+@(idMap:Map[String,Any],stud_name: Map[String,Any],stud_DOB:Map[String,Any],stud_contact_details: Map[String,Any],stud_per_address: Map[String,Any],father_details:Map[String,Any],mother_details:Map[String,Any],govt_id:Map[String,Any], updateView:Boolean)
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Basic Details</title>
+    <style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color:#;
+}
+input{
+
+  padding: 10px;
+  margin: 20px 0 30px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.container {
+  padding: 50px;
+  background-color: lightblue;
+
+}
+
+ div {
+
+   padding: px;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+label{
+  padding: 8px;
+
+
+}
+input[type=submit] {
+  background-color: #529AE1;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+    table,
+    th,
+    td {
+        border: 2px solid black;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 10px;
+    }
+
+    input[type=submit] {
+  background-color: #333;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+</style>
+<!--    <div>-->
+<!--        <script src="D:\IntellG\Play_Framework\First_Play_project\First_Play_project\public\javascripts\index.js"></script>-->
+<!--    </div>-->
+</head>
+<body>
+<div class="container">
+    <h3>Update Student Information</h3>
+    <form method="get" action="/studentForm">
+        <h4>Name of Student</h4>
+        <label >First name:</label>
+        <input type="text"  name="student_first_name" value=@stud_name.get("first_name") >
+        <label>Middle name:</label>
+        <input type="text"  name="student_middle_name" value=@stud_name.get("middle_name") >
+        <label >Last name:</label>
+        <input type="text"  name="student_last_name" value=@stud_name.get("last_name") ><br>
+
+
+
+        <!-- -----------------Address Of Student ------------------------------------------->
+        <h4>Permanent Address</h4>
+
+        <br>
+        <h4>@stud_per_address.get("line1")</h4>
+        <label> Line 1: </label>
+        <input type="text"  name="line1" value='@stud_per_address.get("line1")'  />
+
+        <label> Line 2: </label>
+        <input type="text"  name="line2" value='@stud_per_address.get("line2")'>
+
+        <label> City: </label>
+        <input type="text"  name="city" value=@stud_per_address.get("city")>
+        <br>
+        <label> District: </label>
+        <input type="text"  name="district" value=@stud_per_address.get("district")>
+        <label> State: </label>
+        <input type="text"  name="state" value=@stud_per_address.get("state")>
+        <label> Country: </label>
+        <input type="text"  name="country" value=@stud_per_address.get("country")>
+        <br>
+        <label> Pin-code: </label>
+        <input type="number"  name="pincode" value=@stud_per_address.get("pincode")>
+        </label>
+        <br>
+        <!-------------------------Birth Date Of Student ------------------------------->
+
+        <h4>Birth Details Of Student</h4>
+        <label>Date Of Student:</label>
+        <input type="date"  name="student_dob" value='@stud_DOB.get("student_DOB")'/><br>
+
+
+        <!--------------------------Student Contact Details ---------------------------->
+        <h4>Contact Details Of Student</h4>
+        <label >Mobile Number:</label>
+        <input type="tel"  name="student_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value=@stud_contact_details.get("student_mob_no")>
+
+        <label >Email ID:</label>
+        <input type="email"  name="student_email" value=@stud_contact_details.get("student_email_id")><br>
+
+
+        <h4>Parents Details Of Student</h4><br>
+        <h5>Father Details of Student</h5>
+
+        <label >First name:</label>
+        <input type="text"   name="father_first_name" value='@father_details.get("first_name")'>
+        <label >Middle name:</label>
+        <input type="text"  name="father_mid_name" value='@father_details.get("middle_name")'  >
+        <label>Last name:</label>
+        <input type="text"  name="father_last_name"  value='@father_details.get("last_name")'>
+        <br>
+        <label>Mobile Number:</label>
+        <input type="tel"  name="father_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value='@father_details.get("father_mob_no")' >
+        <label>Email ID:</label>
+        <input type="email"  name="father_email" value='@father_details.get("father_email_id")' ><br>
+
+        <h5>Mother Details of Student</h5>
+
+
+
+        <label >First name:</label>
+        <input type="text"  name="mother_first_name" value='@mother_details.get("first_name")'>
+
+        <br>
+        <label>Mobile Number:</label>
+        <input type="tel"  name="mother_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value='@mother_details.get("mother_mob_no")'  required/>
+        <label>Email ID:</label>
+        <input type="email"  name="mother_email" value='@mother_details.get("mother_email_id")'><br>
+
+
+        <!---------------------------Student Govt Id Details --------------------------->
+        <h4>Student Goverment Id Details</h4><br>
+        <label>Aadhar Card Number of Student:</label>
+        <input type="tel"  name="govt_id" pattern="[0-9]{12}"  title="Twelve digits code" value='@govt_id.get("aadhar_no")'><br>
+
+        <input type="hidden"  name="student_id" value=@idMap.get("$oid")>
+
+        @if(updateView){
+        <input type="submit" name="submit" value="Update" formaction="/studentUpdateFullData" class="btn">
+        } else {
+        <input type="submit" name="Submit" value="Insert" class="btn" />
+        }
+
+        <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
+
+    </form>
+    <hr>
+</div>
+
+
+</body>
+</html>

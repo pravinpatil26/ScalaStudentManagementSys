@@ -1,0 +1,282 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:12:1: value updatepage is not a member of controllers.Application
+[error] GET /update                     controllers.Application.updatepage()
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:14:1: value updatevalues is not a member of controllers.Application
+[error] GET  /update2                      controllers.Application.updatevalues(prn)
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:14:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET  /update2                      controllers.Application.updatevalues(prn)
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:15:1: type mismatch;
+[error]  found   : Int
+[error]  required: String
+[error] GET  /delete                       controllers.Application.deleterecord(prn:Int)
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:52: type mismatch;
+[error]  found   : Long
+[error]  required: Int
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                                    ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:39:44: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error]     Ok(views.html.index(demo,demo,m,demo,n,n,n))
+[error]                                            ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:82:52: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                                    ^
+[error] two errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:39:44: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error]     Ok(views.html.index(demo,demo,m,demo,n,n,n))
+[error]                                            ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:82:52: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                                    ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:52: type mismatch;
+[error]  found   : Long
+[error]  required: Int
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                                    ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:38:43: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]     Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                           ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:41: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                         ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:224:45: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]       Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                             ^
+[error] three errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:38:43: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]     Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                           ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:41: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                         ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:224:45: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]       Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                             ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:38:43: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]     Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                           ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:41: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                         ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:224:45: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]       Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                             ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:38:43: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]     Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                           ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:41: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                         ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:224:45: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]       Ok(views.html.finalUpdate(demo,demo,m,demo,n,m,n))
+[error]                                             ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:81:41: too many arguments (found 7, expected 3) for method apply: (idMap: Map[String,Any], name: Map[String,Any], prev_exam: Map[String,Any]): play.twirl.api.HtmlFormat.Appendable in object finalUpdate
+[error]   Ok(views.html.finalUpdate(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                         ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

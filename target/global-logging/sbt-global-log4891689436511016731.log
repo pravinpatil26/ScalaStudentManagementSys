@@ -1,0 +1,11 @@
+[debug] > Exec(rrun 8080, None, None)
+[error] Expected ID character
+[error] Not a valid command: rrun (similar: runProd)
+[error] Expected project ID
+[error] Expected configuration
+[error] Expected ':'
+[error] Expected key
+[error] Not a valid key: rrun (similar: run, rpmPreun, runner)
+[error] rrun 8080
+[error]     ^
+[debug] > Exec(idea-shell, None, None)

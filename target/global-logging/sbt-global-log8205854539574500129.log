@@ -1,0 +1,10 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 10 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:11:1: too many arguments (found 10, expected 2) for method finalUpdate: (name: String, age: Int): play.api.mvc.Action[play.api.mvc.AnyContent]
+[error] GET /udate2                         controllers.Application.finalUpdate(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Long,emailid)
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 5 s, completed Sep 22, 2022 10:49:08 AM
+[debug] > Exec(idea-shell, None, None)

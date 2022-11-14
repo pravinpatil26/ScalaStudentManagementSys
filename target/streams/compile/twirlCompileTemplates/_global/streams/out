@@ -1,0 +1,3 @@
+[error] [Error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\instituteIndex.scala.html:372
+[error] </html>: Expected '}' but found 'EOF'
+[error] (Compile / twirlCompileTemplates) Twirl compilation failed

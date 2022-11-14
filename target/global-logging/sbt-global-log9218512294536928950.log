@@ -1,0 +1,268 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 8 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:255:19: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:257:19: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:259:25: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val student_details=Document("name"->details,"prn"->prn,"branch"->branch,"prev_exam"->prev_year
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:379:18: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                  ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:381:19: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:438:26: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val name :Document = Document("first_name" -> stu_firstname, "middle_name" -> stu_middlename, "last_name" -> stu_lastname)
+[error]                          ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:441:32: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val perAddress :Document = Document("line1"->stu_per_l1, "line2"->stu_per_l2, "city"->stu_per_city, "district"->stu_per_district, "state"->stu_per_state, "country"->stu_per_country, "pin-code"->stu_per_pin)
+[error]                                ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:442:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val currAddress :Document = Document("line1"->stu_curr_l1, "line2"->stu_curr_l2, "city"->stu_curr_city, "district"->stu_curr_district,"state"->stu_curr_state, "country"->stu_curr_country, "pin-code"->stu_curr_pin)
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:443:29: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val address :Document = Document("permanent_address"->perAddress, "current_address"->currAddress)
+[error]                             ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:446:31: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val education :Document = Document("college_name"->pre_college, "grade"->pre_grade, "passing_year"->pass_year, "prev_rollno"->pre_rollNo)
+[error]                               ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:449:30: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val guaName : Document = Document("first_name"->gua_firstName, "middle_name"->gua_mid_name, "last_name"->gua_last_name)
+[error]                              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:450:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val guaAddress : Document = Document("line1"->gua_add_l1, "line2"->gua_add_l2, "city"->gua_add_city, "district"->gua_add_district,"state"->gua_add_state, "country"->gua_add_country, "pin-code"->gua_add_pin)
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:451:32: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val local_gua : Document = Document("name"->guaName, "address"->guaAddress, "contactno"->gua_mob_no, "emailid"->gua_email)
+[error]                                ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:455:25: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val fee :Document = Document("amount"->fee_total, "paid"->fee_paid, "remaining"->rem)
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:458:25: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val student_details=Document("student_name"->name,
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:565:26: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val name :Document = Document("first_name" -> stu_firstname, "middle_name" -> stu_middlename, "last_name" -> stu_lastname)
+[error]                          ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:568:32: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val perAddress :Document = Document("line1"->stu_per_l1, "line2"->stu_per_l2, "city"->stu_per_city, "district"->stu_per_district, "state"->stu_per_state, "country"->stu_per_country, "pin-code"->stu_per_pin)
+[error]                                ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:569:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val currAddress :Document = Document("line1"->stu_curr_l1, "line2"->stu_curr_l2, "city"->stu_curr_city, "district"->stu_curr_district,"state"->stu_curr_state, "country"->stu_curr_country, "pin-code"->stu_curr_pin)
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:570:29: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val address :Document = Document("permanent_address"->perAddress, "current_address"->currAddress)
+[error]                             ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:573:31: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val education :Document = Document("college_name"->pre_college, "grade"->pre_grade, "passing_year"->pass_year, "prev_rollno"->pre_rollNo)
+[error]                               ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:576:30: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val guaName : Document = Document("first_name"->gua_firstName, "middle_name"->gua_mid_name, "last_name"->gua_last_name)
+[error]                              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:577:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val guaAddress : Document = Document("line1"->gua_add_l1, "line2"->gua_add_l2, "city"->gua_add_city, "district"->gua_add_district,"state"->gua_add_state, "country"->gua_add_country, "pin-code"->gua_add_pin)
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:578:32: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val local_gua : Document = Document("name"->guaName, "address"->guaAddress, "contactno"->gua_mob_no, "emailid"->gua_email)
+[error]                                ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:582:25: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val fee :Document = Document("amount"->fee_total, "paid"->fee_paid, "remaining"->rem)
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:585:25: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val student_details=Document("student_name"->name,
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:728:28: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_name:Document=Document("first_name"->student_first_name,"middle_name"->student_mid_name,"last_name"->student_last_name)
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:729:37: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val peramanant_address:Document=Document("line1"->line1,
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:737:31: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_address:Document=Document("permanent"->peramanant_address,"corresponding"->peramanant_address)
+[error]                               ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:739:39: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_contact_details:Document=Document(
+[error]                                       ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:744:30: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val student_DOB:Document=Document("student_DOB"->student_dob)
+[error]                              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:746:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val father_details:Document=Document(
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:753:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val mother_details:Document=Document(
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:759:39: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_parents_details:Document=Document("father"->father_details,"mother"->mother_details)
+[error]                                       ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:761:34: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val govt_id_details:Document=Document(
+[error]                                  ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:766:37: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val final_stud_details:Document=Document("student_name"->stud_name,
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:939:28: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_name:Document=Document("first_name"->student_first_name,
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:947:37: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val peramanant_address:Document=Document("line1"->line1,
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:957:39: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_contact_details:Document=Document(
+[error]                                       ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:963:30: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val student_DOB:Document=Document("student_DOB"->student_dob)
+[error]                              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:965:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val father_details:Document=Document(
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:972:33: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val mother_details:Document=Document(
+[error]                                 ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:978:39: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val stud_parents_details:Document=Document("father"->father_details,"mother"->mother_details)
+[error]                                       ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:980:34: reference to Document is ambiguous;
+[error] it is imported twice in the same scope by
+[error] import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
+[error] and import org.mongodb.scala.bson.collection.immutable.Document
+[error]     val govt_id_details:Document=Document(
+[error]                                  ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:55:1: value studentView is not a member of controllers.Application
+[error] GET     /studentViewPage                       controllers.Application.studentView(student_first_name,govt_id_details)
+[error] 44 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 30 s, completed Nov 8, 2022 11:08:09 AM
+[debug] > Exec(idea-shell, None, None)

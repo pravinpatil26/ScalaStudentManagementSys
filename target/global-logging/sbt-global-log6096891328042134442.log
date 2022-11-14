@@ -1,0 +1,13 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:39:37: type mismatch;
+[error]  found   : String
+[error]  required: Map[String,Any]
+[error]   Ok(views.html.finalUpdate(id,name,emailid))
+[error]                                     ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 1 s, completed Oct 6, 2022 4:45:22 PM
+[debug] > Exec(idea-shell, None, None)

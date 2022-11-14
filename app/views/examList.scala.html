@@ -1,0 +1,333 @@
+@import scala.collection.mutable.ArrayBuffer
+@(paginatedList: Paginator[ExamStudent])
+
+@* Helper Function to generate links *@
+@link(newPage: Int) = @{
+routes.Application.examStudentList(newPage)
+}
+
+@dashboard{
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Students</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+                html{
+                    position: relative;
+                }
+                body{
+                    margin: 0;
+                }
+                    table{
+                        width: 100%;
+                        border-collapse: collapse;
+                    }
+                    td, th {
+                        border: 1px solid #dddddd;
+                        text-align: center;
+                        padding:6px 20px;
+                    }
+                    tr th {
+                        border: 1px solid #dddddd;
+                        text-align: center;
+                        padding:6px 20px;
+                        background-color: #fffacf;
+                        color: black;
+                        font-size: 18px;
+                    }
+                    tr:hover {
+                        background-color: #dddddd;
+                        cursor: pointer;
+                    }
+
+                    .popup {
+                        background: rgba(66, 62, 62, 0.12);
+                        display: none;
+                        width: 100vw;
+                        height: 100vh;
+                        z-index: 10;
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        justify-content: center;
+                        align-items: center;
+                        transition: display 1ms ease-in;
+                    }
+                    .popped{
+                        display: grid;
+                    }
+
+                    .popup-container {
+                        background: white;
+                        width: 470px;
+                        height: 230px;
+                        display: grid;
+                        border-radius: 3px;
+                        box-shadow: 1px 1px 7px 4px #d6d6d6b5, -2px 2px 8px 4px #f1eeee4f;
+                        grid-template-rows: 65px auto;
+                    }
+
+                    .close-btn{
+                        justify-self: end;
+                        align-self: center;
+                        top: 7px;
+                        right: 19px;
+                        position: relative;
+                    }
+                    .inner-container h2 {
+                        text-align: center;
+                        font-size: 15px;
+                    }
+                    .inner-container{
+                        padding: 15px;
+                    }
+
+                .inner-container form {
+                    margin-top: 10px;
+                    display: grid;
+                    grid-gap: 20px;
+                    justify-content: center;
+                }
+
+                .inner-container select{
+                    outline: 2px solid #006aff;
+                    padding: 5px;
+                    border-radius: 3px;
+                }
+
+                    .wrapper {
+                        margin: 20px;
+                    }
+
+                    .btn-select {
+                        margin: 10px;
+                        display: grid;
+                        justify-content: end;
+                        grid-auto-flow: column;
+                        grid-gap: 20px;
+                    }
+
+                    .pagination {
+                        margin: 15px;
+                        display: grid;
+                        grid-auto-flow: column;
+                        justify-content: center;
+                    }
+                .selected {
+                    border: 2px solid #006aff;
+                    background: #d2ddff;
+                }
+            </style>
+</head>
+
+<body>
+<div class="wrapper">
+    <h1 class="mb-1 text-2xl  tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl dark:text-black">Student Exam List</h1>
+    <div class="btn-select">
+        <div class="relative">
+            <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </div>
+            <input type="search" id="default-search" class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search" required>
+            <button id="search-btn" type="submit" class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button>
+        </div>
+        <button id="insertBtn" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+<!--            Insert-->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+            </svg>
+        </button>
+        <button id="updateBtn" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+<!--            Update-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+            </svg>
+        </button>
+        <button id="deleteBtn" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+<!--            Delete-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+            </svg>
+        </button>
+    </div>
+    <table id="student-table">
+        <thead>
+
+        <th>Name</th>
+        <th>Registration No</th>
+        <th>Branch</th>
+<!--        <th>Admission Year</th>-->
+
+        </thead>
+        <tbody>
+        @for(d <- paginatedList.items){
+        <tr class="std-row" data-id="@d.prn">
+            @*                      <td>@d._id.get("$oid")</td>*@
+            <td>
+                @d.name.get("firstname")
+                @d.name.get("middlename")
+                @d.name.get("lastname")
+            </td>
+            <td>@d.prn</td>
+            <td>@d.branch</td>
+        </tr>
+        }
+        </tbody>
+    </table>
+
+    <div class="popup">
+        <div class="popup-container">
+            <button type="button" class="close-btn text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-full text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+                    <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                </svg>
+            </button>
+            <div class="inner-container">
+                <h1>First Select a student to update</h1>
+                @*                        <form method="get" action="/udate2">*@
+                @*                            <input type="hidden" value="@paginatedList.page" name="current_page">*@
+                @*                        <select name="student_prn">*@
+                    @*                            @for(d <- paginatedList.items){*@
+                    @*                                <option value="@d.prn">@d.name.get("firstname") @d.name.get("lastname")</option>*@
+                    @*                            }*@
+                    @*                        </select>*@
+                @*                            <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">*@
+                    @*                                Submit*@
+                    @*                                <svg aria-hidden="true" class="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>*@
+                    @*                            </button>*@
+
+                @*                        </form>*@
+            </div>
+        </div>
+    </div>
+
+    <div class="pagination flex items-center space-x-1">
+
+        @paginatedList.prevPage.map { page =>
+        <a href="@link(page)" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+            <svg aria-hidden="true" class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+<!--            Previous-->
+        </a>
+        }.getOrElse{
+        <a disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+            <svg aria-hidden="true" class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
+<!--            Previous-->
+        </a>
+        }
+
+        @for(pageNumber <- paginatedList.lowbound+1 to paginatedList.high ) {
+        <a href="@link(pageNumber)" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">@pageNumber</a>
+        }
+
+        @paginatedList.nextPage.map { page =>
+        <a href="@link(page)" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+<!--            Next-->
+            <svg aria-hidden="true" class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+        }.getOrElse {
+        <a href="#" disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+<!--            Next-->
+            <svg aria-hidden="true" class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+        </a>
+        }
+    </div>
+
+</div>
+<script>
+                let popup = document.getElementsByClassName("popup")[0];
+                let updateBtn = document.getElementById("updateBtn");
+                let insertBtn = document.getElementById("insertBtn");
+                let close_btn = document.getElementsByClassName("close-btn")[0];
+                let std_row = document.getElementsByClassName("std-row");
+                let search_btn = document.getElementById("search-btn");
+                let default_search = document.getElementById("default-search");
+
+                let table = document.getElementById("student-table");
+                let stu_aadhar;
+
+
+                function selectRow(row) {
+                    row.addEventListener("click", function (e) {
+                        let select_row = e.target.parentElement;
+
+                        // select only one row
+                        Array.from(std_row).forEach(el => {
+                            if (el != this)
+                                el.classList.remove("selected")
+                            else
+                                el.classList.toggle("selected") ?
+                                        prn = select_row.getAttribute("data-id") :
+                                        prn = undefined
+                        });
+                    });
+                }
+
+                // Add eventlistener to all rows
+                Array.from(std_row).forEach(row => selectRow(row));
+
+
+                close_btn.onclick = () => {
+                    popup.classList.toggle("popped");
+                }
+
+                insertBtn.onclick = () => {
+                    window.location.href = "@routes.Application.index()"
+                }
+
+                updateBtn.onclick = () => {
+                    if(! prn)
+                        popup.classList.toggle("popped");
+                    else {
+                        location.href = `/udate2?student_prn=${prn}`;
+                    }
+                }
+
+                search_btn.addEventListener("click", e => {
+                    let q = default_search.value
+                    renderAndFetch(q);
+                });
+
+                async function renderAndFetch(q){
+                    let response = await fetch(`/examSearch?q=${q}`, {
+                        method: "GET"
+                    });
+                    let students = await response.json();
+
+
+                    var tbody = document.createElement("tbody")
+
+                    if(students.length === 0){
+                        popup.getElementsByClassName("inner-container")[0].innerHTML = "No data";
+                        popup.classList.toggle("popped");
+                    }
+
+                    // create row, remove existing rows and append new ones
+                    for(var i=0; i<students.length; i++){
+                        let id = students[i].id["$oid"]
+                        let {firstname,middlename, lastname} = students[i].name
+                        let branch = students[i].branch
+                        let prn = students[i].prn
+<!--                        let year = students[i].year.slice(5,9);-->
+
+                        let row = tbody.insertRow(i)
+                        row.classList.add("std-row");
+                        row.setAttribute("data-id", prn)
+
+                        row.insertCell(0).innerHTML = `${firstname} ${middlename} ${lastname}`
+                        row.insertCell(1).innerHTML = prn
+                        row.insertCell(2).innerHTML = branch
+<!--                        row.insertCell(3).innerHTML = year-->
+                        selectRow(row);
+
+                        tbody.appendChild(row)
+                        table.tBodies[0].parentNode.replaceChild(tbody,table.tBodies[0])
+                    }
+                }
+
+            </script>
+</body>
+</html>
+}

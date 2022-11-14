@@ -1,0 +1,343 @@
+<html lang="en" dir="ltr">
+<head>
+    <style>
+        body{
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header{
+  z-index: 1;
+  position: fixed;
+  background: #22242A;
+  padding: 20px;
+  width: calc(100% - 0%);
+  top: 0;
+  height: 30px;
+}
+
+.left_area h3{
+  color: #fff;
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.left_area span{
+  color: #fff;
+
+
+
+}
+
+.insert_btn{
+padding: 5px;
+  background: #2323a;
+  text-decoration: none;
+  float: right;
+  margin-top: -20px;
+  margin-right: 70px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.insert_btn:hover{
+  background: #0B87A6;
+}
+
+.update_btn{
+padding: 5px;
+  background: #2323a;
+  text-decoration: none;
+  float: right;
+  margin-top: -40px;
+  margin-right: 130px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.update_btn:hover{
+  background: #0B87A6;
+}
+
+.logout_btn{
+  padding: 5px;
+
+  text-decoration: none;
+  float: right;
+  margin-top: -20px;
+  margin-right: 70px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.logout_btn:hover{
+  background: #0B87A6;
+}
+
+.sidebar{
+  z-index: 1;
+  top: 0;
+  background: #2f323a;
+  margin-top: 70px;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: calc(100% - 9%);
+  transition: 0.5s;
+  transition-property: left;
+  overflow-y: auto;
+}
+
+.profile_info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar .profile_info .profile_image{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.sidebar .profile_info h4{
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.sidebar a{
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover{
+  background: #19B3D3;
+}
+
+.sidebar i{
+  padding-right: 10px;
+}
+
+label #sidebar_btn{
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 300px;
+  font-size: 20px;
+  margin: 5px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover{
+  color: #19B3D3;
+}
+
+#check:checked ~ .sidebar{
+  left: -185px;
+}
+
+#check:checked ~ .sidebar a span{
+  display: none;
+}
+
+#check:checked ~ .sidebar a{
+  font-size: 20px;
+  margin-left: 165px;
+  width: 100%;
+}
+
+.content{
+  width: (100% - 250px);
+  margin-top: 60px;
+  padding: 20px;
+  margin-left: 250px;
+  background: url(background.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  transition: 0.5s;
+}
+
+#check:checked ~ .content{
+  margin-left: 60px;
+}
+
+#check:checked ~ .sidebar .profile_info{
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+.mobile_nav{
+  display: none;
+}
+
+.content .card p{
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+
+/* Responsive CSS */
+
+
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sidebar Dashboard Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+<input type="checkbox" id="check">
+<!--header area start-->
+<header>
+    <label for="check">
+        <i class="fas fa-bars" id="sidebar_btn"></i>
+    </label>
+    <div class="left_area">
+        <h3>Student <span>Management</span></h3>
+    </div>
+    <div class="right_area">
+<!--        <a href="/login1" class="logout_btn">Logout</a>-->
+
+        <a href="/login1" class="logout_btn"><i class="fa fa-power-off" style="font-size:16px"></i></a>
+
+    </div>
+<!--    <form method="get" action="/index">-->
+<!--    <div class="insert_area">-->
+<!--       <a href="/index" class="insert_btn"><i class="fa fa-plus" style="font-size:16px"></i></a>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button style="font-size:13px" class="insert_btn" type="button"> <i class="fa fa-plus"></i></button>&ndash;&gt;-->
+<!--    </div>-->
+<!--    <div class="update_area">-->
+<!--        <a href="/update" class="update_btn"><i class="fa fa-edit" style="font-size:16px"></i></a>&ndash;&gt;-->
+<!--        &lt;!&ndash;        <button style="font-size:13px" class="insert_btn" type="button"> <i class="fa fa-plus"></i></button>&ndash;&gt;-->
+<!--    </div>-->
+
+</header>
+<!--header area end-->
+<!--mobile navigation bar start-->
+<div class="mobile_nav">
+    <div class="nav_bar">
+        <img src="1.png" class="mobile_profile_image" alt="">
+        <i class="fa fa-bars nav_btn"></i>
+    </div>
+    <div class="mobile_nav_items">
+
+        <a href="#"><i class="fas fa-home"></i><span>Dashboard</span></a>
+        <a href="#"><i class="fas fa-cogs"></i><span>Student</span></a>
+        <a href="#"><i class="fas fa-table"></i><span>Admission</span></a>
+        <a href="#"><i class="fas fa-th"></i><span>Exam</span></a>
+        <a href="#"><i class="fas fa-sliders-h"></i><span>Institute</span></a>
+        <a href="#"><i class="fas fa-info-circle"></i><span>About Us</span></a>
+        <a href="#"><i class="fa fa-phone" style="font-size:16px"></i><span>Contact</span></a>
+    </div>
+</div>
+<!--mobile navigation bar end-->
+<!--sidebar start-->
+<div class="sidebar">
+<!--    <div class="profile_info">-->
+<!--&lt;!&ndash;        <img src="1.png" class="profile_image" alt="">&ndash;&gt;-->
+<!--        <h4>Hi, Divyesh</h4>-->
+<!--    </div>-->
+    <a href="/index1"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="/studentList"><i class="fas fa-cogs"></i><span>Student</span></a>
+<!--    <a href="/admissionIndex"><i class="fas fa-table"></i><span>Admission</span></a>-->
+    <a href="/admissionList"><i class="fas fa-table"></i><span>Admission</span></a>
+    <a href="/examList"><i class="fas fa-th"></i><span>Exam</span></a>
+    <a href="/instituteList"><i class="fas fa-sliders-h"></i><span>Institute</span></a>
+    <a href="#"><i class="fas fa-info-circle"></i><span>About Us</span></a>
+    <a href="#"><i class="fa fa-phone" style="font-size:16px"></i><span>Contact</span></a>
+
+</div>
+<!--sidebar end-->
+
+<div class="content">
+    <center>  <h1> Student Managment System</h1> </center>
+    <hr>
+    <p>"Student Management System (SMS) is a solution tool that is designed to track, maintain and manage all the data generated by a School, including the grades of a student, their attendance, their interpersonal activities records, etc.,"
+
+        SMS acts as the bottom line database to store all the day-to-day school operations, maintain the proper records of the past few decades, regulate the various operation modules, managing the critical tasks, efficiently handling the administrative processes such as:
+        <br>
+        <br>
+        1. Admissions
+        The Student Management System software is created to help manage the student's admissions activities, starting from initial communication to course enrolment.
+        <br>
+        <br>
+        2. Billing and Payments
+        The Payments paid or received can also be managed and recorded through Student Management System; unlike invoice generation, credit notes, refunds, etc., SMS stores all the necessary information about parents and staff suppliers, and contractors.
+        <br>
+        <br>
+        3. Reporting
+        Reporting feature benefits the schools to analyze the trends in student behavior and examine the outcomes to boost their performance.
+        <br>
+        <br>
+        4. Tracking Student's Fees
+        Fee tracking is one of the most beneficial features of this online software.
+        <br>
+        <br>
+        The school administration department can track billing dates, induce late fee penalty, generate invoice, and automatically gets the report of received payments throughout the year.
+
+        Student Management System software is helpful for teachers and school supervisors and also support applications and dashboards effective for students and parents as well for communication and combined data collection.
+
+        The other names of Student Management System are Student Information System (SIS), Student Information Management System (SIMS) and Student Record System (SRS).
+        <br><br><br>
+    </p>
+<!--    <div class="card">-->
+<!--        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>-->
+<!--    </div>-->
+<!--    <div class="card">-->
+<!--        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>-->
+<!--    </div>-->
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('.nav_btn').click(function(){
+        $('.mobile_nav_items').toggleClass('active');
+      });
+    });
+</script>
+
+</body>
+</html>
+      

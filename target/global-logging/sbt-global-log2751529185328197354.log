@@ -1,0 +1,640 @@
+[debug] > Exec(run 9090, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:32:25: not enough arguments for method apply: (content: play.twirl.api.Html): play.twirl.api.HtmlFormat.Appendable in object index1.
+[error] Unspecified value parameter content.
+[error]     Ok(views.html.index1())
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:95:37: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object examList
+[error]     Ok(views.html.examList(Paginator(students.toSeq, examCurrentPage, offset, totalItems(0).toInt)))
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:14: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:99:19: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `examSearch`'s return type
+[error]   def examSearch()
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] 6 errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:32:25: not enough arguments for method apply: (content: play.twirl.api.Html): play.twirl.api.HtmlFormat.Appendable in object index1.
+[error] Unspecified value parameter content.
+[error]     Ok(views.html.index1())
+[error]                         ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:95:37: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object examList
+[error]     Ok(views.html.examList(Paginator(students.toSeq, examCurrentPage, offset, totalItems(0).toInt)))
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:14: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:99:19: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `examSearch`'s return type
+[error]   def examSearch()
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] 6 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:32:24: not enough arguments for method apply: (idMap: Map[String,Any], name: Map[String,Any], prn: Int, prev_exam: Map[String,Any], branch: String, mobileno: Int, emailid: String): play.twirl.api.HtmlFormat.Appendable in object index.
+[error] Unspecified value parameters idMap, name, prn...
+[error]     Ok(views.html.index())
+[error]                        ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:95:37: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object examList
+[error]     Ok(views.html.examList(Paginator(students.toSeq, examCurrentPage, offset, totalItems(0).toInt)))
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:14: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]              ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:99:19: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `examSearch`'s return type
+[error]   def examSearch()
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] 6 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:95:37: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object examList
+[error]     Ok(views.html.examList(Paginator(students.toSeq, examCurrentPage, offset, totalItems(0).toInt)))
+[error]                                     ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:11: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]           ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:99:19: procedure syntax is deprecated: instead, add `: Unit` to explicitly declare `examSearch`'s return type
+[error]   def examSearch()
+[error]                   ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] 5 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:11: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]           ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:14:12: not found: type Student
+[error]     <script src="https://cdn.tailwindcss.com"></script>
+[error]            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:2:28: not found: type Student
+[error] @(paginatedList: Paginator[Student])
+[error]                            ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:326:2: not found: type Student
+[error] }
+[error]  ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 6 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources and 1 Java source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 3 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source and 1 Java source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 3 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\controllers\Application.scala:131:7: illegal start of simple expression
+[error]       }
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\examList.scala.html:168:24: value year is not a member of controllers.ExamStudent
+[error] <!--            <td>@d.year</td>-->
+[error]                        ^
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\examList.scala.html:270:72: play.api.mvc.Call does not take parameters
+[error]                     window.location.href = "@routes.Application.index()()"
+[error]                                                                        ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\examList.scala.html:269:72: play.api.mvc.Call does not take parameters
+[error]                     window.location.href = "@routes.Application.index()()"
+[error]                                                                        ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 3 Scala sources and 1 Java source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:8:2: not found: value dahboard
+[error] @dahboard{
+[error]  ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\app\views\admissionList.scala.html:8:2: not found: value dahboard
+[error] @dahboard{
+[error]  ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:38:1: value admissionDelete is not a member of controllers.Application
+[error] GET     /admissionDelete                controllers.Application.admissionDelete()
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source and 1 Java source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

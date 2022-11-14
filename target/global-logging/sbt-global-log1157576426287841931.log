@@ -1,0 +1,36 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:39:37: type mismatch;
+[error]  found   : String
+[error]  required: Map[String,Any]
+[error]   Ok(views.html.finalUpdate(id,name,emailid))
+[error]                                     ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:140:43: type mismatch;
+[error]  found   : Map[String,Any]
+[error]  required: String
+[error]       Ok(views.html.finalUpdate(demo,demo,demo))
+[error]                                           ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:140:32: not enough arguments for method apply: (idMap: Map[String,Any], name: Map[String,Any], emailid: String): play.twirl.api.HtmlFormat.Appendable in object finalUpdate.
+[error] Unspecified value parameter emailid.
+[error]       Ok(views.html.finalUpdate(demo,demo))
+[error]                                ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

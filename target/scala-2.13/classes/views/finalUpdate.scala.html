@@ -1,0 +1,147 @@
+
+@(idMap:Map[String,Any],name:Map[String,Any],prev_exam:Map[String,Any])
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+}
+input{
+
+  padding: 10px;
+  margin: 20px 0 30px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+.container {
+  padding: 50px;
+  background-color: lightblue;
+
+}
+
+ div {
+
+   padding: px;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+label{
+  padding: 8px;
+
+
+}
+input[type=submit] {
+  background-color: #529AE1;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+
+</style>
+    <title>Update</title>
+</head>
+<body>
+
+<form method="get" action="/udate2">
+    <div class="container">
+        <center>  <h1> Update Your Details</h1> </center>
+        <h2>@idMap.get("$oid")</h2>
+        <hr>
+        <h3> Student Exam Details </h3>
+        <label> Name: </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+        <input type="text" name="firstname"  value='@name.get("firstname")' />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+        <input type="text" name="middlename" value='@name.get("middlename")' />
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+        <input type="text" name="lastname" value='@name.get("lastname")' />
+        <br>
+
+
+        <br>
+        <label>
+            Branch :
+        </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" name="branch" id="branch" />
+        <br>
+        <br>
+        <br>
+
+        <label>
+            Phone :
+        </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" name="country code" value="+91" size="2" disabled/>
+        <input type="text" name="mobileno" id="mobileno" size="16"/> <br> <br>
+
+        <label>
+            Email:
+        </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" name="emailid" id="emailid" size="28"/> <br>
+        <br> <br>
+        <h3> Previous Exam Details </h3>
+
+        <label>
+            Academic Year :
+        </label>
+        &nbsp&nbsp&nbsp&nbsp
+
+        <input type="text" name="acad_year" value='@prev_exam.get("acad_year")' />
+        <br><br><br>
+
+        <label>
+            Result :
+        </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" name="result"  value='@prev_exam.get("result")' />
+
+        <br>
+        <br>
+        <label> Score: </label>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <input type="text" name="score" value='@prev_exam.get("score")' size="10"/> <br> <br>
+
+        <br> <br>
+
+
+        <input type="submit" value="Submit"/>
+
+    </div>
+</form>
+
+</body>
+</html>

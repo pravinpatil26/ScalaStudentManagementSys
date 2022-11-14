@@ -1,0 +1,668 @@
+
+@(idMap:Map[String,Any],stu_name:Map[String,Any],stu_aadhar:String,stu_per_address:Map[String,Any],stu_curr_address:Map[String,Any],stu_preEdu:Map[String,Any],stu_local_name:Map[String,Any],stu_local_address:Map[String,Any],stu_local:Map[String,Any],stu_branch:String,stu_category:String,stu_hostel:String,stu_year:Int,stu_fee:Map[String,Any], updateView: Boolean)
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Student Admission Details</title>
+        <style>
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .show_option {
+            padding: 10px;
+            background: #000000;
+            display: grid;
+            align-content: center;
+            justify-content: end;
+        }
+
+        button,
+        .btn {
+            border: 0;
+            background: rgb(78, 129, 207);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+            font-size: 20px;
+            height: 50px;
+            color: white;
+            box-shadow: 0px 0px;
+            transition: box-shadow ease-in 1ms 1ms;
+        }
+
+        button:hover {
+            box-shadow: 2px 3px 2px 0px #899dbe;
+            /* transition: border-shadow 12s ease-in; */
+        }
+
+        .popup_container {
+            background: #ffffff;
+            padding: 30px;
+            /* width: 800px; */
+            /* height: 800px; */
+            /* position: absolute; */
+            /* left: 57px; */
+            /* top: 100px; */
+        }
+
+        .form_group {
+            display: grid;
+            grid-auto-flow: row;
+            /* justify-items: center; */
+            /* align-items: center; */
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        p {
+            justify-self: self-start;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .input_group p,
+        label {
+            justify-self: self-start;
+            font-size: 17px;
+            color: #757087;
+            font-weight: normal !important;
+        }
+
+        .input_group input {
+            height: 40px;
+            border: 1.5px #d7deee solid;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px 0px #d3cece;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            transition: border ease-in 10ms;
+        }
+
+        .form_group.address {
+            display: grid;
+            grid-auto-flow: row;
+            /* justify-items: center; */
+            /* align-items: center; */
+            /* grid-template-columns: 200px auto; */
+        }
+
+        .group {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: auto auto;
+            grid-gap: 20px;
+            /* margin-top: 76px; */
+        }
+
+
+        .input_group {
+            display: grid;
+        }
+
+        .group_col {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(3, 250px);
+            grid-gap: 30px;
+        }
+
+        /* input {
+
+            padding: 10px;
+            margin: 20px 0 30px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        button {
+            background-color: #529AE1;
+            color: white;
+            padding: 16px 32px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            width: 9%;
+            opacity: 0.9;
+        }
+
+        .deleteBtn {
+            background-color: ##529AE1;
+        }
+
+        .view {
+            background-color: #529AE1;
+        }
+
+        .update {
+            background-color: ##529AE1;
+        }
+
+        .container {
+            padding: 50px;
+            background: lightblue;
+
+
+
+        }
+
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        label {
+            padding: 8px;
+
+
+        }
+
+        input[type=submit] {
+            background-color: #529AE1;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        } */
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    </head>
+
+    <body>
+            <!--<nav>-->
+
+            <!--    <ul>-->
+            <!--        <li class="parent"><a class="link" href="index.scala.html">Home</a></li>-->
+            <!--        <li class="parent"><a class="link" href="student.scala.html">Student</a></li>-->
+            <!--        <li class="parent"><a class="link" href="#">Admission</a></li>-->
+            <!--        <li class="parent"><a class="link" href="#">Exam</a></li>-->
+            <!--        <li class="parent"><a class="link" href="institute.scala.html">Institute</a></li>-->
+            <!--        <li class="parent"><a class="link" href="contact.scala.html">Contact</a></li>-->
+            <!--    </ul>-->
+            <!--</nav>-->
+
+        <script>
+        function autoFillAddress() {
+            let checkBox = document.getElementById('checkBox');
+
+            let pl1 = document.getElementById('stu_perm_l1');
+            let pl2 = document.getElementById('stu_perm_l2');
+            let pcity = document.getElementById('stu_perm_city');
+            let pdistrict = document.getElementById('stu_perm_district');
+            let pstate = document.getElementById('stu_perm_state');
+            let pcountry = document.getElementById('stu_perm_country');
+            let ppin = document.getElementById('stu_perm_pin');
+
+
+            let cl1 = document.getElementById('stu_curre_l1');
+            let cl2 = document.getElementById('stu_curre_l2');
+            let ccity = document.getElementById('stu_curre_city');
+            let cdistrict = document.getElementById('stu_curre_district');
+            let cstate = document.getElementById('stu_curre_state');
+            let ccountry = document.getElementById('stu_curre_country');
+            let cpin = document.getElementById('stu_curre_pin');
+
+            if (checkBox.checked == true) {
+                let pl1v = pl1.value;
+                let pl2v = pl2.value;
+                let pcityv = pcity.value;
+                let pdistrictv = pdistrict.value;
+                let pstatev = pstate.value;
+                let pcountryv = pcountry.value;
+                let ppinv = ppin.value;
+
+                cl1.value = pl1v;
+                cl2.value = pl2v;
+                ccity.value = pcityv;
+                cdistrict.value = pdistrictv;
+                cstate.value = pdistrictv;
+                ccountry.value = pcountryv;
+                cpin.value = ppinv
+            } else {
+                cl1.value = "";
+                cl2.value = "";
+                ccity.value = "";
+                cdistrict.value = "";
+                cstate.value = "";
+                ccountry.value = "";
+                cpin.value = "";
+            }
+
+
+        }
+
+    function admissionBtnHide() {
+        var y = document.getElementById("buttons")
+        y.style.display = "none";
+    }
+
+    </script>
+
+
+
+<!--        <div class="show_option">-->
+<!--            <div class="inner" id="buttons">-->
+<!--                <button id="insertBtn" onclick="admissionBtnHide()">Insert</button>-->
+<!--                <button id="updateBtn" onclick="admissionBtnHide()">Update</button>-->
+<!--                <button id="deleteBtn" onclick="admissionBtnHide()">Delete</button>-->
+<!--            </div>-->
+<!--        </div>-->
+
+        <div class="popup_container">
+            <div class="insert_form">
+                <h1>Student Admission Details</h1>
+                <form action="/admissionForm" method="GET">
+
+
+                    <div class="form_group">
+                        <p>Name of student</p>
+
+                        <div class="group_col">
+                            <div class="input_group">
+                                <p>First Name</p>
+                                <input type="text" id="stu_first_name" name="stu_firstname"
+                                value='@stu_name.get("first_name")' onkeyup="stu_validFName()"
+                                placeholder="First Name" />
+                            </div>
+                            <div class="input_group">
+                                <p>Middle Name</p>
+                                <input type="text" id="stu_middle_name" name="stu_middlename"
+                                value='@stu_name.get("middle_name")' placeholder="Middle Name" />
+                            </div>
+                            <div class="input_group">
+                                <p>Last Name</p>
+                                <input type="text" id="stu_last_name" name="stu_lastname" value='@stu_name.get("last_name")'
+                                placeholder="Last Name" />
+                            </div>
+                        </div>
+
+                    </div>
+                        <!-- Address -->
+                    <div class="form_group">
+                        <p>Permanent Address</p>
+
+                        <div class="group">
+
+                            <div class="input_group">
+                                <p> Line 1: </p>
+                                <input type="text" name="stu_per_l1" value='@stu_per_address.get("line1")' id="stu_perm_l1" />
+                            </div>
+                            <div class="input_group">
+                                <p> Line 2: </p>
+                                <input type="text" name="stu_per_l2" value='@stu_per_address.get("line2")'
+                                id="stu_perm_l2" />
+                            </div>
+                            <div class="input_group">
+                                <p> City: </p>
+                                <input type="text" name="stu_per_city" value='@stu_per_address.get("city")'
+                                id="stu_perm_city" />
+                            </div>
+                            <div class="input_group">
+                                <p>District:</p>
+                                <input type="text" name="stu_per_district" id="stu_perm_district"
+                                value=@stu_per_address.get("district")>
+                            </div>
+                            <div class="input_group">
+                                <p> State: </p>
+                                <input type="text" name="stu_per_state" value='@stu_per_address.get("state")'
+                                id="stu_perm_state" />
+                            </div>
+                            <div class="input_group">
+                                <p> Country: </p>
+                                <input type="text" name="stu_per_country" value='@stu_per_address.get("country")'
+                                id="stu_perm_country" />
+                            </div>
+                            <div class="input_group">
+                                <p> Pin-code: </p>
+                                <input type="number" name="stu_per_pin" value='@stu_per_address.get("pin-code")'
+                                id="stu_perm_pin" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="checkbox" id="checkBox"  onclick="autoFillAddress()"> Is current address same as permanent address
+
+                    <div class="form_group">
+                        <p>Current Address</p>
+
+
+                        <div class="group">
+                            <div class="input_group">
+                                <p> Line 1: </p>
+                                <input type="text" name="stu_curr_l1" value='@stu_curr_address.get("line1")'
+                                id="stu_curre_l1" />
+                            </div>
+
+                            <div class="input_group">
+                                <p> Line 2: </p>
+                                <input type="text" name="stu_curr_l2" value='@stu_curr_address.get("line2")'
+                                id="stu_curre_l2" />
+                            </div>
+                            <div class="input_group">
+                                <p> City: </p>
+                                <input type="text" name="stu_curr_city" value='@stu_curr_address.get("city")'
+                                id="stu_curre_city" />
+                            </div>
+
+                            <div class="input_group">
+                                <p> District: </p>
+                                <input type="text" name="stu_curr_district" value='@stu_curr_address.get("district")'
+                                id="stu_curre_district" />
+                            </div>
+
+                            <div class="input_group">
+                                <p> State: </p>
+                                <input type="text" name="stu_curr_state" value='@stu_curr_address.get("state")'
+                                id="stu_curre_state" />
+                            </div>
+
+                            <div class="input_group">
+                                <p> Country: </p>
+                                <input type="text" name="stu_curr_country" value='@stu_curr_address.get("country")'
+                                id="stu_curre_country" />
+                            </div>
+
+                            <div class="input_group">
+                                <p> Pin-code: </p>
+                                <input type="number" name="stu_curr_pin" value='@stu_curr_address.get("pin-code")'
+                                id="stu_curre_pin" />
+                            </div>
+                        </div>
+                    </div>
+
+                        <!-------------------------previous education------------------------------->
+
+                    <div class="form_group">
+                        <p>Previous Education Of Student</p>
+
+                        <div class="group">
+                            <div class="input_group">
+                                <p>College Name:</p>
+                                <input type="text" id="prev_college" name="pre_college"
+                                value='@stu_preEdu.get("college_name")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Grade:</p>
+                                <input type="text" id="prev_grade" name="pre_grade" value='@stu_preEdu.get("grade")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Previous Roll No:</p>
+                                <input type=number id="prev_rollNo" name="pre_rollNo"
+                                value='@stu_preEdu.get("prev_rollno")'>
+                            </div>
+                            <div class="input_group">
+                                <p>Passing Year</p>
+                                <input type="number" id="prev_pass_year" name="pass_year"
+                                value='@stu_preEdu.get("passing_year")'>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                        <!---------------------------Student local Guardian Details --------------------------->
+                    <div class="form_group">
+                        <p>Guardian Details Of Student</p>
+
+                        <div class="group">
+                            <div class="input_group">
+                                <p>First name:</p>
+                                <input type="text" id="gua_first_Name" name="gua_firstName"
+                                value='@stu_local_name.get("first_name")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Middle name:</p>
+                                <input type="text" id="gua_middleName" name="gua_mid_name"
+                                value='@stu_local_name.get("middle_name")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Last name:</p>
+                                <input type="text" id="gua_lastName" name="gua_last_name"
+                                value='@stu_local_name.get("last_name")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Mobile Number:</p>
+                                <input type="text" id="gua_mobile_no" name="gua_mob_no" pattern="[0-9]{10}"
+                                value='@stu_local.get("contactno")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Email ID:</p>
+                                <input type="email" id="guaEmail" name="gua_email" value='@stu_local.get("emailid")' />
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form_group">
+                        <p>Guardian Address</p>
+                        <div class="group">
+
+                            <div class="input_group">
+                                <p> Line 1: </p>
+                                <input type="text" id="gua_addr_l1" name="gua_add_l1"
+                                value='@stu_local_address.get("line1")' />
+
+                            </div>
+
+                            <div class="input_group">
+                                <p> Line 2: </p>
+                                <input type="text" id="gua_addr_l2" name="gua_add_l2"
+                                value='@stu_local_address.get("line2")' />
+                            </div>
+
+                            <div class="input_group">
+                                <p> City: </p>
+                                <input type="text" id="gua_addr_city" name="gua_add_city"
+                                value='@stu_local_address.get("city")' />
+                            </div>
+
+                            <div class="input_group">
+                                <p>District:</p>
+                                <input type="text" id="gua_addr_district" name="gua_add_district"
+                                value='@stu_local_address.get("district")' />
+                            </div>
+                            <div class="input_group">
+                                <p> State: </p>
+                                <input type="text" id="gua_addr_state" name="gua_add_state"
+                                value='@stu_local_address.get("state")' />
+                            </div>
+
+                            <div class="input_group">
+                                <p> Country: </p>
+                                <input type="text" id="gua_addr_country" name="gua_add_country"
+                                value='@stu_local_address.get("country")' />
+                            </div>
+
+                            <div class="input_group">
+                                <p> Pin-code: </p>
+                                <input type="number" id="gua_addr_pin" name="gua_add_pin"
+                                value='@stu_local_address.get("pin-code")' />
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                        <!--------------------------Student Branch Details ---------------------------->
+
+
+                    <div class="form_group">
+                        <p>Enter selected Branch</p>
+                        <div class="group_col">
+                            <div class="input_group">
+
+                                <p>Branch: </p>
+                                <input type="text" id="stu_branch" name="branch" value='@stu_branch'>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                        <!-------------------------Student Govt Id Details ------------------------->
+                    <div class="form_group">
+                        <p>Student Government Id Details</p>
+                        <div class="group_col">
+                            <div class="input_group">
+
+                                <p>Aadhar Card Number of Student:</p>
+                                <input type="text" id="stu_aadhaar_no" name="stu_aadhar_no" value='@stu_aadhar' />
+                            </div>
+                        </div>
+                    </div>
+
+                        <!---------------------------Student Fee Details --------------------------->
+                    <div class="form_group">
+                        <p>Student Fee Details</p>
+
+                        <div class="group_col">
+                            <div class="input_group">
+                                <p>Total Amount:</p>
+                                <input type="number" id="stu_fee_total" name="fee_total" value='@stu_fee.get("amount")' />
+                            </div>
+                            <div class="input_group">
+                                <p>Paid: </p>
+                                <input type="number" id="stu_fee_paid" name="fee_paid" value='@stu_fee.get("paid")'>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!---------------------------Student Category Details --------------------------->
+                    <div class="form_group">
+                        <p>Student Category Details</p>
+                        <div class="group_col">
+                            <div class="input_group">
+                                <p>Category: </p>
+                                <select name="stu_category" id="category">
+                                    <option value='@stu_category' selected hidden>@stu_category</option>
+                                    <option value="open/general">Open/General</option>
+                                    <option value="sc">SC</option>
+                                    <option value="obc">OBC</option>
+                                    <option value="nt">NT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                        <!---------------------------Student Admission Year Details --------------------------->
+                    <div class="form_group">
+                        <p>Student Admission Year Details</p>
+                        <div class="group_col">
+                            <div class="input_group">
+                                <p>Admission Year:</p>
+                                <input type="number" id="stu_admission_year" name="admission_year" value='@stu_year'>
+                            </div>
+                        </div>
+                    </div>
+
+
+                        <!---------------------------Student Hostel Details --------------------------->
+                    <div class="form_group">
+                        <p>Student Hostel Details</p>
+                        <div class="group_col">
+                            <div class="input_group">
+                                <p>Need of Hostel:</p>
+                                <select name="hostel_need" id="stu_hostel_need">
+                                    <option value='@stu_hostel' selected hidden>@stu_hostel</option>
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="student_id" value=@idMap.get("$oid")>
+
+
+
+                    @if(updateView){
+                        <input type="submit" name="submit" value="Update" formaction="/admissionUpdateData" class="btn">
+                    } else {
+                        <input type="submit" name="Submit" value="Insert" class="btn" />
+                    }
+
+                    <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
+
+                </form>
+            </div>
+<!--            <form>-->
+<!--                <div class="form_group">-->
+<!--                    <div class="update_form hide">-->
+<!--                        <div class="group_col">-->
+<!--                        <div class="input_group">-->
+<!--                        <p>Aadhar Card No: </p>-->
+<!--                        <input type="text" name="student_aadhaar" placeholder="student aadhaar" required>-->
+<!--                        <input type="submit" name="submit" value="View" formaction="/admissionView" class="btn">-->
+<!--                        </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </form>-->
+        </div>
+<!--        <script>-->
+<!--        let insertBtn = document.getElementById("insertBtn");-->
+<!--        let updateBtn = document.getElementById("updateBtn");-->
+<!--        let insert_form = document.getElementsByClassName("insert_form")[0];-->
+<!--        let update_form = document.getElementsByClassName("update_form")[0];-->
+
+<!--        let inView = window.location.pathname;-->
+<!--        inView === "/admissionView" ?-->
+<!--                insert_form.classList.toggle("hide") : "";-->
+
+<!--         insertBtn.addEventListener("click", e => {-->
+<!--            insert_form.classList.toggle("hide");-->
+<!--        })-->
+
+<!--        updateBtn.addEventListener("click", e => {-->
+<!--            update_form.classList.toggle("hide");-->
+<!--        })-->
+
+
+<!--    </script>-->
+    </body>
+
+</html>

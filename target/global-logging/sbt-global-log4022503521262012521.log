@@ -1,0 +1,60 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Long
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] four errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Int
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:8:1: type mismatch;
+[error]  found   : String
+[error]  required: Long
+[error] GET    /form                   controllers.Application.getValues(firstname ,middlename,lastname,branch,prn,acad_year,result,score,mobileno,emailid)
+[error] four errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

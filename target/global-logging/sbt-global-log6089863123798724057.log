@@ -1,0 +1,13 @@
+[debug] > Exec(compile, None, None)
+[debug] Evaluating tasks: Compile / compile
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 9 Scala sources and 1 Java source to D:\play-samples-play-scala-hello-world-tutorial\target\scala-2.13\classes ...
+[error] D:\play-samples-play-scala-hello-world-tutorial\app\controllers\Application.scala:42:37: procedure syntax is deprecated: instead, add `: Unit =` to explicitly declare `updatevalues`'s return type
+[error]   def updatevalues(firstname:String){
+[error]                                     ^
+[error] D:\play-samples-play-scala-hello-world-tutorial\conf\routes:9:1: Cannot use a method returning Unit as a Handler for requests
+[error] GET  /form                      controllers.Application.updatevalues(firstname)
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[error] Total time: 5 s, completed Sep 19, 2022 3:43:15 PM
+[debug] > Exec(idea-shell, None, None)
