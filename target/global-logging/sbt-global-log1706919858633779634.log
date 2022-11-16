@@ -1,3 +1,51 @@
 [debug] > Exec(run 9090, None, None)
 [debug] Evaluating tasks: Compile / run
 [debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:67:1: not enough arguments for method instituteGetValues: (student_first_name: String, student_mid_name: String, student_last_name: String, stu_registration_id: Int, prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String, current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String): play.api.mvc.Action[play.api.mvc.AnyContent].
+[error] Unspecified value parameters current_district, current_state, current_country...
+[error] GET     /instituteForm                  controllers.Application.instituteGetValues(prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin)
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:70:1: not enough arguments for method instituteUpdate: (student_first_name: String, student_mid_name: String, student_last_name: String, stu_registration_id: Int, prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String, current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String, institute_id: String): play.api.mvc.Action[play.api.mvc.AnyContent].
+[error] Unspecified value parameters current_state, current_country, current_pin...
+[error] GET     /instituteUpdate                controllers.Application.instituteUpdate(prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin,get_id)
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 8 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:67:1: not enough arguments for method instituteGetValues: (student_first_name: String, student_mid_name: String, student_last_name: String, stu_registration_id: Int, prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String, current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String): play.api.mvc.Action[play.api.mvc.AnyContent].
+[error] Unspecified value parameters current_district, current_state, current_country...
+[error] GET     /instituteForm                  controllers.Application.instituteGetValues(prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin)
+[error] D:\Scala Projects\divyesh\play_app_sample1\layout-check\conf\routes:70:1: not enough arguments for method instituteUpdate: (student_first_name: String, student_mid_name: String, student_last_name: String, stu_registration_id: Int, prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String, current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String, institute_id: String): play.api.mvc.Action[play.api.mvc.AnyContent].
+[error] Unspecified value parameters current_state, current_country, current_pin...
+[error] GET     /instituteUpdate                controllers.Application.instituteUpdate(prev_name,prev_code,prev_email,prev_contact,prev_line1,prev_line2,prev_city,prev_district,prev_state,prev_country,prev_pin,prev_year,current_name,current_code,current_email,current_contact,current_line1,current_line2,current_city,current_district,current_state,current_country,current_pin,get_id)
+[error] two errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

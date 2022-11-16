@@ -201,24 +201,25 @@ def deleterecord(prn:String)=Action{
 
 //CheckLogin
 
-  def validatelogin(username:String, password:String)=Action{ implicit request=>
-    if(username=="scala" & password=="scala") {
+  def loginConnection()={
+    val uri: String = "mongodb://localhost:27017"
+    val mongoClient = MongoClient(uri)
+    val db: MongoDatabase = mongoClient.getDatabase("studentInfo")
+    println("login connection created successfully")
+    val collection: MongoCollection[Document] = db.getCollection("login")
+    collection
+  }
 
-      //  Ok(s"$username logged in!!!!!!!!! hehe your password is $password")
+  def validatelogin(username:String, password:String)=Action{ implicit request=>
+
+    val ch = loginConnection().countDocuments(and(equal("userName", username), equal("password", password))).headResult()
+
+    if(ch == 1) {
+
       Redirect(routes.Application.index1()).withSession("username" -> username)
-      // Ok(views.html.index())
     }
     else{
-      //Redirect("/").flashing("error"->"invalid")
-      //      Ok {
-      //        flash.get("success").getOrElse("Welcome!")
-      //      }
-      //@main{ <script src="test.js" type="text/javascript"></script> }
       Redirect(routes.Application.login).flashing("error"->"Invalid username/password")
-      //Redirect(routes.Application.popup())
-      // Ok("INVALID!!!!!!!!!!!!!!!!!!!!!!")
-      // Flash.notify()
-
     }
   }
 
@@ -387,7 +388,6 @@ def deleterecord(prn:String)=Action{
       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
     Ok("done")
   }
-
 
 
 
