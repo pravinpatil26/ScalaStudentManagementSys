@@ -1,6 +1,6 @@
 
 
-@(jsonMap: Map[String,Any],stu_name: Map[String,Any],stu_Id:Int,jsonMap1: Map[String,Any],jsonMap2: Map[String,Any],jsonMap3: Map[String,Any],jsonMap4: Map[String,Any],updateView:Boolean)
+@(jsonMap: Map[String,Any],name:String,registration:String,email:String,contact:String,address:Map[String,Any],updateView:Boolean)
 
 <html>
 <head>
@@ -93,109 +93,55 @@ table,
 
 <div class="container">
     <form method="get" action="/instituteForm">
-
-        <h4> Previous Institute Details </h4>
-
-        <!-- ---------------------- Name OF Student -------------------------------------         -->
-        <h4>Name of Student</h4>
-        <label >First name:</label>
-        <input type="text" name="student_first_name" placeholder= "firstName" value='@stu_name.get("first_name")'/>
-        <label>Middle name:</label>
-        <input type="text" name="student_mid_name" placeholder= "middleName" value='@stu_name.get("middle_name")' />
-        <label >Last name:</label>
-        <input type="text" name="student_last_name" placeholder= "lastName" value='@stu_name.get("last_name")'/>
-
-        <br>
-        <h4>Student Registration Id</h4>
-        <label>Registration Id:</label>
-        <input type="number" name="stu_registration_Id" placeholder="student registration Id" value='@stu_Id'>
+        <h3>Institute Details</h3>
         <br>
         <hr>
+
         <label> Name </label>
-        <input type="text" name="prev_name" placeholder= "name" id="prev_name3" value='@jsonMap1.get("Name")' size="42" required />
-        <label> Unique Code: </label>
-        <input type="text" name="prev_code" placeholder="code" id="prev_code4" pattern="[A-Za-z0-9]{}" value='@jsonMap1.get("Unique Code")' title="Alphabet and Digits only" size="25" required />
+        <input type="text" name="institute_name" placeholder= "name" id="institute_name" value='@name' size="42" required />
 
-        <label>Email Id:</label>
-        <input type="email" placeholder="Email" name="prev_email" id="prev_email3" size="42" value='@jsonMap1.get("Email ID")' title="Type a valid Email" required>
-
-        <label> Contact Number: </label>
-        <input type="text" name="prev_contact" placeholder="ContactNumber" pattern="[0-9]{10}" value='@jsonMap1.get("Contact Number")' title="Ten digits code" id="prev_contact" required />
+        <label> Registration Code: </label>
+        <input type="text" name="institute_code" placeholder="code" id="institute_code" pattern="[A-Za-z0-9]{}" value='@registration' title="Alphabet and Digits only" size="25" required />
 
         <br>
+        <label>Email Id:</label>
+        <input type="email" placeholder="Email" name="institute_email" id="institute_email" size="42" value='@email' title="Type a valid Email" required>
+
+        <label> Contact Number: </label>
+        <input type="text" name="institute_contact" placeholder="ContactNumber" pattern="[0-9]{10}" value='@contact' title="Ten digits code" id="institute_contact" required />
+
+        <br>
+        <hr>
         <label>
-            Address:
+            <h4>Address: </h4>
             <br>
 
             <label> Line 1: </label>
-            <input type="text" name="prev_line1" id="prev_line3" placeholder= "Line 1" value='@jsonMap3.get("Line 1")' size="49" required />
+            <input type="text" name="institute_line1" id="institute_line1" placeholder= "Line 1" value='@address.get("Line 1")' size="49" required />
 
             <label> Line 2: </label>
-            <input type="text" name="prev_line2" id="prev_line4" placeholder= "Line 2" size="49" value='@jsonMap3.get("Line 2")' required />
-
-            <label> City: </label>
-            <input type="text" name="prev_city" id="prev_city2" value='@jsonMap3.get("City")' placeholder= "City" required />
+            <input type="text" name="institute_line2" id="institute_line2" placeholder= "Line 2" size="49" value='@address.get("Line 2")' required />
 
             <br>
+            <label> City: </label>
+            <input type="text" name="institute_city" id="institute_city2" value='@address.get("City")' placeholder= "City" required />
+
             <label> District: </label>
-            <input type="text" name="prev_district" id="prev_district1" value='@jsonMap3.get("District")' placeholder= "District" size="25" required />
+            <input type="text" name="institute_district" id="institute_district1" value='@address.get("District")' placeholder= "District" size="25" required />
 
             <label> State: </label>
-            <input type="text" name="prev_state" id="prev_state1" value='@jsonMap3.get("State")' placeholder= "State" size="25" required />
+            <input type="text" name="institute_state" id="institute_state1" value='@address.get("State")' placeholder= "State" size="25" required />
 
+            <br>
             <label> Country: </label>
-            <input type="text" name="prev_country" id="prev_country1"  value='@jsonMap3.get("Country")' placeholder= "Country" size="25" required />
+            <input type="text" name="institute_country" id="institute_country1"  value='@address.get("Country")' placeholder= "Country" size="25" required />
 
             <label> Pin-code: </label>
-            <input type="number" name="prev_pin" id="prev_pin1" value='@jsonMap3.get("Pin-code")' placeholder= "PinCode" size="25" required />
+            <input type="number" name="institute_pin" id="institute_pin1" value='@address.get("Pin-code")' placeholder= "PinCode" size="25" required />
 
         </label>
 
         <br>
-
-        <label> Passing Year: </label>
-        <input type="date" name="prev_year"  id="prev_year1" value='@jsonMap1.get("Passing year")'
-               min="2010-01-01" max="2022-07-31" required />
-        <h4> Current Institute Details </h4>
-
-
-        <label> Name </label>
-        <input type="text" name="current_name" placeholder= "name" id="current_name1" value='@jsonMap2.get("Name")' size="42" required />
-
-        <label> Unique Code: </label>
-        <input type="text" name="current_code" placeholder="code" size="25" id="current_code4" value='@jsonMap2.get("Unique Code")' pattern="[A-Za-z0-9]{}" title="Alphabet and Digits only" required />
-
-        <label>Email Id:</label>
-        <input type="email" placeholder="Email" name="current_email" size="42"   title="Type a valid Email"  value='@jsonMap2.get("Email ID")' id="current_email1" required>
-
-        <label> Contact Number: </label>
-        <input type="text" name="current_contact" id="current_contact1" pattern="[0-9]{10}" value='@jsonMap2.get("Contact Number")' title="Ten digits code" placeholder="ContactNumber"  required />
-
-        <br>
-        <label>
-            Address:
-
-            <br>
-            <label> Line 1: </label>
-            <input type="text" name="current_line1" id="current_line3" value='@jsonMap4.get("Line 1")' placeholder= "Line 1" size="49" required />
-
-            <label> Line 2: </label>
-            <input type="text" name="current_line2" id="current_line4" value='@jsonMap4.get("Line 2")' placeholder= "Line 2" size="49" required />
-
-            <label> City: </label>
-            <input type="text" name="current_city" id="current_city1" value='@jsonMap4.get("City")' placeholder= "City" required />
-
-            <br>
-            <label> District: </label>
-            <input type="text" name="current_district" id="current_district1" value='@jsonMap4.get("District")' placeholder= "District" title="Alphabet and Digits only" size="25" required />
-            <label> State: </label>
-            <input type="text" name="current_state" id="current_state1" value='@jsonMap4.get("State")' placeholder= "State"  size="25" required />
-
-            <label> Country: </label>
-            <input type="text" name="current_country" id="current_country1" value='@jsonMap4.get("Country")' placeholder= "Country" size="25" required />
-
-            <label> Pin-code: </label>
-            <input type="number" name="current_pin" id="current_pin1" value='@jsonMap4.get("Pin-code")' placeholder= "PinCode" size="25" required />
 
         </label>
         <input type="hidden"  name="get_id" value=@jsonMap.get("$oid")>

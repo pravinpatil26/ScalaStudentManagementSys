@@ -199,24 +199,26 @@ routes.Application.instituteList(newPage)
     <table id="student-table">
         <thead>
 
-        <th>Student Name</th>
-        <th>Student Id</th>
-        <th>Previous Institute Code</th>
-        <th>Current Institue Code</th>
+        <th>Institute Name</th>
+        <th>Registration No</th>
+        <th>Institute Contact</th>
+        <th>Institute Address</th>
 
         </thead>
         <tbody>
         @for(d <- paginatedList.items){
-        <tr class="std-row" data-id="@d.studentId">
+        <tr class="std-row" data-id="@d.instituteId">
             @*                      <td>@d._id.get("$oid")</td>*@
             <td>
-                @d.studentName.get("first_name")
-                @d.studentName.get("middle_name")
-                @d.studentName.get("last_name")
+                @d.instituteName
             </td>
-            <td>@d.studentId</td>
-            <td>@d.prevInstituteCode.get("Unique Code")</td>
-            <td>@d.currInstituteCode.get("Unique Code")</td>
+            <td>@d.instituteId</td>
+            <td>@d.instituteContact</td>
+            <td>
+                @d.instituteAddress.get("City")
+                ,
+                @d.instituteAddress.get("District")
+            </td>
         </tr>
         }
         </tbody>
@@ -371,13 +373,13 @@ routes.Application.instituteList(newPage)
                     if(! studentId)
                         popup.classList.toggle("popped");
                     else {
-                        location.href = `/instituteView?stu_registration_Id=${studentId}`;
+                        location.href = `/instituteView?institute_code=${studentId}`;
                     }
                 }
 
                 function confirmDelete(intent){
                     if(intent){
-                        location.href = `/instituteView?stu_registration_Id=${studentId}`;
+                        location.href = `/instituteDelete?institute_code=${studentId}`;
                     } else{
                         deletePopup.classList.toggle("popped")
                     }
@@ -413,19 +415,19 @@ routes.Application.instituteList(newPage)
                     // create row, remove existing rows and append new ones
                     for(var i=0; i<students.length; i++){
                         let id = students[i].id["$oid"]
-                        let {first_name,middle_name, last_name} = students[i].studentName
-                        let studentId = students[i].studentId
-                        let prevInstituteCode = students[i].prevInstituteCode["Unique Code"]
-                        let currInstituteCode = students[i].currInstituteCode["Unique Code"].slice(5,9);
+                        let inst_name = students[i].instituteName
+                        let inst_id = students[i].instituteId
+                        let inst_contact = students[i].instituteContact
+                        let inst_address = students[i].instituteAddress["City"].slice(5,9);
 
                         let row = tbody.insertRow(i)
                         row.classList.add("std-row");
                         row.setAttribute("data-id", studentId)
 
-                        row.insertCell(0).innerHTML = `${first_name} ${middle_name} ${last_name}`
-                        row.insertCell(1).innerHTML = studentId
-                        row.insertCell(2).innerHTML = prevInstituteCode
-                        row.insertCell(3).innerHTML = currInstituteCode
+                        row.insertCell(0).innerHTML = inst_name
+                        row.insertCell(1).innerHTML = inst_id
+                        row.insertCell(2).innerHTML = inst_contact
+                        row.insertCell(3).innerHTML = inst_address
                         selectRow(row);
 
                         tbody.appendChild(row)

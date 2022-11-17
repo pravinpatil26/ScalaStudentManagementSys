@@ -224,27 +224,29 @@ Seq[Any](format.raw/*2.46*/("""
     <table id="student-table">
         <thead>
 
-        <th>Student Name</th>
-        <th>Student Id</th>
-        <th>Previous Institute Code</th>
-        <th>Current Institue Code</th>
+        <th>Institute Name</th>
+        <th>Registration No</th>
+        <th>Institute Contact</th>
+        <th>Institute Address</th>
 
         </thead>
         <tbody>
         """),_display_(/*209.10*/for(d <- paginatedList.items) yield /*209.39*/{_display_(Seq[Any](format.raw/*209.40*/("""
-        """),format.raw/*210.9*/("""<tr class="std-row" data-id=""""),_display_(/*210.39*/d/*210.40*/.studentId),format.raw/*210.50*/("""">
+        """),format.raw/*210.9*/("""<tr class="std-row" data-id=""""),_display_(/*210.39*/d/*210.40*/.instituteId),format.raw/*210.52*/("""">
             """),format.raw/*211.66*/("""
             """),format.raw/*212.13*/("""<td>
-                """),_display_(/*213.18*/d/*213.19*/.studentName.get("first_name")),format.raw/*213.49*/("""
-                """),_display_(/*214.18*/d/*214.19*/.studentName.get("middle_name")),format.raw/*214.50*/("""
-                """),_display_(/*215.18*/d/*215.19*/.studentName.get("last_name")),format.raw/*215.48*/("""
-            """),format.raw/*216.13*/("""</td>
-            <td>"""),_display_(/*217.18*/d/*217.19*/.studentId),format.raw/*217.29*/("""</td>
-            <td>"""),_display_(/*218.18*/d/*218.19*/.prevInstituteCode.get("Unique Code")),format.raw/*218.56*/("""</td>
-            <td>"""),_display_(/*219.18*/d/*219.19*/.currInstituteCode.get("Unique Code")),format.raw/*219.56*/("""</td>
+                """),_display_(/*213.18*/d/*213.19*/.instituteName),format.raw/*213.33*/("""
+            """),format.raw/*214.13*/("""</td>
+            <td>"""),_display_(/*215.18*/d/*215.19*/.instituteId),format.raw/*215.31*/("""</td>
+            <td>"""),_display_(/*216.18*/d/*216.19*/.instituteContact),format.raw/*216.36*/("""</td>
+            <td>
+                """),_display_(/*218.18*/d/*218.19*/.instituteAddress.get("City")),format.raw/*218.48*/("""
+                """),format.raw/*219.17*/(""",
+                """),_display_(/*220.18*/d/*220.19*/.instituteAddress.get("District")),format.raw/*220.52*/("""
+            """),format.raw/*221.13*/("""</td>
         </tr>
-        """)))}),format.raw/*221.10*/("""
-        """),format.raw/*222.9*/("""</tbody>
+        """)))}),format.raw/*223.10*/("""
+        """),format.raw/*224.9*/("""</tbody>
     </table>
 
     <div class="popup">
@@ -256,20 +258,20 @@ Seq[Any](format.raw/*2.46*/("""
             </button>
             <div class="inner-container">
                 <h1>Please Select a student</h1>
-                """),format.raw/*234.79*/("""
-                """),format.raw/*235.118*/("""
-                """),format.raw/*236.76*/("""
-                    """),format.raw/*237.84*/("""
-                    """),format.raw/*238.159*/("""
-                    """),format.raw/*239.54*/("""
-                    """),format.raw/*240.58*/("""
-                """),format.raw/*241.317*/("""
-                    """),format.raw/*242.63*/("""
-                    """),format.raw/*243.383*/("""
-                    """),format.raw/*244.62*/("""
+                """),format.raw/*236.79*/("""
+                """),format.raw/*237.118*/("""
+                """),format.raw/*238.76*/("""
+                    """),format.raw/*239.84*/("""
+                    """),format.raw/*240.159*/("""
+                    """),format.raw/*241.54*/("""
+                    """),format.raw/*242.58*/("""
+                """),format.raw/*243.317*/("""
+                    """),format.raw/*244.63*/("""
+                    """),format.raw/*245.383*/("""
+                    """),format.raw/*246.62*/("""
 
-                """),format.raw/*246.52*/("""
-            """),format.raw/*247.13*/("""</div>
+                """),format.raw/*248.52*/("""
+            """),format.raw/*249.13*/("""</div>
         </div>
     </div>
 
@@ -301,36 +303,36 @@ Seq[Any](format.raw/*2.46*/("""
 
     <div class="pagination flex items-center space-x-1">
 
-        """),_display_(/*279.10*/paginatedList/*279.23*/.prevPage.map/*279.36*/ { page =>_display_(Seq[Any](format.raw/*279.46*/("""
-        """),format.raw/*280.9*/("""<a href=""""),_display_(/*280.19*/link(page)),format.raw/*280.29*/("""" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+        """),_display_(/*281.10*/paginatedList/*281.23*/.prevPage.map/*281.36*/ { page =>_display_(Seq[Any](format.raw/*281.46*/("""
+        """),format.raw/*282.9*/("""<a href=""""),_display_(/*282.19*/link(page)),format.raw/*282.29*/("""" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
             <svg aria-hidden="true" class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
 <!--            Previous-->
         </a>
-        """)))}/*284.10*/.getOrElse/*284.20*/{_display_(Seq[Any](format.raw/*284.21*/("""
-        """),format.raw/*285.9*/("""<a disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+        """)))}/*286.10*/.getOrElse/*286.20*/{_display_(Seq[Any](format.raw/*286.21*/("""
+        """),format.raw/*287.9*/("""<a disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
             <svg aria-hidden="true" class="mr-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path></svg>
 <!--            Previous-->
         </a>
-        """)))}),format.raw/*289.10*/("""
+        """)))}),format.raw/*291.10*/("""
 
-        """),_display_(/*291.10*/for(pageNumber <- paginatedList.lowbound until paginatedList.high ) yield /*291.77*/ {_display_(Seq[Any](format.raw/*291.79*/("""
-        """),_display_(/*292.10*/if(pageNumber != 0)/*292.29*/ {_display_(Seq[Any](format.raw/*292.31*/("""
-        """),format.raw/*293.9*/("""<a href=""""),_display_(/*293.19*/link(pageNumber)),format.raw/*293.35*/("""" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">"""),_display_(/*293.128*/pageNumber),format.raw/*293.138*/("""</a>
-        """)))}),format.raw/*294.10*/("""
-        """)))}),format.raw/*295.10*/("""
+        """),_display_(/*293.10*/for(pageNumber <- paginatedList.lowbound until paginatedList.high ) yield /*293.77*/ {_display_(Seq[Any](format.raw/*293.79*/("""
+        """),_display_(/*294.10*/if(pageNumber != 0)/*294.29*/ {_display_(Seq[Any](format.raw/*294.31*/("""
+        """),format.raw/*295.9*/("""<a href=""""),_display_(/*295.19*/link(pageNumber)),format.raw/*295.35*/("""" class="px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-blue-400 hover:text-white">"""),_display_(/*295.128*/pageNumber),format.raw/*295.138*/("""</a>
+        """)))}),format.raw/*296.10*/("""
+        """)))}),format.raw/*297.10*/("""
 
-        """),_display_(/*297.10*/paginatedList/*297.23*/.nextPage.map/*297.36*/ { page =>_display_(Seq[Any](format.raw/*297.46*/("""
-        """),format.raw/*298.9*/("""<a href=""""),_display_(/*298.19*/link(page)),format.raw/*298.29*/("""" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+        """),_display_(/*299.10*/paginatedList/*299.23*/.nextPage.map/*299.36*/ { page =>_display_(Seq[Any](format.raw/*299.46*/("""
+        """),format.raw/*300.9*/("""<a href=""""),_display_(/*300.19*/link(page)),format.raw/*300.29*/("""" class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
 <!--            Next-->
             <svg aria-hidden="true" class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
-        """)))}/*302.10*/.getOrElse/*302.20*/ {_display_(Seq[Any](format.raw/*302.22*/("""
-        """),format.raw/*303.9*/("""<a href="#" disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
+        """)))}/*304.10*/.getOrElse/*304.20*/ {_display_(Seq[Any](format.raw/*304.22*/("""
+        """),format.raw/*305.9*/("""<a href="#" disabled class="flex items-center px-4 py-2 text-gray-500 bg-gray-300 rounded-md">
 <!--            Next-->
             <svg aria-hidden="true" class="ml-2 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
         </a>
-        """)))}),format.raw/*307.10*/("""
-    """),format.raw/*308.5*/("""</div>
+        """)))}),format.raw/*309.10*/("""
+    """),format.raw/*310.5*/("""</div>
 
 </div>
 <script>
@@ -359,118 +361,118 @@ Seq[Any](format.raw/*2.46*/("""
 
 
 
-                function selectRow(row) """),format.raw/*337.41*/("""{"""),format.raw/*337.42*/("""
-                    """),format.raw/*338.21*/("""row.addEventListener("click", function (e) """),format.raw/*338.64*/("""{"""),format.raw/*338.65*/("""
-                        """),format.raw/*339.25*/("""let select_row = e.target.parentElement;
+                function selectRow(row) """),format.raw/*339.41*/("""{"""),format.raw/*339.42*/("""
+                    """),format.raw/*340.21*/("""row.addEventListener("click", function (e) """),format.raw/*340.64*/("""{"""),format.raw/*340.65*/("""
+                        """),format.raw/*341.25*/("""let select_row = e.target.parentElement;
 
                         // select only one row
-                        Array.from(std_row).forEach(el => """),format.raw/*342.59*/("""{"""),format.raw/*342.60*/("""
-                            """),format.raw/*343.29*/("""if (el != this)
+                        Array.from(std_row).forEach(el => """),format.raw/*344.59*/("""{"""),format.raw/*344.60*/("""
+                            """),format.raw/*345.29*/("""if (el != this)
                                 el.classList.remove("selected")
                             else
                                 el.classList.toggle("selected") ?
                                         studentId = select_row.getAttribute("data-id") :
                                         studentId = undefined
-                        """),format.raw/*349.25*/("""}"""),format.raw/*349.26*/(""");
-                    """),format.raw/*350.21*/("""}"""),format.raw/*350.22*/(""");
-                """),format.raw/*351.17*/("""}"""),format.raw/*351.18*/("""
+                        """),format.raw/*351.25*/("""}"""),format.raw/*351.26*/(""");
+                    """),format.raw/*352.21*/("""}"""),format.raw/*352.22*/(""");
+                """),format.raw/*353.17*/("""}"""),format.raw/*353.18*/("""
 
-                """),format.raw/*353.17*/("""// Add eventlistener to all rows
+                """),format.raw/*355.17*/("""// Add eventlistener to all rows
                 Array.from(std_row).forEach(row => selectRow(row));
 
 
 
-                close_btn.onclick = () => """),format.raw/*358.43*/("""{"""),format.raw/*358.44*/("""
-                    """),format.raw/*359.21*/("""popup.classList.toggle("popped");
-                """),format.raw/*360.17*/("""}"""),format.raw/*360.18*/("""
+                close_btn.onclick = () => """),format.raw/*360.43*/("""{"""),format.raw/*360.44*/("""
+                    """),format.raw/*361.21*/("""popup.classList.toggle("popped");
+                """),format.raw/*362.17*/("""}"""),format.raw/*362.18*/("""
 
-                """),format.raw/*362.17*/("""close_btn_delete.onclick = (e) => """),format.raw/*362.51*/("""{"""),format.raw/*362.52*/("""
-                    """),format.raw/*363.21*/("""deletePopup.classList.toggle("popped")
-                """),format.raw/*364.17*/("""}"""),format.raw/*364.18*/("""
+                """),format.raw/*364.17*/("""close_btn_delete.onclick = (e) => """),format.raw/*364.51*/("""{"""),format.raw/*364.52*/("""
+                    """),format.raw/*365.21*/("""deletePopup.classList.toggle("popped")
+                """),format.raw/*366.17*/("""}"""),format.raw/*366.18*/("""
 
-                """),format.raw/*366.17*/("""insertBtn.onclick = () => """),format.raw/*366.43*/("""{"""),format.raw/*366.44*/("""
-                    """),format.raw/*367.21*/("""window.location.href = """"),_display_(/*367.46*/routes/*367.52*/.Application.instituteIndex()),format.raw/*367.81*/(""""
-                """),format.raw/*368.17*/("""}"""),format.raw/*368.18*/("""
+                """),format.raw/*368.17*/("""insertBtn.onclick = () => """),format.raw/*368.43*/("""{"""),format.raw/*368.44*/("""
+                    """),format.raw/*369.21*/("""window.location.href = """"),_display_(/*369.46*/routes/*369.52*/.Application.instituteIndex()),format.raw/*369.81*/(""""
+                """),format.raw/*370.17*/("""}"""),format.raw/*370.18*/("""
 
-                """),format.raw/*370.17*/("""updateBtn.onclick = () => """),format.raw/*370.43*/("""{"""),format.raw/*370.44*/("""
-                    """),format.raw/*371.21*/("""if(! studentId)
+                """),format.raw/*372.17*/("""updateBtn.onclick = () => """),format.raw/*372.43*/("""{"""),format.raw/*372.44*/("""
+                    """),format.raw/*373.21*/("""if(! studentId)
                         popup.classList.toggle("popped");
-                    else """),format.raw/*373.26*/("""{"""),format.raw/*373.27*/("""
-                        """),format.raw/*374.25*/("""location.href = `/instituteView?stu_registration_Id=$"""),format.raw/*374.78*/("""{"""),format.raw/*374.79*/("""studentId"""),format.raw/*374.88*/("""}"""),format.raw/*374.89*/("""`;
-                    """),format.raw/*375.21*/("""}"""),format.raw/*375.22*/("""
-                """),format.raw/*376.17*/("""}"""),format.raw/*376.18*/("""
+                    else """),format.raw/*375.26*/("""{"""),format.raw/*375.27*/("""
+                        """),format.raw/*376.25*/("""location.href = `/instituteView?institute_code=$"""),format.raw/*376.73*/("""{"""),format.raw/*376.74*/("""studentId"""),format.raw/*376.83*/("""}"""),format.raw/*376.84*/("""`;
+                    """),format.raw/*377.21*/("""}"""),format.raw/*377.22*/("""
+                """),format.raw/*378.17*/("""}"""),format.raw/*378.18*/("""
 
-                """),format.raw/*378.17*/("""function confirmDelete(intent)"""),format.raw/*378.47*/("""{"""),format.raw/*378.48*/("""
-                    """),format.raw/*379.21*/("""if(intent)"""),format.raw/*379.31*/("""{"""),format.raw/*379.32*/("""
-                        """),format.raw/*380.25*/("""location.href = `/instituteView?stu_registration_Id=$"""),format.raw/*380.78*/("""{"""),format.raw/*380.79*/("""studentId"""),format.raw/*380.88*/("""}"""),format.raw/*380.89*/("""`;
-                    """),format.raw/*381.21*/("""}"""),format.raw/*381.22*/(""" """),format.raw/*381.23*/("""else"""),format.raw/*381.27*/("""{"""),format.raw/*381.28*/("""
-                        """),format.raw/*382.25*/("""deletePopup.classList.toggle("popped")
-                    """),format.raw/*383.21*/("""}"""),format.raw/*383.22*/("""
-                """),format.raw/*384.17*/("""}"""),format.raw/*384.18*/("""
+                """),format.raw/*380.17*/("""function confirmDelete(intent)"""),format.raw/*380.47*/("""{"""),format.raw/*380.48*/("""
+                    """),format.raw/*381.21*/("""if(intent)"""),format.raw/*381.31*/("""{"""),format.raw/*381.32*/("""
+                        """),format.raw/*382.25*/("""location.href = `/instituteDelete?institute_code=$"""),format.raw/*382.75*/("""{"""),format.raw/*382.76*/("""studentId"""),format.raw/*382.85*/("""}"""),format.raw/*382.86*/("""`;
+                    """),format.raw/*383.21*/("""}"""),format.raw/*383.22*/(""" """),format.raw/*383.23*/("""else"""),format.raw/*383.27*/("""{"""),format.raw/*383.28*/("""
+                        """),format.raw/*384.25*/("""deletePopup.classList.toggle("popped")
+                    """),format.raw/*385.21*/("""}"""),format.raw/*385.22*/("""
+                """),format.raw/*386.17*/("""}"""),format.raw/*386.18*/("""
 
-                """),format.raw/*386.17*/("""deleteBtn.onclick = () => """),format.raw/*386.43*/("""{"""),format.raw/*386.44*/("""
-                    """),format.raw/*387.21*/("""if(!studentId)
+                """),format.raw/*388.17*/("""deleteBtn.onclick = () => """),format.raw/*388.43*/("""{"""),format.raw/*388.44*/("""
+                    """),format.raw/*389.21*/("""if(!studentId)
                         popup.classList.toggle("popped");
-                    else """),format.raw/*389.26*/("""{"""),format.raw/*389.27*/("""
-                        """),format.raw/*390.25*/("""deletePopup.classList.toggle("popped")
-                    """),format.raw/*391.21*/("""}"""),format.raw/*391.22*/("""
-                """),format.raw/*392.17*/("""}"""),format.raw/*392.18*/("""
+                    else """),format.raw/*391.26*/("""{"""),format.raw/*391.27*/("""
+                        """),format.raw/*392.25*/("""deletePopup.classList.toggle("popped")
+                    """),format.raw/*393.21*/("""}"""),format.raw/*393.22*/("""
+                """),format.raw/*394.17*/("""}"""),format.raw/*394.18*/("""
 
-                """),format.raw/*394.17*/("""search_btn.addEventListener("click", e => """),format.raw/*394.59*/("""{"""),format.raw/*394.60*/("""
-                    """),format.raw/*395.21*/("""let q = default_search.value
+                """),format.raw/*396.17*/("""search_btn.addEventListener("click", e => """),format.raw/*396.59*/("""{"""),format.raw/*396.60*/("""
+                    """),format.raw/*397.21*/("""let q = default_search.value
                     renderAndFetch(q);
-                """),format.raw/*397.17*/("""}"""),format.raw/*397.18*/(""");
+                """),format.raw/*399.17*/("""}"""),format.raw/*399.18*/(""");
 
-                async function renderAndFetch(q)"""),format.raw/*399.49*/("""{"""),format.raw/*399.50*/("""
-                    """),format.raw/*400.21*/("""let response = await fetch(`/instituteSearch?q=$"""),format.raw/*400.69*/("""{"""),format.raw/*400.70*/("""q"""),format.raw/*400.71*/("""}"""),format.raw/*400.72*/("""`, """),format.raw/*400.75*/("""{"""),format.raw/*400.76*/("""
-                        """),format.raw/*401.25*/("""method: "GET"
-                    """),format.raw/*402.21*/("""}"""),format.raw/*402.22*/(""");
+                async function renderAndFetch(q)"""),format.raw/*401.49*/("""{"""),format.raw/*401.50*/("""
+                    """),format.raw/*402.21*/("""let response = await fetch(`/instituteSearch?q=$"""),format.raw/*402.69*/("""{"""),format.raw/*402.70*/("""q"""),format.raw/*402.71*/("""}"""),format.raw/*402.72*/("""`, """),format.raw/*402.75*/("""{"""),format.raw/*402.76*/("""
+                        """),format.raw/*403.25*/("""method: "GET"
+                    """),format.raw/*404.21*/("""}"""),format.raw/*404.22*/(""");
                     let students = await response.json();
 
 
                     var tbody = document.createElement("tbody")
 
-                    if(students.length === 0)"""),format.raw/*408.46*/("""{"""),format.raw/*408.47*/("""
-                        """),format.raw/*409.25*/("""popup.getElementsByClassName("inner-container")[0].innerHTML = "No data";
+                    if(students.length === 0)"""),format.raw/*410.46*/("""{"""),format.raw/*410.47*/("""
+                        """),format.raw/*411.25*/("""popup.getElementsByClassName("inner-container")[0].innerHTML = "No data";
                         popup.classList.toggle("popped");
-                    """),format.raw/*411.21*/("""}"""),format.raw/*411.22*/("""
+                    """),format.raw/*413.21*/("""}"""),format.raw/*413.22*/("""
 
-                    """),format.raw/*413.21*/("""// create row, remove existing rows and append new ones
-                    for(var i=0; i<students.length; i++)"""),format.raw/*414.57*/("""{"""),format.raw/*414.58*/("""
-                        """),format.raw/*415.25*/("""let id = students[i].id["$oid"]
-                        let """),format.raw/*416.29*/("""{"""),format.raw/*416.30*/("""first_name,middle_name, last_name"""),format.raw/*416.63*/("""}"""),format.raw/*416.64*/(""" """),format.raw/*416.65*/("""= students[i].studentName
-                        let studentId = students[i].studentId
-                        let prevInstituteCode = students[i].prevInstituteCode["Unique Code"]
-                        let currInstituteCode = students[i].currInstituteCode["Unique Code"].slice(5,9);
+                    """),format.raw/*415.21*/("""// create row, remove existing rows and append new ones
+                    for(var i=0; i<students.length; i++)"""),format.raw/*416.57*/("""{"""),format.raw/*416.58*/("""
+                        """),format.raw/*417.25*/("""let id = students[i].id["$oid"]
+                        let inst_name = students[i].instituteName
+                        let inst_id = students[i].instituteId
+                        let inst_contact = students[i].instituteContact
+                        let inst_address = students[i].instituteAddress["City"].slice(5,9);
 
                         let row = tbody.insertRow(i)
                         row.classList.add("std-row");
                         row.setAttribute("data-id", studentId)
 
-                        row.insertCell(0).innerHTML = `$"""),format.raw/*425.57*/("""{"""),format.raw/*425.58*/("""first_name"""),format.raw/*425.68*/("""}"""),format.raw/*425.69*/(""" """),format.raw/*425.70*/("""$"""),format.raw/*425.71*/("""{"""),format.raw/*425.72*/("""middle_name"""),format.raw/*425.83*/("""}"""),format.raw/*425.84*/(""" """),format.raw/*425.85*/("""$"""),format.raw/*425.86*/("""{"""),format.raw/*425.87*/("""last_name"""),format.raw/*425.96*/("""}"""),format.raw/*425.97*/("""`
-                        row.insertCell(1).innerHTML = studentId
-                        row.insertCell(2).innerHTML = prevInstituteCode
-                        row.insertCell(3).innerHTML = currInstituteCode
+                        row.insertCell(0).innerHTML = inst_name
+                        row.insertCell(1).innerHTML = inst_id
+                        row.insertCell(2).innerHTML = inst_contact
+                        row.insertCell(3).innerHTML = inst_address
                         selectRow(row);
 
                         tbody.appendChild(row)
                         table.tBodies[0].parentNode.replaceChild(tbody,table.tBodies[0])
-                    """),format.raw/*433.21*/("""}"""),format.raw/*433.22*/("""
-                """),format.raw/*434.17*/("""}"""),format.raw/*434.18*/("""
+                    """),format.raw/*435.21*/("""}"""),format.raw/*435.22*/("""
+                """),format.raw/*436.17*/("""}"""),format.raw/*436.18*/("""
 
-                """),format.raw/*436.17*/("""Array.from(rows).forEach(e => e.addEventListener("click", sortTable));
+                """),format.raw/*438.17*/("""Array.from(rows).forEach(e => e.addEventListener("click", sortTable));
 
                 // https://www.w3schools.com/howto/howto_js_sort_table.asp
-                function sortTable(event) """),format.raw/*439.43*/("""{"""),format.raw/*439.44*/("""
-                    """),format.raw/*440.21*/("""var n = event.target.cellIndex;
+                function sortTable(event) """),format.raw/*441.43*/("""{"""),format.raw/*441.44*/("""
+                    """),format.raw/*442.21*/("""var n = event.target.cellIndex;
 
-                    event.target.parentNode.querySelectorAll("th").forEach(rowHead => """),format.raw/*442.87*/("""{"""),format.raw/*442.88*/("""
-                        """),format.raw/*443.25*/("""if(rowHead != event.target)"""),format.raw/*443.52*/("""{"""),format.raw/*443.53*/("""
-                            """),format.raw/*444.29*/("""rowHead.classList.remove("highlight")
-                        """),format.raw/*445.25*/("""}"""),format.raw/*445.26*/(""" """),format.raw/*445.27*/("""else """),format.raw/*445.32*/("""{"""),format.raw/*445.33*/("""
-                            """),format.raw/*446.29*/("""event.target.classList.toggle("highlight")
-                        """),format.raw/*447.25*/("""}"""),format.raw/*447.26*/("""
-                    """),format.raw/*448.21*/("""}"""),format.raw/*448.22*/(""")
+                    event.target.parentNode.querySelectorAll("th").forEach(rowHead => """),format.raw/*444.87*/("""{"""),format.raw/*444.88*/("""
+                        """),format.raw/*445.25*/("""if(rowHead != event.target)"""),format.raw/*445.52*/("""{"""),format.raw/*445.53*/("""
+                            """),format.raw/*446.29*/("""rowHead.classList.remove("highlight")
+                        """),format.raw/*447.25*/("""}"""),format.raw/*447.26*/(""" """),format.raw/*447.27*/("""else """),format.raw/*447.32*/("""{"""),format.raw/*447.33*/("""
+                            """),format.raw/*448.29*/("""event.target.classList.toggle("highlight")
+                        """),format.raw/*449.25*/("""}"""),format.raw/*449.26*/("""
+                    """),format.raw/*450.21*/("""}"""),format.raw/*450.22*/(""")
 
                     event.target.parentNode.classList.toggle("rotate");
                     var switching, i, x, y, shouldSwitch, dir, switchcount = 0;
@@ -480,14 +482,14 @@ Seq[Any](format.raw/*2.46*/("""
                     dir = "asc";
                     /* Make a loop that will continue until
                     no switching has been done: */
-                    while (switching) """),format.raw/*458.39*/("""{"""),format.raw/*458.40*/("""
-                        """),format.raw/*459.25*/("""// Start by saying: no switching is done:
+                    while (switching) """),format.raw/*460.39*/("""{"""),format.raw/*460.40*/("""
+                        """),format.raw/*461.25*/("""// Start by saying: no switching is done:
                         switching = false;
                         rows = table.rows;
                         /* Loop through all table rows (except the
                         first, which contains table headers): */
-                        for (i = 1; i < (rows.length - 1); i++) """),format.raw/*464.65*/("""{"""),format.raw/*464.66*/("""
-                            """),format.raw/*465.29*/("""// Start by saying there should be no switching:
+                        for (i = 1; i < (rows.length - 1); i++) """),format.raw/*466.65*/("""{"""),format.raw/*466.66*/("""
+                            """),format.raw/*467.29*/("""// Start by saying there should be no switching:
                             shouldSwitch = false;
                             /* Get the two elements you want to compare,
                             one from current row and one from the next: */
@@ -495,41 +497,41 @@ Seq[Any](format.raw/*2.46*/("""
                             y = rows[i + 1].getElementsByTagName("TD")[n];
                             /* Check if the two rows should switch place,
                             based on the direction, asc or desc: */
-                            if (dir == "asc") """),format.raw/*473.47*/("""{"""),format.raw/*473.48*/("""
-                                """),format.raw/*474.33*/("""if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) """),format.raw/*474.92*/("""{"""),format.raw/*474.93*/("""
-                                    """),format.raw/*475.37*/("""// If so, mark as a switch and break the loop:
+                            if (dir == "asc") """),format.raw/*475.47*/("""{"""),format.raw/*475.48*/("""
+                                """),format.raw/*476.33*/("""if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) """),format.raw/*476.92*/("""{"""),format.raw/*476.93*/("""
+                                    """),format.raw/*477.37*/("""// If so, mark as a switch and break the loop:
                                     shouldSwitch = true;
                                     break;
-                                """),format.raw/*478.33*/("""}"""),format.raw/*478.34*/("""
-                            """),format.raw/*479.29*/("""}"""),format.raw/*479.30*/(""" """),format.raw/*479.31*/("""else if (dir == "desc") """),format.raw/*479.55*/("""{"""),format.raw/*479.56*/("""
-                                """),format.raw/*480.33*/("""if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) """),format.raw/*480.92*/("""{"""),format.raw/*480.93*/("""
-                                    """),format.raw/*481.37*/("""// If so, mark as a switch and break the loop:
+                                """),format.raw/*480.33*/("""}"""),format.raw/*480.34*/("""
+                            """),format.raw/*481.29*/("""}"""),format.raw/*481.30*/(""" """),format.raw/*481.31*/("""else if (dir == "desc") """),format.raw/*481.55*/("""{"""),format.raw/*481.56*/("""
+                                """),format.raw/*482.33*/("""if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) """),format.raw/*482.92*/("""{"""),format.raw/*482.93*/("""
+                                    """),format.raw/*483.37*/("""// If so, mark as a switch and break the loop:
                                     shouldSwitch = true;
                                     break;
-                                """),format.raw/*484.33*/("""}"""),format.raw/*484.34*/("""
-                            """),format.raw/*485.29*/("""}"""),format.raw/*485.30*/("""
-                        """),format.raw/*486.25*/("""}"""),format.raw/*486.26*/("""
-                        """),format.raw/*487.25*/("""if (shouldSwitch) """),format.raw/*487.43*/("""{"""),format.raw/*487.44*/("""
-                            """),format.raw/*488.29*/("""/* If a switch has been marked, make the switch
+                                """),format.raw/*486.33*/("""}"""),format.raw/*486.34*/("""
+                            """),format.raw/*487.29*/("""}"""),format.raw/*487.30*/("""
+                        """),format.raw/*488.25*/("""}"""),format.raw/*488.26*/("""
+                        """),format.raw/*489.25*/("""if (shouldSwitch) """),format.raw/*489.43*/("""{"""),format.raw/*489.44*/("""
+                            """),format.raw/*490.29*/("""/* If a switch has been marked, make the switch
                             and mark that a switch has been done: */
                             rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
                             switching = true;
                             // Each time a switch is done, increase this count by 1:
                             switchcount ++;
-                        """),format.raw/*494.25*/("""}"""),format.raw/*494.26*/(""" """),format.raw/*494.27*/("""else """),format.raw/*494.32*/("""{"""),format.raw/*494.33*/("""
-                            """),format.raw/*495.29*/("""/* If no switching has been done AND the direction is "asc",
+                        """),format.raw/*496.25*/("""}"""),format.raw/*496.26*/(""" """),format.raw/*496.27*/("""else """),format.raw/*496.32*/("""{"""),format.raw/*496.33*/("""
+                            """),format.raw/*497.29*/("""/* If no switching has been done AND the direction is "asc",
                             set the direction to "desc" and run the while loop again. */
-                            if (switchcount == 0 && dir == "asc") """),format.raw/*497.67*/("""{"""),format.raw/*497.68*/("""
-                                """),format.raw/*498.33*/("""dir = "desc";
+                            if (switchcount == 0 && dir == "asc") """),format.raw/*499.67*/("""{"""),format.raw/*499.68*/("""
+                                """),format.raw/*500.33*/("""dir = "desc";
                                 switching = true;
-                            """),format.raw/*500.29*/("""}"""),format.raw/*500.30*/("""
-                        """),format.raw/*501.25*/("""}"""),format.raw/*501.26*/("""
-                    """),format.raw/*502.21*/("""}"""),format.raw/*502.22*/("""
-                """),format.raw/*503.17*/("""}"""),format.raw/*503.18*/("""
+                            """),format.raw/*502.29*/("""}"""),format.raw/*502.30*/("""
+                        """),format.raw/*503.25*/("""}"""),format.raw/*503.26*/("""
+                    """),format.raw/*504.21*/("""}"""),format.raw/*504.22*/("""
+                """),format.raw/*505.17*/("""}"""),format.raw/*505.18*/("""
 
 
 
-            """),format.raw/*507.13*/("""</script>
+            """),format.raw/*509.13*/("""</script>
 </body>
 </html>
 """)))}))
@@ -549,9 +551,9 @@ Seq[Any](format.raw/*2.46*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/instituteList.scala.html
-                  HASH: d571c277bcc8beb0889f463b20299d585280c873
-                  MATRIX: 432->1|809->47|931->137|942->141|1037->91|1068->134|1096->206|1124->209|1141->218|1179->219|1207->221|1387->373|1416->374|1466->396|1531->433|1560->434|1606->452|1638->456|1667->457|1717->479|1773->507|1802->508|1852->530|1885->535|1914->536|1968->562|2082->648|2111->649|2161->671|2196->678|2225->679|2279->705|2443->841|2472->842|2522->864|2556->870|2585->871|2639->897|2981->1211|3010->1212|3060->1234|3097->1243|3126->1244|3180->1270|3298->1360|3327->1361|3379->1385|3428->1406|3457->1407|3511->1433|4023->1917|4052->1918|4102->1940|4137->1947|4166->1948|4220->1974|4284->2010|4313->2011|4361->2031|4406->2048|4435->2049|4485->2071|4910->2468|4939->2469|4985->2487|5033->2507|5062->2508|5112->2530|5177->2567|5206->2568|5254->2588|5307->2613|5336->2614|5386->2636|5449->2671|5478->2672|5524->2690|5587->2725|5616->2726|5666->2748|5774->2828|5803->2829|5851->2849|5903->2873|5932->2874|5982->2896|6047->2933|6076->2934|6130->2960|6170->2972|6199->2973|6480->3226|6509->3227|6581->3271|6610->3272|6664->3298|6775->3381|6804->3382|6855->3404|6900->3420|6930->3421|6985->3447|7050->3483|7080->3484|7129->3504|7180->3526|7210->3527|7261->3549|7444->3703|7474->3704|7523->3724|7575->3747|7605->3748|7656->3770|7806->3891|7836->3892|7889->3916|7927->3925|7957->3926|8012->3952|8076->3987|8106->3988|8159->4012|8200->4024|8230->4025|8285->4051|8526->4263|8556->4264|8609->4288|8650->4300|8680->4301|8735->4327|8938->4501|8968->4502|9015->4520|9054->4530|9084->4531|9135->4553|9250->4639|9280->4640|9327->4658|9369->4671|9399->4672|9450->4694|9712->4927|9742->4928|9791->4948|9848->4976|9878->4977|9929->4999|10019->5060|10049->5061|10098->5081|10152->5106|10182->5107|10233->5129|10323->5190|10353->5191|10400->5209|10446->5226|10476->5227|10527->5249|10600->5293|10630->5294|10677->5312|10716->5322|10746->5323|10797->5345|10872->5391|10902->5392|10945->5406|15174->9607|15220->9636|15260->9637|15298->9647|15356->9677|15367->9678|15399->9688|15444->9757|15487->9771|15538->9794|15549->9795|15601->9825|15648->9844|15659->9845|15712->9876|15759->9895|15770->9896|15821->9925|15864->9939|15916->9963|15927->9964|15959->9974|16011->9998|16022->9999|16081->10036|16133->10060|16144->10061|16203->10098|16266->10129|16304->10139|17193->11061|17241->11180|17288->11257|17339->11342|17391->11502|17442->11557|17493->11616|17541->11934|17592->11998|17644->12382|17695->12445|17744->12500|17787->12514|19579->14278|19602->14291|19625->14304|19674->14314|19712->14324|19750->14334|19782->14344|20262->14804|20282->14814|20322->14815|20360->14825|20862->15295|20903->15308|20987->15375|21028->15377|21067->15388|21096->15407|21137->15409|21175->15419|21213->15429|21251->15445|21373->15538|21406->15548|21453->15563|21496->15574|21537->15587|21560->15600|21583->15613|21632->15623|21670->15633|21708->15643|21740->15653|22219->16112|22239->16122|22280->16124|22318->16134|22828->16612|22862->16618|24111->17838|24141->17839|24192->17861|24264->17904|24294->17905|24349->17931|24528->18081|24558->18082|24617->18112|25006->18472|25036->18473|25089->18497|25119->18498|25168->18518|25198->18519|25247->18539|25427->18690|25457->18691|25508->18713|25588->18764|25618->18765|25667->18785|25730->18819|25760->18820|25811->18842|25896->18898|25926->18899|25975->18919|26030->18945|26060->18946|26111->18968|26164->18993|26180->18999|26231->19028|26279->19047|26309->19048|26358->19068|26413->19094|26443->19095|26494->19117|26624->19218|26654->19219|26709->19245|26791->19298|26821->19299|26859->19308|26889->19309|26942->19333|26972->19334|27019->19352|27049->19353|27098->19373|27157->19403|27187->19404|27238->19426|27277->19436|27307->19437|27362->19463|27444->19516|27474->19517|27512->19526|27542->19527|27595->19551|27625->19552|27655->19553|27688->19557|27718->19558|27773->19584|27862->19644|27892->19645|27939->19663|27969->19664|28018->19684|28073->19710|28103->19711|28154->19733|28283->19833|28313->19834|28368->19860|28457->19920|28487->19921|28534->19939|28564->19940|28613->19960|28684->20002|28714->20003|28765->20025|28880->20111|28910->20112|28993->20166|29023->20167|29074->20189|29151->20237|29181->20238|29211->20239|29241->20240|29273->20243|29303->20244|29358->20270|29422->20305|29452->20306|29660->20485|29690->20486|29745->20512|29928->20666|29958->20667|30011->20691|30153->20804|30183->20805|30238->20831|30328->20892|30358->20893|30420->20926|30450->20927|30480->20928|31032->21451|31062->21452|31101->21462|31131->21463|31161->21464|31191->21465|31221->21466|31261->21477|31291->21478|31321->21479|31351->21480|31381->21481|31419->21490|31449->21491|31893->21906|31923->21907|31970->21925|32000->21926|32049->21946|32270->22138|32300->22139|32351->22161|32501->22282|32531->22283|32586->22309|32642->22336|32672->22337|32731->22367|32823->22430|32853->22431|32883->22432|32917->22437|32947->22438|33006->22468|33103->22536|33133->22537|33184->22559|33214->22560|33692->23009|33722->23010|33777->23036|34135->23365|34165->23366|34224->23396|34842->23985|34872->23986|34935->24020|35023->24079|35053->24080|35120->24118|35331->24300|35361->24301|35420->24331|35450->24332|35480->24333|35533->24357|35563->24358|35626->24392|35714->24451|35744->24452|35811->24490|36022->24672|36052->24673|36111->24703|36141->24704|36196->24730|36226->24731|36281->24757|36328->24775|36358->24776|36417->24806|36851->25211|36881->25212|36911->25213|36945->25218|36975->25219|37034->25249|37281->25467|37311->25468|37374->25502|37497->25596|37527->25597|37582->25623|37612->25624|37663->25646|37693->25647|37740->25665|37770->25666|37819->25686
-                  LINES: 17->1|22->2|26->5|26->5|29->2|31->4|32->7|33->8|33->8|33->8|34->9|40->15|40->15|41->16|42->17|42->17|43->18|43->18|43->18|44->19|45->20|45->20|46->21|46->21|46->21|47->22|49->24|49->24|50->25|50->25|50->25|51->26|54->29|54->29|55->30|55->30|55->30|56->31|63->38|63->38|64->39|64->39|64->39|65->40|67->42|67->42|69->44|69->44|69->44|70->45|81->56|81->56|82->57|82->57|82->57|83->58|84->59|84->59|86->61|86->61|86->61|87->62|96->71|96->71|97->72|97->72|97->72|98->73|99->74|99->74|101->76|101->76|101->76|102->77|103->78|103->78|104->79|104->79|104->79|105->80|107->82|107->82|109->84|109->84|109->84|110->85|111->86|111->86|114->89|114->89|114->89|120->95|120->95|121->96|121->96|122->97|124->99|124->99|125->100|125->100|125->100|126->101|127->102|127->102|129->104|129->104|129->104|130->105|134->109|134->109|136->111|136->111|136->111|137->112|140->115|140->115|142->117|142->117|142->117|143->118|144->119|144->119|146->121|146->121|146->121|147->122|152->127|152->127|154->129|154->129|154->129|155->130|159->134|159->134|160->135|160->135|160->135|161->136|163->138|163->138|164->139|164->139|164->139|165->140|171->146|171->146|173->148|173->148|173->148|174->149|176->151|176->151|178->153|178->153|178->153|179->154|181->156|181->156|182->157|182->157|182->157|183->158|184->159|184->159|185->160|185->160|185->160|186->161|187->162|187->162|188->163|234->209|234->209|234->209|235->210|235->210|235->210|235->210|236->211|237->212|238->213|238->213|238->213|239->214|239->214|239->214|240->215|240->215|240->215|241->216|242->217|242->217|242->217|243->218|243->218|243->218|244->219|244->219|244->219|246->221|247->222|259->234|260->235|261->236|262->237|263->238|264->239|265->240|266->241|267->242|268->243|269->244|271->246|272->247|304->279|304->279|304->279|304->279|305->280|305->280|305->280|309->284|309->284|309->284|310->285|314->289|316->291|316->291|316->291|317->292|317->292|317->292|318->293|318->293|318->293|318->293|318->293|319->294|320->295|322->297|322->297|322->297|322->297|323->298|323->298|323->298|327->302|327->302|327->302|328->303|332->307|333->308|362->337|362->337|363->338|363->338|363->338|364->339|367->342|367->342|368->343|374->349|374->349|375->350|375->350|376->351|376->351|378->353|383->358|383->358|384->359|385->360|385->360|387->362|387->362|387->362|388->363|389->364|389->364|391->366|391->366|391->366|392->367|392->367|392->367|392->367|393->368|393->368|395->370|395->370|395->370|396->371|398->373|398->373|399->374|399->374|399->374|399->374|399->374|400->375|400->375|401->376|401->376|403->378|403->378|403->378|404->379|404->379|404->379|405->380|405->380|405->380|405->380|405->380|406->381|406->381|406->381|406->381|406->381|407->382|408->383|408->383|409->384|409->384|411->386|411->386|411->386|412->387|414->389|414->389|415->390|416->391|416->391|417->392|417->392|419->394|419->394|419->394|420->395|422->397|422->397|424->399|424->399|425->400|425->400|425->400|425->400|425->400|425->400|425->400|426->401|427->402|427->402|433->408|433->408|434->409|436->411|436->411|438->413|439->414|439->414|440->415|441->416|441->416|441->416|441->416|441->416|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|450->425|458->433|458->433|459->434|459->434|461->436|464->439|464->439|465->440|467->442|467->442|468->443|468->443|468->443|469->444|470->445|470->445|470->445|470->445|470->445|471->446|472->447|472->447|473->448|473->448|483->458|483->458|484->459|489->464|489->464|490->465|498->473|498->473|499->474|499->474|499->474|500->475|503->478|503->478|504->479|504->479|504->479|504->479|504->479|505->480|505->480|505->480|506->481|509->484|509->484|510->485|510->485|511->486|511->486|512->487|512->487|512->487|513->488|519->494|519->494|519->494|519->494|519->494|520->495|522->497|522->497|523->498|525->500|525->500|526->501|526->501|527->502|527->502|528->503|528->503|532->507
+                  HASH: a6d049917d82b702a5c608e895f5c248cb8e5332
+                  MATRIX: 432->1|809->47|931->137|942->141|1037->91|1068->134|1096->206|1124->209|1141->218|1179->219|1207->221|1387->373|1416->374|1466->396|1531->433|1560->434|1606->452|1638->456|1667->457|1717->479|1773->507|1802->508|1852->530|1885->535|1914->536|1968->562|2082->648|2111->649|2161->671|2196->678|2225->679|2279->705|2443->841|2472->842|2522->864|2556->870|2585->871|2639->897|2981->1211|3010->1212|3060->1234|3097->1243|3126->1244|3180->1270|3298->1360|3327->1361|3379->1385|3428->1406|3457->1407|3511->1433|4023->1917|4052->1918|4102->1940|4137->1947|4166->1948|4220->1974|4284->2010|4313->2011|4361->2031|4406->2048|4435->2049|4485->2071|4910->2468|4939->2469|4985->2487|5033->2507|5062->2508|5112->2530|5177->2567|5206->2568|5254->2588|5307->2613|5336->2614|5386->2636|5449->2671|5478->2672|5524->2690|5587->2725|5616->2726|5666->2748|5774->2828|5803->2829|5851->2849|5903->2873|5932->2874|5982->2896|6047->2933|6076->2934|6130->2960|6170->2972|6199->2973|6480->3226|6509->3227|6581->3271|6610->3272|6664->3298|6775->3381|6804->3382|6855->3404|6900->3420|6930->3421|6985->3447|7050->3483|7080->3484|7129->3504|7180->3526|7210->3527|7261->3549|7444->3703|7474->3704|7523->3724|7575->3747|7605->3748|7656->3770|7806->3891|7836->3892|7889->3916|7927->3925|7957->3926|8012->3952|8076->3987|8106->3988|8159->4012|8200->4024|8230->4025|8285->4051|8526->4263|8556->4264|8609->4288|8650->4300|8680->4301|8735->4327|8938->4501|8968->4502|9015->4520|9054->4530|9084->4531|9135->4553|9250->4639|9280->4640|9327->4658|9369->4671|9399->4672|9450->4694|9712->4927|9742->4928|9791->4948|9848->4976|9878->4977|9929->4999|10019->5060|10049->5061|10098->5081|10152->5106|10182->5107|10233->5129|10323->5190|10353->5191|10400->5209|10446->5226|10476->5227|10527->5249|10600->5293|10630->5294|10677->5312|10716->5322|10746->5323|10797->5345|10872->5391|10902->5392|10945->5406|15171->9604|15217->9633|15257->9634|15295->9644|15353->9674|15364->9675|15398->9687|15443->9756|15486->9770|15537->9793|15548->9794|15584->9808|15627->9822|15679->9846|15690->9847|15724->9859|15776->9883|15787->9884|15826->9901|15896->9943|15907->9944|15958->9973|16005->9991|16053->10011|16064->10012|16119->10045|16162->10059|16225->10090|16263->10100|17152->11022|17200->11141|17247->11218|17298->11303|17350->11463|17401->11518|17452->11577|17500->11895|17551->11959|17603->12343|17654->12406|17703->12461|17746->12475|19538->14239|19561->14252|19584->14265|19633->14275|19671->14285|19709->14295|19741->14305|20221->14765|20241->14775|20281->14776|20319->14786|20821->15256|20862->15269|20946->15336|20987->15338|21026->15349|21055->15368|21096->15370|21134->15380|21172->15390|21210->15406|21332->15499|21365->15509|21412->15524|21455->15535|21496->15548|21519->15561|21542->15574|21591->15584|21629->15594|21667->15604|21699->15614|22178->16073|22198->16083|22239->16085|22277->16095|22787->16573|22821->16579|24070->17799|24100->17800|24151->17822|24223->17865|24253->17866|24308->17892|24487->18042|24517->18043|24576->18073|24965->18433|24995->18434|25048->18458|25078->18459|25127->18479|25157->18480|25206->18500|25386->18651|25416->18652|25467->18674|25547->18725|25577->18726|25626->18746|25689->18780|25719->18781|25770->18803|25855->18859|25885->18860|25934->18880|25989->18906|26019->18907|26070->18929|26123->18954|26139->18960|26190->18989|26238->19008|26268->19009|26317->19029|26372->19055|26402->19056|26453->19078|26583->19179|26613->19180|26668->19206|26745->19254|26775->19255|26813->19264|26843->19265|26896->19289|26926->19290|26973->19308|27003->19309|27052->19329|27111->19359|27141->19360|27192->19382|27231->19392|27261->19393|27316->19419|27395->19469|27425->19470|27463->19479|27493->19480|27546->19504|27576->19505|27606->19506|27639->19510|27669->19511|27724->19537|27813->19597|27843->19598|27890->19616|27920->19617|27969->19637|28024->19663|28054->19664|28105->19686|28234->19786|28264->19787|28319->19813|28408->19873|28438->19874|28485->19892|28515->19893|28564->19913|28635->19955|28665->19956|28716->19978|28831->20064|28861->20065|28944->20119|28974->20120|29025->20142|29102->20190|29132->20191|29162->20192|29192->20193|29224->20196|29254->20197|29309->20223|29373->20258|29403->20259|29611->20438|29641->20439|29696->20465|29879->20619|29909->20620|29962->20644|30104->20757|30134->20758|30189->20784|31189->21755|31219->21756|31266->21774|31296->21775|31345->21795|31566->21987|31596->21988|31647->22010|31797->22131|31827->22132|31882->22158|31938->22185|31968->22186|32027->22216|32119->22279|32149->22280|32179->22281|32213->22286|32243->22287|32302->22317|32399->22385|32429->22386|32480->22408|32510->22409|32988->22858|33018->22859|33073->22885|33431->23214|33461->23215|33520->23245|34138->23834|34168->23835|34231->23869|34319->23928|34349->23929|34416->23967|34627->24149|34657->24150|34716->24180|34746->24181|34776->24182|34829->24206|34859->24207|34922->24241|35010->24300|35040->24301|35107->24339|35318->24521|35348->24522|35407->24552|35437->24553|35492->24579|35522->24580|35577->24606|35624->24624|35654->24625|35713->24655|36147->25060|36177->25061|36207->25062|36241->25067|36271->25068|36330->25098|36577->25316|36607->25317|36670->25351|36793->25445|36823->25446|36878->25472|36908->25473|36959->25495|36989->25496|37036->25514|37066->25515|37115->25535
+                  LINES: 17->1|22->2|26->5|26->5|29->2|31->4|32->7|33->8|33->8|33->8|34->9|40->15|40->15|41->16|42->17|42->17|43->18|43->18|43->18|44->19|45->20|45->20|46->21|46->21|46->21|47->22|49->24|49->24|50->25|50->25|50->25|51->26|54->29|54->29|55->30|55->30|55->30|56->31|63->38|63->38|64->39|64->39|64->39|65->40|67->42|67->42|69->44|69->44|69->44|70->45|81->56|81->56|82->57|82->57|82->57|83->58|84->59|84->59|86->61|86->61|86->61|87->62|96->71|96->71|97->72|97->72|97->72|98->73|99->74|99->74|101->76|101->76|101->76|102->77|103->78|103->78|104->79|104->79|104->79|105->80|107->82|107->82|109->84|109->84|109->84|110->85|111->86|111->86|114->89|114->89|114->89|120->95|120->95|121->96|121->96|122->97|124->99|124->99|125->100|125->100|125->100|126->101|127->102|127->102|129->104|129->104|129->104|130->105|134->109|134->109|136->111|136->111|136->111|137->112|140->115|140->115|142->117|142->117|142->117|143->118|144->119|144->119|146->121|146->121|146->121|147->122|152->127|152->127|154->129|154->129|154->129|155->130|159->134|159->134|160->135|160->135|160->135|161->136|163->138|163->138|164->139|164->139|164->139|165->140|171->146|171->146|173->148|173->148|173->148|174->149|176->151|176->151|178->153|178->153|178->153|179->154|181->156|181->156|182->157|182->157|182->157|183->158|184->159|184->159|185->160|185->160|185->160|186->161|187->162|187->162|188->163|234->209|234->209|234->209|235->210|235->210|235->210|235->210|236->211|237->212|238->213|238->213|238->213|239->214|240->215|240->215|240->215|241->216|241->216|241->216|243->218|243->218|243->218|244->219|245->220|245->220|245->220|246->221|248->223|249->224|261->236|262->237|263->238|264->239|265->240|266->241|267->242|268->243|269->244|270->245|271->246|273->248|274->249|306->281|306->281|306->281|306->281|307->282|307->282|307->282|311->286|311->286|311->286|312->287|316->291|318->293|318->293|318->293|319->294|319->294|319->294|320->295|320->295|320->295|320->295|320->295|321->296|322->297|324->299|324->299|324->299|324->299|325->300|325->300|325->300|329->304|329->304|329->304|330->305|334->309|335->310|364->339|364->339|365->340|365->340|365->340|366->341|369->344|369->344|370->345|376->351|376->351|377->352|377->352|378->353|378->353|380->355|385->360|385->360|386->361|387->362|387->362|389->364|389->364|389->364|390->365|391->366|391->366|393->368|393->368|393->368|394->369|394->369|394->369|394->369|395->370|395->370|397->372|397->372|397->372|398->373|400->375|400->375|401->376|401->376|401->376|401->376|401->376|402->377|402->377|403->378|403->378|405->380|405->380|405->380|406->381|406->381|406->381|407->382|407->382|407->382|407->382|407->382|408->383|408->383|408->383|408->383|408->383|409->384|410->385|410->385|411->386|411->386|413->388|413->388|413->388|414->389|416->391|416->391|417->392|418->393|418->393|419->394|419->394|421->396|421->396|421->396|422->397|424->399|424->399|426->401|426->401|427->402|427->402|427->402|427->402|427->402|427->402|427->402|428->403|429->404|429->404|435->410|435->410|436->411|438->413|438->413|440->415|441->416|441->416|442->417|460->435|460->435|461->436|461->436|463->438|466->441|466->441|467->442|469->444|469->444|470->445|470->445|470->445|471->446|472->447|472->447|472->447|472->447|472->447|473->448|474->449|474->449|475->450|475->450|485->460|485->460|486->461|491->466|491->466|492->467|500->475|500->475|501->476|501->476|501->476|502->477|505->480|505->480|506->481|506->481|506->481|506->481|506->481|507->482|507->482|507->482|508->483|511->486|511->486|512->487|512->487|513->488|513->488|514->489|514->489|514->489|515->490|521->496|521->496|521->496|521->496|521->496|522->497|524->499|524->499|525->500|527->502|527->502|528->503|528->503|529->504|529->504|530->505|530->505|534->509
                   -- GENERATED --
               */
           

@@ -15,15 +15,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object instituteIndex extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template8[Map[String, Any],Map[String, Any],Int,Map[String, Any],Map[String, Any],Map[String, Any],Map[String, Any],Boolean,play.twirl.api.HtmlFormat.Appendable] {
+object instituteIndex extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template7[Map[String, Any],String,String,String,String,Map[String, Any],Boolean,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*3.2*/(jsonMap: Map[String,Any],stu_name: Map[String,Any],stu_Id:Int,jsonMap1: Map[String,Any],jsonMap2: Map[String,Any],jsonMap3: Map[String,Any],jsonMap4: Map[String,Any],updateView:Boolean):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*3.2*/(jsonMap: Map[String,Any],name:String,registration:String,email:String,contact:String,address:Map[String,Any],updateView:Boolean):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*3.188*/("""
+Seq[Any](format.raw/*3.131*/("""
 
 """),format.raw/*5.1*/("""<html>
 <head>
@@ -116,122 +116,68 @@ Seq[Any](format.raw/*3.188*/("""
 
 <div class="container">
     <form method="get" action="/instituteForm">
-
-        <h4> Previous Institute Details </h4>
-
-        <!-- ---------------------- Name OF Student -------------------------------------         -->
-        <h4>Name of Student</h4>
-        <label >First name:</label>
-        <input type="text" name="student_first_name" placeholder= "firstName" value='"""),_display_(/*102.87*/stu_name/*102.95*/.get("first_name")),format.raw/*102.113*/("""'/>
-        <label>Middle name:</label>
-        <input type="text" name="student_mid_name" placeholder= "middleName" value='"""),_display_(/*104.86*/stu_name/*104.94*/.get("middle_name")),format.raw/*104.113*/("""' />
-        <label >Last name:</label>
-        <input type="text" name="student_last_name" placeholder= "lastName" value='"""),_display_(/*106.85*/stu_name/*106.93*/.get("last_name")),format.raw/*106.110*/("""'/>
-
-        <br>
-        <h4>Student Registration Id</h4>
-        <label>Registration Id:</label>
-        <input type="number" name="stu_registration_Id" placeholder="student registration Id" value='"""),_display_(/*111.103*/stu_Id),format.raw/*111.109*/("""'>
+        <h3>Institute Details</h3>
         <br>
         <hr>
+
         <label> Name </label>
-        <input type="text" name="prev_name" placeholder= "name" id="prev_name3" value='"""),_display_(/*115.89*/jsonMap1/*115.97*/.get("Name")),format.raw/*115.109*/("""' size="42" required />
-        <label> Unique Code: </label>
-        <input type="text" name="prev_code" placeholder="code" id="prev_code4" pattern="[A-Za-z0-9]"""),format.raw/*117.100*/("""{"""),format.raw/*117.101*/("""}"""),format.raw/*117.102*/("""" value='"""),_display_(/*117.112*/jsonMap1/*117.120*/.get("Unique Code")),format.raw/*117.139*/("""' title="Alphabet and Digits only" size="25" required />
+        <input type="text" name="institute_name" placeholder= "name" id="institute_name" value='"""),_display_(/*101.98*/name),format.raw/*101.102*/("""' size="42" required />
 
-        <label>Email Id:</label>
-        <input type="email" placeholder="Email" name="prev_email" id="prev_email3" size="42" value='"""),_display_(/*120.102*/jsonMap1/*120.110*/.get("Email ID")),format.raw/*120.126*/("""' title="Type a valid Email" required>
-
-        <label> Contact Number: </label>
-        <input type="text" name="prev_contact" placeholder="ContactNumber" pattern="[0-9]"""),format.raw/*123.90*/("""{"""),format.raw/*123.91*/("""10"""),format.raw/*123.93*/("""}"""),format.raw/*123.94*/("""" value='"""),_display_(/*123.104*/jsonMap1/*123.112*/.get("Contact Number")),format.raw/*123.134*/("""' title="Ten digits code" id="prev_contact" required />
+        <label> Registration Code: </label>
+        <input type="text" name="institute_code" placeholder="code" id="institute_code" pattern="[A-Za-z0-9]"""),format.raw/*104.109*/("""{"""),format.raw/*104.110*/("""}"""),format.raw/*104.111*/("""" value='"""),_display_(/*104.121*/registration),format.raw/*104.133*/("""' title="Alphabet and Digits only" size="25" required />
 
         <br>
+        <label>Email Id:</label>
+        <input type="email" placeholder="Email" name="institute_email" id="institute_email" size="42" value='"""),_display_(/*108.111*/email),format.raw/*108.116*/("""' title="Type a valid Email" required>
+
+        <label> Contact Number: </label>
+        <input type="text" name="institute_contact" placeholder="ContactNumber" pattern="[0-9]"""),format.raw/*111.95*/("""{"""),format.raw/*111.96*/("""10"""),format.raw/*111.98*/("""}"""),format.raw/*111.99*/("""" value='"""),_display_(/*111.109*/contact),format.raw/*111.116*/("""' title="Ten digits code" id="institute_contact" required />
+
+        <br>
+        <hr>
         <label>
-            Address:
+            <h4>Address: </h4>
             <br>
 
             <label> Line 1: </label>
-            <input type="text" name="prev_line1" id="prev_line3" placeholder= "Line 1" value='"""),_display_(/*131.96*/jsonMap3/*131.104*/.get("Line 1")),format.raw/*131.118*/("""' size="49" required />
+            <input type="text" name="institute_line1" id="institute_line1" placeholder= "Line 1" value='"""),_display_(/*120.106*/address/*120.113*/.get("Line 1")),format.raw/*120.127*/("""' size="49" required />
 
             <label> Line 2: </label>
-            <input type="text" name="prev_line2" id="prev_line4" placeholder= "Line 2" size="49" value='"""),_display_(/*134.106*/jsonMap3/*134.114*/.get("Line 2")),format.raw/*134.128*/("""' required />
-
-            <label> City: </label>
-            <input type="text" name="prev_city" id="prev_city2" value='"""),_display_(/*137.73*/jsonMap3/*137.81*/.get("City")),format.raw/*137.93*/("""' placeholder= "City" required />
+            <input type="text" name="institute_line2" id="institute_line2" placeholder= "Line 2" size="49" value='"""),_display_(/*123.116*/address/*123.123*/.get("Line 2")),format.raw/*123.137*/("""' required />
 
             <br>
+            <label> City: </label>
+            <input type="text" name="institute_city" id="institute_city2" value='"""),_display_(/*127.83*/address/*127.90*/.get("City")),format.raw/*127.102*/("""' placeholder= "City" required />
+
             <label> District: </label>
-            <input type="text" name="prev_district" id="prev_district1" value='"""),_display_(/*141.81*/jsonMap3/*141.89*/.get("District")),format.raw/*141.105*/("""' placeholder= "District" size="25" required />
+            <input type="text" name="institute_district" id="institute_district1" value='"""),_display_(/*130.91*/address/*130.98*/.get("District")),format.raw/*130.114*/("""' placeholder= "District" size="25" required />
 
             <label> State: </label>
-            <input type="text" name="prev_state" id="prev_state1" value='"""),_display_(/*144.75*/jsonMap3/*144.83*/.get("State")),format.raw/*144.96*/("""' placeholder= "State" size="25" required />
+            <input type="text" name="institute_state" id="institute_state1" value='"""),_display_(/*133.85*/address/*133.92*/.get("State")),format.raw/*133.105*/("""' placeholder= "State" size="25" required />
 
+            <br>
             <label> Country: </label>
-            <input type="text" name="prev_country" id="prev_country1"  value='"""),_display_(/*147.80*/jsonMap3/*147.88*/.get("Country")),format.raw/*147.103*/("""' placeholder= "Country" size="25" required />
+            <input type="text" name="institute_country" id="institute_country1"  value='"""),_display_(/*137.90*/address/*137.97*/.get("Country")),format.raw/*137.112*/("""' placeholder= "Country" size="25" required />
 
             <label> Pin-code: </label>
-            <input type="number" name="prev_pin" id="prev_pin1" value='"""),_display_(/*150.73*/jsonMap3/*150.81*/.get("Pin-code")),format.raw/*150.97*/("""' placeholder= "PinCode" size="25" required />
+            <input type="number" name="institute_pin" id="institute_pin1" value='"""),_display_(/*140.83*/address/*140.90*/.get("Pin-code")),format.raw/*140.106*/("""' placeholder= "PinCode" size="25" required />
 
         </label>
 
         <br>
 
-        <label> Passing Year: </label>
-        <input type="date" name="prev_year"  id="prev_year1" value='"""),_display_(/*157.70*/jsonMap1/*157.78*/.get("Passing year")),format.raw/*157.98*/("""'
-               min="2010-01-01" max="2022-07-31" required />
-        <h4> Current Institute Details </h4>
-
-
-        <label> Name </label>
-        <input type="text" name="current_name" placeholder= "name" id="current_name1" value='"""),_display_(/*163.95*/jsonMap2/*163.103*/.get("Name")),format.raw/*163.115*/("""' size="42" required />
-
-        <label> Unique Code: </label>
-        <input type="text" name="current_code" placeholder="code" size="25" id="current_code4" value='"""),_display_(/*166.104*/jsonMap2/*166.112*/.get("Unique Code")),format.raw/*166.131*/("""' pattern="[A-Za-z0-9]"""),format.raw/*166.153*/("""{"""),format.raw/*166.154*/("""}"""),format.raw/*166.155*/("""" title="Alphabet and Digits only" required />
-
-        <label>Email Id:</label>
-        <input type="email" placeholder="Email" name="current_email" size="42"   title="Type a valid Email"  value='"""),_display_(/*169.118*/jsonMap2/*169.126*/.get("Email ID")),format.raw/*169.142*/("""' id="current_email1" required>
-
-        <label> Contact Number: </label>
-        <input type="text" name="current_contact" id="current_contact1" pattern="[0-9]"""),format.raw/*172.87*/("""{"""),format.raw/*172.88*/("""10"""),format.raw/*172.90*/("""}"""),format.raw/*172.91*/("""" value='"""),_display_(/*172.101*/jsonMap2/*172.109*/.get("Contact Number")),format.raw/*172.131*/("""' title="Ten digits code" placeholder="ContactNumber"  required />
-
-        <br>
-        <label>
-            Address:
-
-            <br>
-            <label> Line 1: </label>
-            <input type="text" name="current_line1" id="current_line3" value='"""),_display_(/*180.80*/jsonMap4/*180.88*/.get("Line 1")),format.raw/*180.102*/("""' placeholder= "Line 1" size="49" required />
-
-            <label> Line 2: </label>
-            <input type="text" name="current_line2" id="current_line4" value='"""),_display_(/*183.80*/jsonMap4/*183.88*/.get("Line 2")),format.raw/*183.102*/("""' placeholder= "Line 2" size="49" required />
-
-            <label> City: </label>
-            <input type="text" name="current_city" id="current_city1" value='"""),_display_(/*186.79*/jsonMap4/*186.87*/.get("City")),format.raw/*186.99*/("""' placeholder= "City" required />
-
-            <br>
-            <label> District: </label>
-            <input type="text" name="current_district" id="current_district1" value='"""),_display_(/*190.87*/jsonMap4/*190.95*/.get("District")),format.raw/*190.111*/("""' placeholder= "District" title="Alphabet and Digits only" size="25" required />
-            <label> State: </label>
-            <input type="text" name="current_state" id="current_state1" value='"""),_display_(/*192.81*/jsonMap4/*192.89*/.get("State")),format.raw/*192.102*/("""' placeholder= "State"  size="25" required />
-
-            <label> Country: </label>
-            <input type="text" name="current_country" id="current_country1" value='"""),_display_(/*195.85*/jsonMap4/*195.93*/.get("Country")),format.raw/*195.108*/("""' placeholder= "Country" size="25" required />
-
-            <label> Pin-code: </label>
-            <input type="number" name="current_pin" id="current_pin1" value='"""),_display_(/*198.79*/jsonMap4/*198.87*/.get("Pin-code")),format.raw/*198.103*/("""' placeholder= "PinCode" size="25" required />
-
         </label>
-        <input type="hidden"  name="get_id" value="""),_display_(/*201.52*/jsonMap/*201.59*/.get("$oid")),format.raw/*201.71*/(""">
+        <input type="hidden"  name="get_id" value="""),_display_(/*147.52*/jsonMap/*147.59*/.get("$oid")),format.raw/*147.71*/(""">
 
         <br>
 
-        """),_display_(/*205.10*/if(updateView)/*205.24*/{_display_(Seq[Any](format.raw/*205.25*/("""
-        """),format.raw/*206.9*/("""<input type="submit" name="submit" value="Submit" formaction="/instituteUpdate" class="btn">
-        """)))}/*207.11*/else/*207.16*/{_display_(Seq[Any](format.raw/*207.17*/("""
-        """),format.raw/*208.9*/("""<input type="submit" name="Submit" value="Submit" class="btn" />
-        """)))}),format.raw/*209.10*/("""
+        """),_display_(/*151.10*/if(updateView)/*151.24*/{_display_(Seq[Any](format.raw/*151.25*/("""
+        """),format.raw/*152.9*/("""<input type="submit" name="submit" value="Submit" formaction="/instituteUpdate" class="btn">
+        """)))}/*153.11*/else/*153.16*/{_display_(Seq[Any](format.raw/*153.17*/("""
+        """),format.raw/*154.9*/("""<input type="submit" name="Submit" value="Submit" class="btn" />
+        """)))}),format.raw/*155.10*/("""
 
-        """),format.raw/*211.9*/("""<input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
+        """),format.raw/*157.9*/("""<input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
 
     </form>
 </div>
@@ -242,9 +188,9 @@ Seq[Any](format.raw/*3.188*/("""
     }
   }
 
-  def render(jsonMap:Map[String, Any],stu_name:Map[String, Any],stu_Id:Int,jsonMap1:Map[String, Any],jsonMap2:Map[String, Any],jsonMap3:Map[String, Any],jsonMap4:Map[String, Any],updateView:Boolean): play.twirl.api.HtmlFormat.Appendable = apply(jsonMap,stu_name,stu_Id,jsonMap1,jsonMap2,jsonMap3,jsonMap4,updateView)
+  def render(jsonMap:Map[String, Any],name:String,registration:String,email:String,contact:String,address:Map[String, Any],updateView:Boolean): play.twirl.api.HtmlFormat.Appendable = apply(jsonMap,name,registration,email,contact,address,updateView)
 
-  def f:((Map[String, Any],Map[String, Any],Int,Map[String, Any],Map[String, Any],Map[String, Any],Map[String, Any],Boolean) => play.twirl.api.HtmlFormat.Appendable) = (jsonMap,stu_name,stu_Id,jsonMap1,jsonMap2,jsonMap3,jsonMap4,updateView) => apply(jsonMap,stu_name,stu_Id,jsonMap1,jsonMap2,jsonMap3,jsonMap4,updateView)
+  def f:((Map[String, Any],String,String,String,String,Map[String, Any],Boolean) => play.twirl.api.HtmlFormat.Appendable) = (jsonMap,name,registration,email,contact,address,updateView) => apply(jsonMap,name,registration,email,contact,address,updateView)
 
   def ref: this.type = this
 
@@ -254,9 +200,9 @@ Seq[Any](format.raw/*3.188*/("""
               /*
                   -- GENERATED --
                   SOURCE: app/views/instituteIndex.scala.html
-                  HASH: 864fcf6f9b24063fedfffd28a8b5ea750cff5bf7
-                  MATRIX: 845->5|1127->191|1157->195|1298->309|1326->310|1363->320|1560->490|1588->491|1617->493|1648->497|1676->498|1707->502|1813->581|1841->582|1870->584|1902->589|1930->590|1961->594|2097->703|2125->704|2154->706|2193->717|2222->718|2253->722|2302->744|2330->745|2363->751|2393->754|2421->755|2452->759|2531->811|2559->812|2588->814|2620->819|2648->820|2679->824|2721->839|2749->840|2778->842|2825->861|2854->862|2885->866|3060->1014|3088->1015|3117->1017|3147->1020|3175->1021|3206->1025|3334->1126|3362->1127|3393->1131|3423->1134|3451->1135|3482->1139|3523->1153|3551->1154|3582->1158|3614->1163|3642->1164|3673->1168|3806->1274|3834->1275|3865->1279|3904->1290|3933->1291|3964->1295|4016->1320|4044->1321|4073->1323|4117->1340|4145->1341|4182->1351|4275->1417|4303->1418|4340->1428|4370->1431|4398->1432|4435->1442|4482->1462|4510->1463|4545->1471|4987->1885|5005->1893|5046->1911|5201->2038|5219->2046|5261->2065|5415->2191|5433->2199|5473->2216|5708->2422|5737->2428|5916->2579|5934->2587|5969->2599|6162->2762|6193->2763|6224->2764|6263->2774|6282->2782|6324->2801|6548->2996|6567->3004|6606->3020|6808->3193|6838->3194|6869->3196|6899->3197|6938->3207|6957->3215|7002->3237|7295->3502|7314->3510|7351->3524|7550->3694|7569->3702|7606->3716|7759->3841|7777->3849|7811->3861|8014->4036|8032->4044|8071->4060|8261->4222|8279->4230|8314->4243|8508->4409|8526->4417|8564->4432|8754->4594|8772->4602|8810->4618|9033->4813|9051->4821|9093->4841|9361->5081|9380->5089|9415->5101|9613->5270|9632->5278|9674->5297|9726->5319|9757->5320|9788->5321|10018->5522|10037->5530|10076->5546|10268->5709|10298->5710|10329->5712|10359->5713|10398->5723|10417->5731|10462->5753|10750->6013|10768->6021|10805->6035|10999->6201|11017->6209|11054->6223|11245->6386|11263->6394|11297->6406|11506->6587|11524->6595|11563->6611|11790->6810|11808->6818|11844->6831|12044->7003|12062->7011|12100->7026|12296->7194|12314->7202|12353->7218|12500->7337|12517->7344|12551->7356|12609->7386|12633->7400|12673->7401|12711->7411|12834->7515|12848->7520|12888->7521|12926->7531|13033->7606|13073->7618
-                  LINES: 21->3|26->3|28->5|32->9|32->9|33->10|40->17|40->17|41->18|41->18|41->18|42->19|44->21|44->21|45->22|45->22|45->22|46->23|51->28|51->28|52->29|52->29|52->29|53->30|57->34|57->34|60->37|60->37|60->37|61->38|63->40|63->40|64->41|64->41|64->41|65->42|66->43|66->43|67->44|67->44|67->44|68->45|75->52|75->52|76->53|76->53|76->53|77->54|82->59|82->59|84->61|84->61|84->61|85->62|86->63|86->63|88->65|88->65|88->65|89->66|94->71|94->71|96->73|96->73|96->73|97->74|98->75|98->75|99->76|101->78|101->78|102->79|104->81|104->81|107->84|107->84|107->84|108->85|109->86|109->86|113->90|125->102|125->102|125->102|127->104|127->104|127->104|129->106|129->106|129->106|134->111|134->111|138->115|138->115|138->115|140->117|140->117|140->117|140->117|140->117|140->117|143->120|143->120|143->120|146->123|146->123|146->123|146->123|146->123|146->123|146->123|154->131|154->131|154->131|157->134|157->134|157->134|160->137|160->137|160->137|164->141|164->141|164->141|167->144|167->144|167->144|170->147|170->147|170->147|173->150|173->150|173->150|180->157|180->157|180->157|186->163|186->163|186->163|189->166|189->166|189->166|189->166|189->166|189->166|192->169|192->169|192->169|195->172|195->172|195->172|195->172|195->172|195->172|195->172|203->180|203->180|203->180|206->183|206->183|206->183|209->186|209->186|209->186|213->190|213->190|213->190|215->192|215->192|215->192|218->195|218->195|218->195|221->198|221->198|221->198|224->201|224->201|224->201|228->205|228->205|228->205|229->206|230->207|230->207|230->207|231->208|232->209|234->211
+                  HASH: 8566926d70ab574a2f01e4150ab6cc3120fc19b5
+                  MATRIX: 801->5|1026->134|1056->138|1197->252|1225->253|1262->263|1459->433|1487->434|1516->436|1547->440|1575->441|1606->445|1712->524|1740->525|1769->527|1801->532|1829->533|1860->537|1996->646|2024->647|2053->649|2092->660|2121->661|2152->665|2201->687|2229->688|2262->694|2292->697|2320->698|2351->702|2430->754|2458->755|2487->757|2519->762|2547->763|2578->767|2620->782|2648->783|2677->785|2724->804|2753->805|2784->809|2959->957|2987->958|3016->960|3046->963|3074->964|3105->968|3233->1069|3261->1070|3292->1074|3322->1077|3350->1078|3381->1082|3422->1096|3450->1097|3481->1101|3513->1106|3541->1107|3572->1111|3705->1217|3733->1218|3764->1222|3803->1233|3832->1234|3863->1238|3915->1263|3943->1264|3972->1266|4016->1283|4044->1284|4081->1294|4174->1360|4202->1361|4239->1371|4269->1374|4297->1375|4334->1385|4381->1405|4409->1406|4444->1414|4769->1711|4796->1715|5006->1895|5037->1896|5068->1897|5107->1907|5142->1919|5389->2137|5417->2142|5624->2320|5654->2321|5685->2323|5715->2324|5754->2334|5784->2341|6117->2645|6135->2652|6172->2666|6381->2846|6399->2853|6436->2867|6617->3020|6634->3027|6669->3039|6864->3206|6881->3213|6920->3229|7120->3401|7137->3408|7173->3421|7395->3615|7412->3622|7450->3637|7650->3809|7667->3816|7706->3832|7889->3987|7906->3994|7940->4006|7998->4036|8022->4050|8062->4051|8100->4061|8223->4165|8237->4170|8277->4171|8315->4181|8422->4256|8462->4268
+                  LINES: 21->3|26->3|28->5|32->9|32->9|33->10|40->17|40->17|41->18|41->18|41->18|42->19|44->21|44->21|45->22|45->22|45->22|46->23|51->28|51->28|52->29|52->29|52->29|53->30|57->34|57->34|60->37|60->37|60->37|61->38|63->40|63->40|64->41|64->41|64->41|65->42|66->43|66->43|67->44|67->44|67->44|68->45|75->52|75->52|76->53|76->53|76->53|77->54|82->59|82->59|84->61|84->61|84->61|85->62|86->63|86->63|88->65|88->65|88->65|89->66|94->71|94->71|96->73|96->73|96->73|97->74|98->75|98->75|99->76|101->78|101->78|102->79|104->81|104->81|107->84|107->84|107->84|108->85|109->86|109->86|113->90|124->101|124->101|127->104|127->104|127->104|127->104|127->104|131->108|131->108|134->111|134->111|134->111|134->111|134->111|134->111|143->120|143->120|143->120|146->123|146->123|146->123|150->127|150->127|150->127|153->130|153->130|153->130|156->133|156->133|156->133|160->137|160->137|160->137|163->140|163->140|163->140|170->147|170->147|170->147|174->151|174->151|174->151|175->152|176->153|176->153|176->153|177->154|178->155|180->157
                   -- GENERATED --
               */
           

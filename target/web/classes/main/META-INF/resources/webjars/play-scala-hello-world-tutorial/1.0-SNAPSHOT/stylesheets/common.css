@@ -1,0 +1,30 @@
+.btn-select{
+    position: relative;
+}
+
+button#insertBtn:hover::after {
+    content: "Insert";
+    position: absolute;
+    top: -24px;
+    right: 160px;
+    color: black;
+    padding: 3px;
+}
+
+button#updateBtn:hover::after {
+    content: "Update";
+    position: absolute;
+    top: -24px;
+    right: 80px;
+    color: black;
+    padding: 3px;
+}
+
+button#deleteBtn:hover::after {
+    content: "Delete";
+    position: absolute;
+    top: -24px;
+    right: 6px;
+    color: black;
+    padding: 3px;
+}

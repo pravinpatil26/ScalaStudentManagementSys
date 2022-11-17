@@ -22,7 +22,7 @@ import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 case class AdmissionStudent(_id : Option[Map[String,String]], aadhar: Option[String], name :Option[Map[String,String]], branch: Option[String], year: Option[String])
 case class ExamStudent(_id : Option[Map[String,String]], prn: Option[String], name: Option[Map[String,String]], branch: Option[String])
 case class StudentBasic(_id : Option[Map[String,String]], aadhar: Option[Map[String, String]], name: Option[Map[String,String]], studentDOB: Option[Map[String,String]])
-case class StudentInstitute(_id : Option[Map[String,String]],studentName: Option[Map[String, String]], studentId: Option[String], prevInstituteCode: Option[Map[String, String]],currInstituteCode: Option[Map[String, String]])
+case class StudentInstitute(_id : Option[Map[String,String]],instituteName: Option[String], instituteContact: Option[String],instituteId:Option[String],instituteAddress: Option[Map[String, String]])
 
 @Singleton
 class Application @Inject()(cc:ControllerComponents) extends AbstractController (cc) {
@@ -472,7 +472,8 @@ def deleterecord(prn:String)=Action{
     )
     var str = collection.insertOne(student_details).results()
 
-    Ok(s"Student admission details added successfully!!!")
+    //Ok(s"Student admission details added successfully!!!")
+    Redirect(routes.Application.admissionStudentList(0))
   }
 
 //  def admissionDelete()=Action{
@@ -493,7 +494,7 @@ def deleterecord(prn:String)=Action{
 
     if (ch == 1) {
       collection.deleteOne(equal("aadhar_card_no", student_aadhaar)).printHeadResult()
-      Ok("Deleted Successfully!")
+      Redirect(routes.Application.admissionStudentList(0))
     }
     else {
       Ok("Enter correct Aadhar card no")
@@ -1086,13 +1087,13 @@ def deleterecord(prn:String)=Action{
     demo = demo.empty
     var n: Int = 0
     var updateView = false
-    Ok(views.html.instituteIndex(demo,demo,n,demo,demo,demo,demo,updateView))
+    var s : String = null
+    Ok(views.html.instituteIndex(demo,s,s,s,s,demo,updateView))
 
   }
 
-  def instituteGetValues(student_first_name:String,student_mid_name:String,student_last_name:String,stu_registration_id:Int,
-                         prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String,
-                         current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String
+  def instituteGetValues(institute_name:String,institute_code:String,institute_email:String,institute_contact:String,
+                         institute_line1:String,institute_line2:String,institute_city:String,institute_district:String,institute_state:String,institute_country:String,institute_pin:Int
                         ): Action[AnyContent] = Action {
     val uri: String = "mongodb://localhost:27017"
     val mongoClient = MongoClient(uri)
@@ -1101,25 +1102,20 @@ def deleterecord(prn:String)=Action{
     var c=collection.estimatedDocumentCount().headResult().toInt
     println("connected")
     c = c+1
-    val stuName: Document = Document("first_name"->student_first_name, "middle_name"-> student_mid_name, "last_name"->student_last_name)
-    val stuRegistrationId: Document = Document("stu_registration_id"->stu_registration_id)
-    val pin = prev_pin.toInt
-    val add: Document = Document("Line 1" -> prev_line1, "Line 2" -> prev_line2, "City" -> prev_city, "District" -> prev_district, "State" -> prev_state, "Country" -> prev_country, "Pin-code" -> pin)
-    val prev_doc: Document = Document("Name" -> prev_name, "Unique Code" -> prev_code, "Email ID" -> prev_email, "Contact Number" -> prev_contact, "Address" -> add, "Passing year" -> prev_year)
-    val current_pin1 = current_pin.toInt
-    val current_add: Document = Document("Line 1" -> current_line1, "Line 2" -> current_line2, "City" -> current_city, "District" -> current_district, "State" -> current_state, "Country" -> current_country, "Pin-code" -> current_pin1)
-    val current_doc: Document = Document("Name" -> current_name, "Unique Code" -> current_code, "Email ID" -> current_email, "Contact Number" -> current_contact, "Address" -> current_add)
-    val doc: Document = Document("student_name"->stuName,"stu_registration_id"->stuRegistrationId,"Previous Institute Details" -> prev_doc, "Current Institute Details" -> current_doc, "Count" -> c)
-    collection.insertOne(doc).results()
+//    val pin = institute_pin.toInt
+    val address: Document = Document("Line 1" -> institute_line1, "Line 2" -> institute_line2, "City" -> institute_city, "District" -> institute_district, "State" -> institute_state, "Country" -> institute_country, "Pin-code" -> institute_pin)
+    val instituteInfo: Document = Document("Name" -> institute_name, "Registration_Id" -> institute_code, "Email_Id" -> institute_email, "Contact_Number" -> institute_contact,"Address" -> address)
+
+    collection.insertOne(instituteInfo).results()
 
     println("inserted....")
     Ok("Done...")
   }
 
 
-  def instituteUpdate(student_first_name:String,student_mid_name:String,student_last_name:String,stu_registration_id:Int,
-                      prev_name: String, prev_code: String, prev_email: String, prev_contact: String, prev_line1: String, prev_line2: String, prev_city: String, prev_district: String, prev_state: String, prev_country: String, prev_pin: String, prev_year: String,
-                      current_name: String, current_code: String, current_email: String, current_contact: String, current_line1: String, current_line2: String, current_city: String, current_district: String, current_state: String, current_country: String, current_pin: String, institute_id:String) = Action{
+  def instituteUpdate(institute_name:String,institute_code:String,institute_email:String,institute_contact:String,
+                      institute_line1:String,institute_line2:String,institute_city:String,institute_district:String,institute_state:String,institute_country:String,institute_pin:Int
+                     ) = Action{
     val uri: String = "mongodb://localhost:27017"
     val mongoClient = MongoClient(uri)
     val database: MongoDatabase = mongoClient.getDatabase("studentInfo")
@@ -1127,65 +1123,68 @@ def deleterecord(prn:String)=Action{
     var c=collection.estimatedDocumentCount().headResult().toInt
     println("connected")
     c = c+1
-    val stuName: Document = Document("first_name"->student_first_name, "middle_name"-> student_mid_name, "last_name"->student_last_name)
-    val stuRegistrationId: Document = Document("stu_registration_id"->stu_registration_id)
 
-    val pin = prev_pin.toInt
-    val add: Document = Document("Line 1" -> prev_line1, "Line 2" -> prev_line2, "City" -> prev_city, "District" -> prev_district, "State" -> prev_state, "Country" -> prev_country, "Pin-code" -> pin)
-    val prev_doc: Document = Document("Name" -> prev_name, "Unique Code" -> prev_code, "Email ID" -> prev_email, "Contact Number" -> prev_contact, "Address" -> add, "Passing year" -> prev_year)
-    val current_pin1 = current_pin.toInt
-    val current_add: Document = Document("Line 1" -> current_line1, "Line 2" -> current_line2, "City" -> current_city, "District" -> current_district, "State" -> current_state, "Country" -> current_country, "Pin-code" -> current_pin1)
-    val current_doc: Document = Document("Name" -> current_name, "Unique Code" -> current_code, "Email ID" -> current_email, "Contact Number" -> current_contact, "Address" -> current_add)
+    val address: Document = Document("Line 1" -> institute_line1, "Line 2" -> institute_line2, "City" -> institute_city, "District" -> institute_district, "State" -> institute_state, "Country" -> institute_country, "Pin-code" -> institute_pin)
+    val instituteInfo: Document = Document("Institute Name" -> institute_name, "Registration_Id" -> institute_code, "Email_ID" -> institute_email, "Contact_Number" -> institute_contact,"Address" -> address)
 
-    collection.updateOne(equal("stu_registration_Id",stuRegistrationId),combine(set("student_name",stuName),set("stu_registration_Id",stuRegistrationId),set("Previous Institute Details",prev_doc),
-      set("Current Institute Details",current_doc))).printHeadResult("Update Result: ")
+    //collection.insertOne(instituteInfo).results()
+
+    collection.updateOne(equal("Registration_Id",institute_code),
+      combine(
+        set("Name" , institute_name),
+        set("Registration_Id" , institute_code),
+        set("Email_Id" , institute_email),
+        set("Contact_Number" , institute_contact),
+        set("Address" , address)
+      )).printHeadResult("Update Result: ")
 
 
     Ok("Updated the Values...")
 
   }
 
-  def instituteDelete(stu_registration_id:Int ): Action[AnyContent] = Action {
+  def instituteDelete(institute_code:String ): Action[AnyContent] = Action {
     val uri: String = "mongodb://localhost:27017"
     val mongoClient = MongoClient(uri)
     val database: MongoDatabase = mongoClient.getDatabase("studentInfo")
     val collection: MongoCollection[Document] = database.getCollection("studentInstituteDetails")
-    val ch = collection.countDocuments(equal("stu_registration_Id", stu_registration_id)).headResult()
+    val ch = collection.countDocuments(equal("Registration_Id", institute_code)).headResult()
     //    println(ch)
 
     if (ch == 1) {
-      collection.deleteOne(equal("stu_registration_Id", stu_registration_id)).printHeadResult()
+      collection.deleteOne(equal("Registration_Id", institute_code)).printHeadResult()
       Ok("Deleted Successfully!")
     }
     else {
-      Ok("Enter correct Aadhar card no")
+      Ok("Please check registration number")
     }
   }
-  def instituteView(stu_registration_id:Int): Action[AnyContent] = Action {
+
+  def instituteView(institute_code:String): Action[AnyContent] = Action {
     val uri: String = "mongodb://localhost:27017"
     val mongoClient = MongoClient(uri)
     val database: MongoDatabase = mongoClient.getDatabase("studentInfo")
     val collection: MongoCollection[Document] = database.getCollection("studentInstituteDetails")
     println("connected")
 
-    var collection_data =collection.find(equal("stu_registration_Id",stu_registration_id)).headResult().toJson()
+    var collection_data =collection.find(equal("Registration_Id",institute_code)).headResult().toJson()
 
     val jsonMap =org.json4s.jackson.JsonMethods.parse(collection_data).values.asInstanceOf[Map[String,Any]]
     println(jsonMap)
 
-    val stud_id=jsonMap("_id").asInstanceOf[Map[String,String]].toMap
-    val stu_name = jsonMap("student_name").asInstanceOf[Map[String, String]].toMap
-    val stu_id = jsonMap("stu_registration_Id").toString.toInt
-    val prev_name = jsonMap("Previous Institute Details").asInstanceOf[Map[String, String]].toMap
-    val curr_name = jsonMap("Current Institute Details").asInstanceOf[Map[String, String]].toMap
-    val curr_add=curr_name("Address").asInstanceOf[Map[String, String]].toMap
-    val prev_add=prev_name("Address").asInstanceOf[Map[String, String]].toMap
-    println(curr_add)
-    println(stud_id)
+    val ins_id=jsonMap("_id").asInstanceOf[Map[String,String]].toMap
+
+    val institute_name = jsonMap("Name").toString
+    val institute_id = jsonMap("Registration_Id").toString
+    val institute_email = jsonMap("Email_Id").toString
+    val institute_contact = jsonMap("Contact_Number").toString
+    val institute_address = jsonMap("Address").asInstanceOf[Map[String, String]].toMap
+
+    println(ins_id)
 
     var updateView = true
 
-    Ok(views.html.instituteIndex(stud_id,stu_name,stu_id,prev_name, curr_name, curr_add, prev_add,updateView ))
+    Ok(views.html.instituteIndex(ins_id,institute_name,institute_id,institute_email,institute_contact,institute_address,updateView))
   }
 
   def instituteList(currentPage: Int) = Action{
@@ -1205,10 +1204,11 @@ def deleterecord(prn:String)=Action{
     jsonMap.foreach(stu => {
       students.append((StudentInstitute(
         stu.get("_id").asInstanceOf[Option[Map[String,String]]],
-        stu.get("student_name").asInstanceOf[Option[Map[String,String]]],
-        stu.get("stu_registration_Id").asInstanceOf[Option[String]],
-        stu.get("Previous Institute Details").asInstanceOf[Option[Map[String,String]]],
-        stu.get("Current Institute Details").asInstanceOf[Option[Map[String,String]]]
+        stu.get("Name").asInstanceOf[Option[String]],
+        stu.get("Contact_Number").asInstanceOf[Option[String]],
+        stu.get("Registration_Id").asInstanceOf[Option[String]],
+        stu.get("Address").asInstanceOf[Option[Map[String,String]]]
+
       )))
     })
     val totalItems = collection.countDocuments().results()
@@ -1233,10 +1233,10 @@ def deleterecord(prn:String)=Action{
     jsonMap.foreach(stu => {
       students.append((StudentInstitute(
         stu.get("_id").asInstanceOf[Option[Map[String,String]]],
-        stu.get("student_name").asInstanceOf[Option[Map[String,String]]],
-        stu.get("stu_registration_Id").asInstanceOf[Option[String]],
-        stu.get("Previous Institute Details").asInstanceOf[Option[Map[String,String]]],
-        stu.get("Current Institute Details").asInstanceOf[Option[Map[String,String]]]
+        stu.get("Name").asInstanceOf[Option[String]],
+        stu.get("Institute Contact").asInstanceOf[Option[String]],
+        stu.get("Institute Id").asInstanceOf[Option[String]],
+        stu.get("Address").asInstanceOf[Option[Map[String,String]]]
       )))
     })
 
@@ -1244,10 +1244,10 @@ def deleterecord(prn:String)=Action{
     implicit val studentWrite = new Writes[StudentInstitute] {
       def writes(s: StudentInstitute): JsValue = {
         Json.obj("id" -> s._id,
-          "studentName" -> s.studentName, // Bug: removing toString causes classCastException
-          "studentId" -> s.studentId,
-          "preInstituteCode" -> s.prevInstituteCode,
-          "currInstituteCode" -> s.currInstituteCode
+          "instituteName" -> s.instituteName, // Bug: removing toString causes classCastException
+          "instituteContact" -> s.instituteContact,
+          "instituteId"->s.instituteId,
+          "instituteAddress" -> s.instituteAddress
         )
       }
     }
