@@ -723,7 +723,7 @@ def deleterecord(prn:String)=Action{
                 line1:String, line2:String, city:String, district:String, state:String, country:String, pincode:String,
                 student_dob:String, student_mob_no:String, student_email:String,
                 father_first_name:String, father_mid_name:String, father_last_name:String, father_mob_no:String, father_email:String,
-                mother_first_name:String, mother_mob_no:String, mother_email:String,
+                mother_first_name:String, mother_mid_name:String,mother_last:String,mother_mob_no:String, mother_email:String,
                 student_govt_id:String
                )= Action {
 
@@ -762,6 +762,8 @@ def deleterecord(prn:String)=Action{
     )
     val mother_details:Document=Document(
       "first_name"->mother_first_name,
+      "middle_name"->mother_mid_name,
+      "last_name"->mother_last,
       "mother_mob_no"->mother_mob_no,
       "mother_email_id"->mother_email
     )
@@ -817,28 +819,11 @@ def deleterecord(prn:String)=Action{
     val db: MongoDatabase = mongoClient.getDatabase("studentInfo")
     println("Connection created successfully...")
     val collection: MongoCollection[Document] =db.getCollection("studentBasicDetails");
-    //collection.find(equal("student_name.first_name","Dnyanesh")).headResult().toJson()
-
-//    var s=collection.find(equal("student_govt_id.aadhar_no",govt_id)).headResult().toJson()
-//
-//    val jsonMap =org.json4s.jackson.JsonMethods.parse(s).values.asInstanceOf[Map[String,Any]]
-//    println(jsonMap)
-
 
     var collection_data =collection.find(equal("student_govt_id.aadhar_no", govt_id)).headResult().toJson()
 
     val jsonMap =org.json4s.jackson.JsonMethods.parse(collection_data).values.asInstanceOf[Map[String,Any]]
     println(jsonMap)
-
-//    val json: JsValue = Json.parse(s)
-//
-//    var jsonList:String=""
-//    jsonMap.foreach
-//    {
-//      case (key, value) => jsonList+= (key + " -> " + value)
-//    }
-//    println("List"+jsonList)
-//    val immutableMap = jsonMap.toMap
 
     val stud_id=jsonMap("_id").asInstanceOf[Map[String,String]].toMap
     val stud_name=jsonMap("student_name").asInstanceOf[Map[String,String]].toMap
@@ -881,30 +866,6 @@ def deleterecord(prn:String)=Action{
 
   }
 
-//  def studentUpdateContact(student_mob:String,
-//                    student_email:String,
-//                    student_id:String
-//                   )= Action{ //implicit request =>
-//
-//    //val stud_mid_name=request.session.get("up_student_middle_name")
-//    //println("Middle :"+stud_mid_name)
-//    println("Id :" + student_id)
-//    val uri: String = "mongodb://localhost:27017"
-//
-//    val mongoClient= MongoClient(uri)
-//    val db: MongoDatabase = mongoClient.getDatabase("studentInfo")
-//
-//    println("Connection created successfully...")
-//    val collection: MongoCollection[Document] =db.getCollection("studentBasicDetails");
-//
-//
-//
-//
-//    collection.updateOne((equal("_id",new ObjectId(student_id))),combine(set("student_contact_details.student_mob_no",student_mob),set("student_contact_details.student_email_id",student_email))).printHeadResult("Update Result: ")
-//    Ok("Updated The Values..." )
-//
-//  }
-
   def studentUpdateData(student_first_name:String,
                      student_middle_name:String,
                      student_last_name:String,
@@ -924,6 +885,8 @@ def deleterecord(prn:String)=Action{
                      father_mob_no:String,
                      father_email:String,
                      mother_first_name:String,
+                        mother_mid_name: String,
+                        mother_last_name:String,
                      mother_mob_no:String,
                      mother_email:String,
                      student_govt_id:String,
@@ -973,6 +936,8 @@ def deleterecord(prn:String)=Action{
     )
     val mother_details:Document=Document(
       "first_name"->mother_first_name,
+      "middle_name"->mother_mid_name,
+      "last_name"->mother_last_name,
       "mother_mob_no"->("+91"+mother_mob_no),
       "mother_email_id"->mother_email
     )

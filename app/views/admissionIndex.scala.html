@@ -40,6 +40,7 @@
             color: white;
             box-shadow: 0px 0px;
             transition: box-shadow ease-in 1ms 1ms;
+            margin-top: 25px;
         }
 
         button:hover {
@@ -62,8 +63,8 @@
             grid-auto-flow: row;
             /* justify-items: center; */
             /* align-items: center; */
-            margin-bottom: 20px;
-            padding: 10px;
+            margin-bottom: 1px;
+            padding: 1px;
         }
 
         p {
@@ -103,8 +104,8 @@
         .group {
             display: grid;
             grid-auto-flow: row;
-            grid-template-columns: auto auto;
-            grid-gap: 20px;
+            grid-template-columns: repeat(3, 300px);
+            grid-column-gap: 30px;
             /* margin-top: 76px; */
         }
 
@@ -116,7 +117,7 @@
         .group_col {
             display: grid;
             grid-auto-flow: column;
-            grid-template-columns: repeat(3, 250px);
+            grid-template-columns: repeat(3, 300px);
             grid-gap: 30px;
         }
 
@@ -210,18 +211,6 @@
     </head>
 
     <body>
-            <!--<nav>-->
-
-            <!--    <ul>-->
-            <!--        <li class="parent"><a class="link" href="index.scala.html">Home</a></li>-->
-            <!--        <li class="parent"><a class="link" href="student.scala.html">Student</a></li>-->
-            <!--        <li class="parent"><a class="link" href="#">Admission</a></li>-->
-            <!--        <li class="parent"><a class="link" href="#">Exam</a></li>-->
-            <!--        <li class="parent"><a class="link" href="institute.scala.html">Institute</a></li>-->
-            <!--        <li class="parent"><a class="link" href="contact.scala.html">Contact</a></li>-->
-            <!--    </ul>-->
-            <!--</nav>-->
-
         <script>
         function autoFillAddress() {
             let checkBox = document.getElementById('checkBox');
@@ -279,25 +268,13 @@
 
     </script>
 
-
-
-<!--        <div class="show_option">-->
-<!--            <div class="inner" id="buttons">-->
-<!--                <button id="insertBtn" onclick="admissionBtnHide()">Insert</button>-->
-<!--                <button id="updateBtn" onclick="admissionBtnHide()">Update</button>-->
-<!--                <button id="deleteBtn" onclick="admissionBtnHide()">Delete</button>-->
-<!--            </div>-->
-<!--        </div>-->
-
         <div class="popup_container">
             <div class="insert_form">
                 <h1>Student Admission Details</h1>
                 <form action="/admissionForm" method="GET">
 
-
                     <div class="form_group">
                         <p>Name of student</p>
-
                         <div class="group_col">
                             <div class="input_group">
                                 <p>First Name</p>
@@ -316,7 +293,6 @@
                                 placeholder="Last Name" />
                             </div>
                         </div>
-
                     </div>
                         <!-- Address -->
                     <div class="form_group">
@@ -358,14 +334,15 @@
                                 <input type="number" name="stu_per_pin" value='@stu_per_address.get("pin-code")'
                                 id="stu_perm_pin" />
                             </div>
+
                         </div>
                     </div>
 
-                    <input type="checkbox" id="checkBox"  onclick="autoFillAddress()"> Is current address same as permanent address
-
                     <div class="form_group">
                         <p>Current Address</p>
-
+                        <div>
+                            <input type="checkbox" id="checkBox"  onclick="autoFillAddress()"> Is current address same as permanent address
+                        </div>
 
                         <div class="group">
                             <div class="input_group">
@@ -410,6 +387,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
                         <!-------------------------previous education------------------------------->
 
@@ -525,9 +504,7 @@
 
 
 
-
                         <!--------------------------Student Branch Details ---------------------------->
-
 
                     <div class="form_group">
                         <p>Enter selected Branch</p>
@@ -542,7 +519,6 @@
 
 
 
-
                         <!-------------------------Student Govt Id Details ------------------------->
                     <div class="form_group">
                         <p>Student Government Id Details</p>
@@ -554,6 +530,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
                         <!---------------------------Student Fee Details --------------------------->
                     <div class="form_group">
@@ -570,6 +548,8 @@
                             </div>
                         </div>
                     </div>
+
+
 
                         <!---------------------------Student Category Details --------------------------->
                     <div class="form_group">
@@ -588,6 +568,8 @@
                         </div>
                     </div>
 
+
+
                         <!---------------------------Student Admission Year Details --------------------------->
                     <div class="form_group">
                         <p>Student Admission Year Details</p>
@@ -598,6 +580,7 @@
                             </div>
                         </div>
                     </div>
+
 
 
                         <!---------------------------Student Hostel Details --------------------------->
@@ -617,52 +600,17 @@
 
                     <input type="hidden" name="student_id" value=@idMap.get("$oid")>
 
-
-
                     @if(updateView){
-                        <input type="submit" name="submit" value="Update" formaction="/admissionUpdateData" class="btn">
+                        <input type="submit" name="submit" value="Submit" formaction="/admissionUpdateData" class="btn">
                     } else {
-                        <input type="submit" name="Submit" value="Insert" class="btn" />
+                        <input type="submit" name="Submit" value="Submit" class="btn" />
                     }
 
                     <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
 
                 </form>
             </div>
-<!--            <form>-->
-<!--                <div class="form_group">-->
-<!--                    <div class="update_form hide">-->
-<!--                        <div class="group_col">-->
-<!--                        <div class="input_group">-->
-<!--                        <p>Aadhar Card No: </p>-->
-<!--                        <input type="text" name="student_aadhaar" placeholder="student aadhaar" required>-->
-<!--                        <input type="submit" name="submit" value="View" formaction="/admissionView" class="btn">-->
-<!--                        </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </form>-->
         </div>
-<!--        <script>-->
-<!--        let insertBtn = document.getElementById("insertBtn");-->
-<!--        let updateBtn = document.getElementById("updateBtn");-->
-<!--        let insert_form = document.getElementsByClassName("insert_form")[0];-->
-<!--        let update_form = document.getElementsByClassName("update_form")[0];-->
-
-<!--        let inView = window.location.pathname;-->
-<!--        inView === "/admissionView" ?-->
-<!--                insert_form.classList.toggle("hide") : "";-->
-
-<!--         insertBtn.addEventListener("click", e => {-->
-<!--            insert_form.classList.toggle("hide");-->
-<!--        })-->
-
-<!--        updateBtn.addEventListener("click", e => {-->
-<!--            update_form.classList.toggle("hide");-->
-<!--        })-->
-
-
-<!--    </script>-->
     </body>
 
 </html>

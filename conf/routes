@@ -49,11 +49,11 @@ GET    /admissionSearch                 controllers.Application.admissionSearch(
 
 
 GET    /studentIndex                      controllers.Application.studentIndex()
-GET    /studentForm                       controllers.Application.studentGetValues(student_first_name,student_middle_name,student_last_name,line1,line2,city,district,state,country,pincode,student_dob,student_mob_no,student_email,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mob_no,mother_email,govt_id)
+GET    /studentForm                       controllers.Application.studentGetValues(student_first_name,student_middle_name,student_last_name,line1,line2,city,district,state,country,pincode,student_dob,student_mob_no,student_email,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mid_name,mother_last_name,mother_mob_no,mother_email,govt_id)
 GET    /studentDeletePage                 controllers.Application.studentRedirectDelete()
 GET    /studentDeleteValues               controllers.Application.studentValuesDelete(govt_id)
 GET    /studentViewPage                   controllers.Application.studentView(govt_id)
-GET    /studentUpdateFullData             controllers.Application.studentUpdateData(student_first_name,student_middle_name,student_last_name,line1,line2,city,district,state,country,pincode,student_mob_no,student_email,student_dob,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mob_no,mother_email,govt_id,student_id)
+GET    /studentUpdateFullData             controllers.Application.studentUpdateData(student_first_name,student_middle_name,student_last_name,line1,line2,city,district,state,country,pincode,student_mob_no,student_email,student_dob,father_first_name,father_mid_name,father_last_name,father_mob_no,father_email,mother_first_name,mother_mid_name,mother_last,mother_mob_no,mother_email,govt_id,student_id)
 
 GET    /studentList                   controllers.Application.studentList(currentPage: Int ?= 0)
 GET    /studentList/:currentPage      controllers.Application.studentList(currentPage: Int)

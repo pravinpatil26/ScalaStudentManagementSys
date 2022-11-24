@@ -1,206 +1,392 @@
-
-@(idMap:Map[String,Any],stud_name: Map[String,Any],stud_DOB:Map[String,Any],stud_contact_details: Map[String,Any],stud_per_address: Map[String,Any],father_details:Map[String,Any],mother_details:Map[String,Any],govt_id:Map[String,Any], updateView:Boolean)
+@(idMap:Map[String,Any],stud_name: Map[String,Any],stud_DOB:Map[String,Any],stud_contact_details:
+Map[String,Any],stud_per_address:
+Map[String,Any],father_details:Map[String,Any],mother_details:Map[String,Any],govt_id:Map[String,Any],
+updateView:Boolean)
 
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Student Basic Details</title>
-    <style>
-body{
-  font-family: Calibri, Helvetica, sans-serif;
-  background-color:#;
-}
-input{
-
-  padding: 10px;
-  margin: 20px 0 30px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-.container {
-  padding: 50px;
-  background-color: lightblue;
-
-}
-
- div {
-
-   padding: px;
-         }
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-label{
-  padding: 8px;
-
-
-}
-input[type=submit] {
-  background-color: #529AE1;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-    table,
-    th,
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
+        <meta charset="UTF-8">
+        <title>Student Basic Details</title>
+        <style>
+    .show {
+      display: block;
     }
 
-    th,
-    td {
-        padding: 10px;
+    .hide {
+      display: none;
     }
 
-    input[type=submit] {
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-    ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+    body {
+      font-family: Calibri, Helvetica, sans-serif;
+      margin: 0;
+    }
 
-li {
-  float: left;
-}
+    .show_option {
+      padding: 10px;
+      background: #000000;
+      display: grid;
+      align-content: center;
+      justify-content: end;
+    }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    button,
+    .btn {
+      border: 0;
+      background: rgb(78, 129, 207);
+      padding: 10px;
+      border-radius: 5px;
+      width: 100px;
+      font-size: 20px;
+      height: 50px;
+      color: white;
+      box-shadow: 0px 0px;
+      transition: box-shadow ease-in 1ms 1ms;
+      margin-top:25px;
+    }
 
-li a:hover {
-  background-color: #111;
-}
+    button:hover {
+      box-shadow: 2px 3px 2px 0px #899dbe;
+      /* transition: border-shadow 12s ease-in; */
+    }
 
+    .popup_container {
+      background: #ffffff;
+      padding: 30px;
+      /* width: 800px; */
+      /* height: 800px; */
+      /* position: absolute; */
+      /* left: 57px; */
+      /* top: 100px; */
+    }
 
-</style>
-<!--    <div>-->
-<!--        <script src="D:\IntellG\Play_Framework\First_Play_project\First_Play_project\public\javascripts\index.js"></script>-->
-<!--    </div>-->
-</head>
-<body>
-<div class="container">
-    <h3>Update Student Information</h3>
-    <form method="get" action="/studentForm">
-        <h4>Name of Student</h4>
-        <label >First name:</label>
-        <input type="text"  name="student_first_name" value=@stud_name.get("first_name") >
-        <label>Middle name:</label>
-        <input type="text"  name="student_middle_name" value=@stud_name.get("middle_name") >
-        <label >Last name:</label>
-        <input type="text"  name="student_last_name" value=@stud_name.get("last_name") ><br>
+    .form_group {
+      display: grid;
+      grid-auto-flow: row;
+      /* justify-items: center; */
+      /* align-items: center; */
+      margin-bottom: 1px;
+      padding: 1px;
+    }
 
+    p {
+      justify-self: self-start;
+      font-size: 20px;
+      color: black;
+      font-weight: bold;
+    }
 
+    .input_group p,
+    p {
+      justify-self: self-start;
+      font-size: 17px;
+      color: #757087;
+      font-weight: normal !important;
+    }
 
-        <!-- -----------------Address Of Student ------------------------------------------->
-        <h4>Permanent Address</h4>
+    .input_group input {
+      height: 40px;
+      border: 1.5px #d7deee solid;
+      border-radius: 4px;
+      box-shadow: 1px 1px 4px 0px #d3cece;
+      padding: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border ease-in 10ms;
+    }
 
-        <br>
-        <h4>@stud_per_address.get("line1")</h4>
-        <label> Line 1: </label>
-        <input type="text"  name="line1" value='@stud_per_address.get("line1")'  />
+    .form_group.address {
+      display: grid;
+      grid-auto-flow: row;
+      /* justify-items: center; */
+      /* align-items: center; */
+      /* grid-template-columns: 200px auto; */
+    }
 
-        <label> Line 2: </label>
-        <input type="text"  name="line2" value='@stud_per_address.get("line2")'>
-
-        <label> City: </label>
-        <input type="text"  name="city" value=@stud_per_address.get("city")>
-        <br>
-        <label> District: </label>
-        <input type="text"  name="district" value=@stud_per_address.get("district")>
-        <label> State: </label>
-        <input type="text"  name="state" value=@stud_per_address.get("state")>
-        <label> Country: </label>
-        <input type="text"  name="country" value=@stud_per_address.get("country")>
-        <br>
-        <label> Pin-code: </label>
-        <input type="number"  name="pincode" value=@stud_per_address.get("pincode")>
-        </label>
-        <br>
-        <!-------------------------Birth Date Of Student ------------------------------->
-
-        <h4>Birth Details Of Student</h4>
-        <label>Date Of Student:</label>
-        <input type="date"  name="student_dob" value='@stud_DOB.get("student_DOB")'/><br>
-
-
-        <!--------------------------Student Contact Details ---------------------------->
-        <h4>Contact Details Of Student</h4>
-        <label >Mobile Number:</label>
-        <input type="tel"  name="student_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value=@stud_contact_details.get("student_mob_no")>
-
-        <label >Email ID:</label>
-        <input type="email"  name="student_email" value=@stud_contact_details.get("student_email_id")><br>
-
-
-        <h4>Parents Details Of Student</h4><br>
-        <h5>Father Details of Student</h5>
-
-        <label >First name:</label>
-        <input type="text"   name="father_first_name" value='@father_details.get("first_name")'>
-        <label >Middle name:</label>
-        <input type="text"  name="father_mid_name" value='@father_details.get("middle_name")'  >
-        <label>Last name:</label>
-        <input type="text"  name="father_last_name"  value='@father_details.get("last_name")'>
-        <br>
-        <label>Mobile Number:</label>
-        <input type="tel"  name="father_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value='@father_details.get("father_mob_no")' >
-        <label>Email ID:</label>
-        <input type="email"  name="father_email" value='@father_details.get("father_email_id")' ><br>
-
-        <h5>Mother Details of Student</h5>
+    .group {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-columns: repeat(3, 300px);
+      grid-column-gap: 30px;
+      /* margin-top: 76px; */
+    }
 
 
+    .input_group {
+      display: grid;
+    }
 
-        <label >First name:</label>
-        <input type="text"  name="mother_first_name" value='@mother_details.get("first_name")'>
+    .group_col {
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(3, 300px);
+      grid-gap: 30px;
+    }
 
-        <br>
-        <label>Mobile Number:</label>
-        <input type="tel"  name="mother_mob_no" pattern="[0-9]{10}"  title="Ten digits code" value='@mother_details.get("mother_mob_no")'  required/>
-        <label>Email ID:</label>
-        <input type="email"  name="mother_email" value='@mother_details.get("mother_email_id")'><br>
+    /* input {
 
-
-        <!---------------------------Student Govt Id Details --------------------------->
-        <h4>Student Goverment Id Details</h4><br>
-        <label>Aadhar Card Number of Student:</label>
-        <input type="tel"  name="govt_id" pattern="[0-9]{12}"  title="Twelve digits code" value='@govt_id.get("aadhar_no")'><br>
-
-        <input type="hidden"  name="student_id" value=@idMap.get("$oid")>
-
-        @if(updateView){
-        <input type="submit" name="submit" value="Update" formaction="/studentUpdateFullData" class="btn">
-        } else {
-        <input type="submit" name="Submit" value="Insert" class="btn" />
+            padding: 10px;
+            margin: 20px 0 30px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
         }
 
-        <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
+        button {
+            background-color: #529AE1;
+            color: white;
+            padding: 16px 32px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            width: 9%;
+            opacity: 0.9;
+        }
 
-    </form>
-    <hr>
+        .deleteBtn {
+            background-color: ##529AE1;
+        }
+
+        .view {
+            background-color: #529AE1;
+        }
+
+        .update {
+            background-color: ##529AE1;
+        }
+
+        .container {
+            padding: 50px;
+            background: lightblue;
+        }
+
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        p {
+            padding: 8px;
+        }
+
+        input[type=submit] {
+            background-color: #529AE1;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        } */
+  </style>
+        <!--    <div>-->
+        <!--        <script src="D:\IntellG\Play_Framework\First_Play_project\First_Play_project\public\javascripts\index.js"></script>-->
+        <!--    </div>-->
+</head>
+
+<body>
+<div class="popup_container">
+        <div class="insert_form">
+                <h2>Student Information</h2>
+                <form method="get" action="/studentForm">
+                        <div class="form_group">
+                                <div class="group_col ">
+                                        <div class="input_group">
+                                                <p>First name:</p>
+                                                <input type="text" name="student_first_name" value=@stud_name.get("first_name")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Middle name:</p>
+                                                <input type="text" name="student_middle_name" value=@stud_name.get("middle_name")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Last name:</p>
+                                                <input type="text" name="student_last_name" value=@stud_name.get("last_name")>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!-------------------------Birth Date Of Student ------------------------------->
+
+                        <div class="form_group">
+                                <div class="group_col">
+                                        <div class="input_group">
+                                                <p>Date of Birth:</p>
+                                                <input type="date" name="student_dob" value='@stud_DOB.get("student_DOB")' />
+                                        </div>
+                                </div>
+                        </div>
+
+                        <!---------------------------Student Govt Id Details --------------------------->
+                        <div class="form_group">
+                                <div class="group_col">
+                                        <div class="input_group">
+                                                <p>Aadhar Card Number of Student:</p>
+                                                <input type="tel" name="govt_id" pattern="[0-9]{12}" title="Twelve digits code"
+                                                       value='@govt_id.get("aadhar_no")'><br>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <input type="hidden" name="student_id" value=@idMap.get("$oid")>
+
+
+
+                        <!-- -----------------Address Of Student ------------------------------------------->
+                        <div class="form_group">
+                                <h3>Permanent Address</h3>
+
+                                <!-- <h4>@stud_per_address.get("line1")</h4> -->
+                                <div class="group">
+
+
+                                        <div class="input_group">
+                                                <p> Line 1: </p>
+                                                <input type="text" name="line1" value='@stud_per_address.get("line1")' />
+                                        </div>
+                                        <div class="input_group">
+                                                <p> Line 2: </p>
+                                                <input type="text" name="line2" value='@stud_per_address.get("line2")'>
+                                        </div>
+                                        <div class="input_group">
+                                                <p> City: </p>
+                                                <input type="text" name="city" value=@stud_per_address.get("city")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p> District: </p>
+                                                <input type="text" name="district" value=@stud_per_address.get("district")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p> State: </p>
+                                                <input type="text" name="state" value=@stud_per_address.get("state")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p> Country: </p>
+                                                <input type="text" name="country" value=@stud_per_address.get("country")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p> Pin-code: </p>
+                                                <input type="number" name="pincode" value=@stud_per_address.get("pincode")>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                        <!--------------------------Student Contact Details ---------------------------->
+
+                        <div class="form_group">
+                                <h3>Contact Details Of Student</h3>
+                                <div class="group">
+                                        <div class="input_group">
+                                                <p>Mobile Number:</p>
+                                                <input type="tel" name="student_mob_no" pattern="[0-9]{10}" title="Ten digits code"
+                                                       value=@stud_contact_details.get("student_mob_no")>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Email ID:</p>
+                                                <input type="email" name="student_email" value=@stud_contact_details.get("student_email_id")>
+                                        </div>
+                                </div>
+                        </div>
+
+
+                        <h3>Parents Details Of Student</h3>
+
+                        <div class="form_group">
+                                <h4>Father Details of Student</h4>
+                                <div class="group">
+                                        <div class="input_group">
+                                                <p>First name:</p>
+                                                <input type="text" name="father_first_name" value='@father_details.get("first_name")'>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Middle name:</p>
+                                                <input type="text" name="father_mid_name" value='@father_details.get("middle_name")'>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Last name:</p>
+                                                <input type="text" name="father_last_name" value='@father_details.get("last_name")'>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Mobile Number:</p>
+                                                <input type="tel" name="father_mob_no" pattern="[0-9]{10}" title="Ten digits code"
+                                                       value='@father_details.get("father_mob_no")'>
+                                        </div>
+                                        <div class="input_group">
+                                                <p>Email ID:</p>
+                                                <input type="email" name="father_email" value='@father_details.get("father_email_id")'>
+                                        </div>
+                                </div>
+                        </div>
+
+                        <h4>Mother Details of Student</h4>
+
+                       <div class="form_group">
+                               <div class="group">
+                                       <div class="input_group">
+                                               <p>First name:</p>
+                                               <input type="text" name="mother_first_name" value='@mother_details.get("first_name")'>
+                                       </div>
+                                       <div class="input_group">
+                                               <p>Middle name:</p>
+                                               <input type="text" name="mother_mid_name" value='@mother_details.get("middle_name")'>
+                                       </div>
+                                       <div class="input_group">
+                                               <p>Last name:</p>
+                                               <input type="text" name="mother_last_name" value='@mother_details.get("last_name")'>
+                                       </div>
+                                       <div class="input_group">
+                                               <p>Mobile Number:</p>
+                                               <input type="tel" name="mother_mob_no" pattern="[0-9]{10}" title="Ten digits code"
+                                                      value='@mother_details.get("mother_mob_no")' required />
+                                       </div>
+                                       <div class="input_group">
+                                               <p>Email ID:</p>
+                                               <input type="email" name="mother_email" value='@mother_details.get("mother_email_id")'>
+                                       </div>
+                               </div>
+                       </div>
+
+
+                        <div>
+                        @if(updateView){
+                        <input type="submit" name="submit" value="Submit" formaction="/studentUpdateFullData" class="btn">
+                        } else {
+                        <input type="submit" name="Submit" value="Submit" class="btn" />
+                        }
+
+                        <input type="submit" name="submit" value="Cancel" formaction="/index1" class="btn">
+                        </div>
+                </form>
+        </div>
 </div>
 
 
 </body>
+
 </html>

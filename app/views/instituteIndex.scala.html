@@ -6,157 +6,309 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-    header {
-        z-index: 4;
-        position: fixed;
-        background: #22242A;
-        padding: 20px;
-        width: calc(100% - 0%);
-        top: 0;
-        height: 43px;
-    }
-body{
-  font-family: Calibri, Helvetica, sans-serif;
-   background-color: lightblue;
-}
-input{
-  padding: 10px;
-  margin: 20px 0 30px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-.container {
-  padding: 50px;
+        .show {
+            display: block;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        body {
+            font-family: Calibri, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        .show_option {
+            padding: 10px;
+            background: #000000;
+            display: grid;
+            align-content: center;
+            justify-content: end;
+        }
+
+        button,
+        .btn {
+            border: 0;
+            background: rgb(78, 129, 207);
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+            font-size: 20px;
+            height: 50px;
+            color: white;
+            box-shadow: 0px 0px;
+            transition: box-shadow ease-in 1ms 1ms;
+            margin-top: 25px
+        }
+
+        button:hover {
+            box-shadow: 2px 3px 2px 0px #899dbe;
+            /* transition: border-shadow 12s ease-in; */
+        }
+
+        .popup_container {
+            background: #ffffff;
+            padding: 30px;
+            /* width: 800px; */
+            /* height: 800px; */
+            /* position: absolute; */
+            /* left: 57px; */
+            /* top: 100px; */
+        }
+
+        .form_group {
+            display: grid;
+            grid-auto-flow: row;
+            /* justify-items: center; */
+            /* align-items: center; */
+            margin-bottom: 1px;
+            padding: 1px;
+        }
+
+        p {
+            justify-self: self-start;
+            font-size: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .input_group p,
+        label {
+            justify-self: self-start;
+            font-size: 17px;
+            color: #757087;
+            font-weight: normal !important;
+        }
+
+        .input_group input {
+            height: 40px;
+            border: 1.5px #d7deee solid;
+            border-radius: 4px;
+            box-shadow: 1px 1px 4px 0px #d3cece;
+            padding: 10px;
+            font-size: 15px;
+            outline: none;
+            transition: border ease-in 10ms;
+        }
+
+        .form_group.address {
+            display: grid;
+            grid-auto-flow: row;
+            /* justify-items: center; */
+            /* align-items: center; */
+            /* grid-template-columns: 200px auto; */
+        }
+
+        .group {
+            display: grid;
+            grid-auto-flow: row;
+            grid-template-columns: repeat(3, 300px);
+            grid-column-gap: 30px;
+            /* margin-top: 76px; */
+        }
+
+
+        .input_group {
+            display: grid;
+        }
+
+        .group_col {
+            display: grid;
+            grid-auto-flow: column;
+            grid-template-columns: repeat(3, 300px);
+            grid-gap: 40px;
+        }
+
+        /* input {
+
+            padding: 10px;
+            margin: 20px 0 30px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        button {
+            background-color: #529AE1;
+            color: white;
+            padding: 16px 32px;
+            margin: 4px 2px;
+            border: none;
+            cursor: pointer;
+            width: 9%;
+            opacity: 0.9;
+        }
+
+        .deleteBtn {
+            background-color: ##529AE1;
+        }
+
+        .view {
+            background-color: #529AE1;
+        }
+
+        .update {
+            background-color: ##529AE1;
+        }
+
+        .container {
+            padding: 50px;
+            background: lightblue;
 
 
 
-}
+        }
 
 
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-label{
-  padding: 8px;
-}
-input[type=submit] {
-  background-color: #333;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-}
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
 
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
-}
-table,
-
-    td {
-        border: 2px solid black;
-        border-collapse: collapse;
-    }
+        label {
+            padding: 8px;
 
 
-    td {
-        padding: 10px;
-    }
+        }
 
+        input[type=submit] {
+            background-color: #529AE1;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
 
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
 
-</style>
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        } */
+    </style>
 </head>
 <body>
 
-<div class="container">
-    <form method="get" action="/instituteForm">
-        <h3>Institute Details</h3>
-        <br>
-        <hr>
+    <div class="popup_container">
+        <div class="insert_form">
+            <form method="get" action="/instituteForm">
+                <h3>Institute Details</h3>
 
-        <label> Name </label>
-        <input type="text" name="institute_name" placeholder= "name" id="institute_name" value='@name' size="42" required />
+                <div class="form_group">
+                    <div class="group_col">
+                        <div class="input_group">
+                            <p> Name </p>
+                            <input type="text" name="institute_name" placeholder= "Institute Name"
+                                   id="institute_name" value='@name' />
+                        </div>
 
-        <label> Registration Code: </label>
-        <input type="text" name="institute_code" placeholder="code" id="institute_code" pattern="[A-Za-z0-9]{}" value='@registration' title="Alphabet and Digits only" size="25" required />
+                    </div>
+                </div>
 
-        <br>
-        <label>Email Id:</label>
-        <input type="email" placeholder="Email" name="institute_email" id="institute_email" size="42" value='@email' title="Type a valid Email" required>
+                <div class="form_group">
+                    <div class="group_col">
+                        <div class="input_group">
+                            <p> Registration No: </p>
+                            <input type="text" name="institute_code" placeholder="code" id="institute_code"
+                                   pattern="[A-Za-z0-9]{}" value='@registration' title="Alphabet and Digits only" />
+                        </div>
 
-        <label> Contact Number: </label>
-        <input type="text" name="institute_contact" placeholder="ContactNumber" pattern="[0-9]{10}" value='@contact' title="Ten digits code" id="institute_contact" required />
+                        <div class="input_group">
+                            <p>Email Id:</p>
+                            <input type="email" placeholder="e-mail" name="institute_email"
+                                   id="institute_email" value='@email' title="Type a valid Email">
+                        </div>
 
-        <br>
-        <hr>
-        <label>
-            <h4>Address: </h4>
-            <br>
+                        <div class="input_group">
+                            <p> Contact Number: </p>
+                            <input type="text" name="institute_contact" placeholder="contact number"
+                                   pattern="[0-9]{10}" value='@contact' title="Ten digits code" id="institute_contact"/>
+                        </div>
+                    </div>
+                </div>
 
-            <label> Line 1: </label>
-            <input type="text" name="institute_line1" id="institute_line1" placeholder= "Line 1" value='@address.get("Line 1")' size="49" required />
+                <div class="form_group">
+                    <h4>Address: </h4>
+                    <div class="group">
+                        <div class="input_group">
+                            <p> Line 1: </p>
+                            <input type="text" name="institute_line1" id="institute_line1"
+                                   placeholder= "Line 1" value='@address.get("Line 1")' size="25"/>
+                        </div>
 
-            <label> Line 2: </label>
-            <input type="text" name="institute_line2" id="institute_line2" placeholder= "Line 2" size="49" value='@address.get("Line 2")' required />
+                        <div class="input_group">
+                            <p> Line 2: </p>
+                            <input type="text" name="institute_line2" id="institute_line2"
+                                   placeholder= "Line 2" size="25" value='@address.get("Line 2")'/>
+                        </div>
 
-            <br>
-            <label> City: </label>
-            <input type="text" name="institute_city" id="institute_city2" value='@address.get("City")' placeholder= "City" required />
+                        <div class="input_group">
+                            <p> City: </p>
+                            <input type="text" name="institute_city" id="institute_city2"
+                                   value='@address.get("City")' placeholder= "City" />
+                        </div>
 
-            <label> District: </label>
-            <input type="text" name="institute_district" id="institute_district1" value='@address.get("District")' placeholder= "District" size="25" required />
+                        <div class="input_group">
+                            <p> District: </p>
+                            <input type="text" name="institute_district" id="institute_district1"
+                                   value='@address.get("District")' placeholder= "District" size="25" />
+                        </div>
 
-            <label> State: </label>
-            <input type="text" name="institute_state" id="institute_state1" value='@address.get("State")' placeholder= "State" size="25" required />
+                        <div class="input_group">
+                            <p> State: </p>
+                            <input type="text" name="institute_state" id="institute_state1"
+                                   value='@address.get("State")' placeholder= "State" size="25" />
+                        </div>
 
-            <br>
-            <label> Country: </label>
-            <input type="text" name="institute_country" id="institute_country1"  value='@address.get("Country")' placeholder= "Country" size="25" required />
+                        <div class="input_group">
+                            <p> Country: </p>
+                            <input type="text" name="institute_country" id="institute_country1"
+                                   value='@address.get("Country")' placeholder= "Country" size="25"/>
+                        </div>
 
-            <label> Pin-code: </label>
-            <input type="number" name="institute_pin" id="institute_pin1" value='@address.get("Pin-code")' placeholder= "PinCode" size="25" required />
+                        <div class="input_group">
+                            <p> Pin-code: </p>
+                            <input type="number" name="institute_pin" id="institute_pin1"
+                                   value='@address.get("Pin-code")' placeholder= "PinCode" size="25"/>
+                        </div>
+                    </div>
+                </div>
+                <br>
 
-        </label>
+                <input type="hidden"  name="get_id" value=@jsonMap.get("$oid")>
 
-        <br>
+                <br>
 
-        </label>
-        <input type="hidden"  name="get_id" value=@jsonMap.get("$oid")>
+                @if(updateView){
+                <input type="submit" name="submit" value="Submit" formaction="/instituteUpdate" class="btn">
+                } else {
+                <input type="submit" name="Submit" value="Submit" class="btn" />
+                }
 
-        <br>
+                <input type="submit" name="submit" value="Cancel" formaction="/index1" class="btn">
 
-        @if(updateView){
-        <input type="submit" name="submit" value="Submit" formaction="/instituteUpdate" class="btn">
-        } else {
-        <input type="submit" name="Submit" value="Submit" class="btn" />
-        }
-
-        <input type="submit" name="submit" value="cancel" formaction="/index1" class="btn">
-
-    </form>
-</div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
