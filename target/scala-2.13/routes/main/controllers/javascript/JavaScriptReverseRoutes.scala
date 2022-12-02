@@ -17,7 +17,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:40
+    // @LINE:43
     def admissionView: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionView",
       """
@@ -41,7 +41,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:54
+    // @LINE:57
     def studentValuesDelete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentValuesDelete",
       """
@@ -57,6 +57,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "cancel"})
+        }
+      """
+    )
+  
+    // @LINE:33
+    def insertExamDetail: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.insertExamDetail",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "insertExamDetail"})
         }
       """
     )
@@ -81,7 +91,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:67
+    // @LINE:70
     def instituteGetValues: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteGetValues",
       """
@@ -91,22 +101,12 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:60
+    // @LINE:63
     def studentSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentSearch",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "studentSearch"})
-        }
-      """
-    )
-  
-    // @LINE:17
-    def finalUpdate: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.Application.finalUpdate",
-      """
-        function(firstname0,middlename1,lastname2,prn3,branch4,acad_year5,result6,score7,mobileno8,emailid9) {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "udate2" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("firstname", firstname0), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("middlename", middlename1), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("lastname", lastname2), (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("prn", prn3), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("branch", branch4), (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("acad_year", acad_year5), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("result", result6), (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("score", score7), (""" + implicitly[play.api.mvc.QueryStringBindable[Int]].javascriptUnbind + """)("mobileno", mobileno8), (""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("emailid", emailid9)])})
         }
       """
     )
@@ -131,7 +131,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:58
+    // @LINE:61
     def studentList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentList",
       """
@@ -145,7 +145,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:43
+    // @LINE:46
     def admissionStudentList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionStudentList",
       """
@@ -173,7 +173,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:51
+    // @LINE:54
     def studentIndex: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentIndex",
       """
@@ -183,7 +183,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:41
+    // @LINE:44
     def admissionUpdate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionUpdate",
       """
@@ -203,7 +203,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:55
+    // @LINE:58
     def studentView: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentView",
       """
@@ -233,6 +233,16 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:31
+    def fetchExamStudent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.fetchExamStudent",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fetchExamStudent"})
+        }
+      """
+    )
+  
     // @LINE:21
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
@@ -243,7 +253,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:52
+    // @LINE:55
     def studentGetValues: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentGetValues",
       """
@@ -253,7 +263,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:66
+    // @LINE:69
     def instituteIndex: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteIndex",
       """
@@ -263,7 +273,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:70
+    // @LINE:73
     def instituteUpdate: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteUpdate",
       """
@@ -273,7 +283,17 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:69
+    // @LINE:30
+    def fetchStudent: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.fetchStudent",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fetchStudent"})
+        }
+      """
+    )
+  
+    // @LINE:72
     def instituteView: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteView",
       """
@@ -283,7 +303,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:72
+    // @LINE:75
     def instituteList: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteList",
       """
@@ -297,7 +317,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:74
+    // @LINE:77
     def instituteSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteSearch",
       """
@@ -307,7 +327,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:45
+    // @LINE:48
     def admissionSearch: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionSearch",
       """
@@ -317,7 +337,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:68
+    // @LINE:71
     def instituteDelete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.instituteDelete",
       """
@@ -327,7 +347,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:53
+    // @LINE:56
     def studentRedirectDelete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentRedirectDelete",
       """
@@ -337,7 +357,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:36
+    // @LINE:39
     def admissionIndex: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionIndex",
       """
@@ -347,7 +367,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:56
+    // @LINE:59
     def studentUpdateData: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.studentUpdateData",
       """
@@ -357,7 +377,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:37
+    // @LINE:40
     def admissionGetValues: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionGetValues",
       """
@@ -387,7 +407,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:38
+    // @LINE:41
     def admissionFinalDelete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.admissionFinalDelete",
       """
@@ -415,9 +435,19 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:17
+    def examStudentUpdate: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Application.examStudentUpdate",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "examStudentUpdate" + _qS([(""" + implicitly[play.api.mvc.QueryStringBindable[String]].javascriptUnbind + """)("id", id0)])})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:78
+  // @LINE:81
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -425,7 +455,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:78
+    // @LINE:81
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """

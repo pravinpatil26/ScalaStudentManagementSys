@@ -1,3 +1,5 @@
 [debug] not up to date. inChanged = true, force = false
-[debug] Updating ProjectRef(uri("file:/D:/Scala%20Projects/divyesh/play_app_sample1/layout-check/project/"), "layout-check-build")...
-[debug] Done updating ProjectRef(uri("file:/D:/Scala%20Projects/divyesh/play_app_sample1/layout-check/project/"), "layout-check-build")
+[debug] Updating ProjectRef(uri("file:/C:/Users/venkatesh_bellale/Documents/ScalaStudentManagementSys/project/"), "scalastudentmanagementsys-build")...
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[warn] Unrecognized repository Scala Plugin Bundled Repository, ignoring it
+[debug] Done updating ProjectRef(uri("file:/C:/Users/venkatesh_bellale/Documents/ScalaStudentManagementSys/project/"), "scalastudentmanagementsys-build")

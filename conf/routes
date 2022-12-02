@@ -14,7 +14,7 @@ GET /cancel                             controllers.Application.cancel()
 GET /update1                            controllers.Application.getValues(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Int,emailid)
 GET  /update2                      controllers.Application.updatevalues(prn:Int)
 GET  /delete                       controllers.Application.deleterecord(prn)
-GET /udate2                             controllers.Application.finalUpdate(firstname ,middlename,lastname,prn:Int,branch,acad_year:Int,result,score:Int,mobileno:Int,emailid)
+GET /examStudentUpdate                             controllers.Application.examStudentUpdate(id: String)
 GET /login1                             controllers.Application.login()
 GET /validate1                          controllers.Application.validatelogin(username,password)
 #GET /popup                              controllers.Application.popup()
@@ -27,7 +27,10 @@ GET /view                                 controllers.Application.view(prn:Int)
 GET    /examList                   controllers.Application.examStudentList(currentPage: Int ?= 0)
 GET    /examList/:currentPage      controllers.Application.examStudentList(currentPage: Int)
 GET    /examSearch                 controllers.Application.examSearch()
-
+GET    /fetchStudent                controllers.Application.fetchStudent()
+GET    /fetchExamStudent                controllers.Application.fetchExamStudent()
++ nocsrf
+POST    /insertExamDetail                controllers.Application.insertExamDetail()
 
 
 

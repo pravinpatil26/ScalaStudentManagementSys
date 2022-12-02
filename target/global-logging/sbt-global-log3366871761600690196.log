@@ -1,0 +1,900 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 24 Scala sources and 1 Java source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:91:36: not found: type ExamStudentFetch
+[error]     var students = new ArrayBuffer[ExamStudentFetch]()
+[error]                                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:101:44: not found: type ExamStudentFetch
+[error]     implicit val studentWrite = new Writes[ExamStudentFetch] {
+[error]                                            ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:102:21: not found: type ExamStudentFetch
+[error]       def writes(s: ExamStudentFetch): JsValue = {
+[error]                     ^
+[error] three errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:91:36: not found: type ExamStudentFetch
+[error]     var students = new ArrayBuffer[ExamStudentFetch]()
+[error]                                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:101:44: not found: type ExamStudentFetch
+[error]     implicit val studentWrite = new Writes[ExamStudentFetch] {
+[error]                                            ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:102:21: not found: type ExamStudentFetch
+[error]       def writes(s: ExamStudentFetch): JsValue = {
+[error]                     ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:91:36: not found: type ExamStudentFetch
+[error]     var students = new ArrayBuffer[ExamStudentFetch]()
+[error]                                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:101:44: not found: type ExamStudentFetch
+[error]     implicit val studentWrite = new Writes[ExamStudentFetch] {
+[error]                                            ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:102:21: not found: type ExamStudentFetch
+[error]       def writes(s: ExamStudentFetch): JsValue = {
+[error]                     ^
+[error] three errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources and 1 Java source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 6 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:186:3: type mismatch;
+[error]  found   : Unit
+[error]  required: play.api.mvc.Result
+[error]   }
+[error]   ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources and 1 Java source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 6 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:183:19: identifier expected but ')' found.
+[error]     print(request.)
+[error]                   ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 3 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:26: Option[play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile]] does not take parameters
+[error]     val branch = formData("branch")
+[error]                          ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:26: value formData of type Option[play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile]] does not take type parameters.
+[error]     val branch = formData["branch"]
+[error]                          ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:30: play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile] does not take parameters
+[error]     val branch = formData.get("branch")
+[error]                              ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:26: Option[play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile]] does not take parameters
+[error]     val branch = formData("branch")
+[error]                          ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:23: illegal start of simple pattern
+[error]     formData.map{ val => print(val)
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:3: '=' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:23: illegal start of simple pattern
+[error]     formData.map{ val => print(val)
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:3: '=' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:23: illegal start of simple pattern
+[error]     formData.map{ val => print(val)
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:3: '=' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:23: illegal start of simple pattern
+[error]     formData.map{ val => print(val)
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:3: '=' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:18: illegal start of simple expression
+[error]     formData.map(val => {
+[error]                  ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:190:3: ')' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:23: illegal start of simple pattern
+[error]     formData.map {val =>
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:3: '=' expected but '}' found.
+[error]   }
+[error]   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:186:16: play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile] does not take parameters
+[error]       println(e("student"))
+[error]                ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:186:16: play.api.mvc.MultipartFormData[play.api.libs.Files.TemporaryFile] does not take parameters
+[error]       println(e("student"))
+[error]                ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:26: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val branch = formData("branch")
+[error]                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:186:24: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val year = formData("year")
+[error]                        ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:23: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val prn = formData("student")
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:29: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val acad_year = formData("acad_year")
+[error]                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:189:26: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val result = formData("result")
+[error]                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:190:25: Option[Map[String,Seq[String]]] does not take parameters
+[error]     val score = formData("score")
+[error]                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:192:111: not found: value document
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                               ^
+[error] 7 errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:193:1: '=' expected.
+[error]     formData.map => { data
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:193:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map => { data
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map => { data
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map => { data
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map{ data =>
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map(data => {
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map(data =>
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map{data =>
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:188:1: '=' expected.
+[error]     formData.map {
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:189:7: not found: value branch
+[error]       branch = data("branch")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:190:7: not found: value year
+[error]       year = data("year")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:191:7: not found: value prn
+[error]       prn = data("student")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:192:7: not found: value acad_year
+[error]       acad_year = data("acad_year")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:193:7: not found: value result
+[error]       result = data("result")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:7: not found: value score
+[error]       score = data("score")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:41: not found: value prn
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:58: not found: value branch
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:86: not found: value year
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                      ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:111: not found: value document
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                               ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:120: not found: value acad_year
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                        ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:133: not found: value document
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                     ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:153: not found: value score
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:198:173: not found: value result
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                                                             ^
+[error] 14 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:185:14: not a legal formal parameter.
+[error] Note: Tuples cannot be directly destructured in method or function parameters.
+[error]       Either create a single parameter accepting the Tuple1,
+[error]       or consider a pattern matching anonymous function: `{ case (param1, param1) => ... }
+[error]     formData.map => { data
+[error]              ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:41: not found: value prn
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:58: not found: value branch
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:86: not found: value year
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                      ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:111: not found: value document
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                               ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:120: not found: value acad_year
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                        ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:133: not found: value document
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                     ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:153: not found: value score
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:173: not found: value result
+[error]     val examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                                                             ^
+[error] 8 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:1: '=' expected.
+[error]     formData.map { data =>
+[error] ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:109: not found: value document
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:131: not found: value document
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> document(acad_year -> document("score" -> score), "result" -> result))
+[error]                                                                                                                                   ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:109: overloaded method apply with alternatives:
+[error]   (elems: org.mongodb.scala.bson.BsonMagnets.CanBeBsonElement*)org.mongodb.scala.bson.collection.immutable.Document <and>
+[error]   (xs: (String, org.mongodb.scala.bson.BsonValue)*)org.mongodb.scala.bson.collection.immutable.Document
+[error]  cannot be applied to ((Seq[String], org.mongodb.scala.bson.collection.immutable.Document), (String, Seq[String]))
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(acad_year -> Document("score" -> score), "result" -> result))
+[error]                                                                                                             ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:28: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Nothing
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(s"$acad_year" -> Document("score" -> score ,"result" -> result)))
+[error]                            ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:28: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Nothing
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(s"$acad_year" -> Document("score" -> score ,"result" -> result)))
+[error]                            ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:28: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Nothing
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(s"$acad_year" -> Document("score" -> score ,"result" -> result)))
+[error]                            ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:109: overloaded method apply with alternatives:
+[error]   (underlying: org.mongodb.scala.bson.BsonDocument)org.mongodb.scala.bson.collection.immutable.Document <and>
+[error]   (elems: org.mongodb.scala.bson.BsonMagnets.CanBeBsonElements)org.mongodb.scala.bson.collection.immutable.Document <and>
+[error]   (elems: org.mongodb.scala.bson.BsonMagnets.CanBeBsonElement*)org.mongodb.scala.bson.collection.immutable.Document <and>
+[error]   (json: String)org.mongodb.scala.bson.collection.immutable.Document <and>
+[error]   (xs: (String, org.mongodb.scala.bson.BsonValue)*)org.mongodb.scala.bson.collection.immutable.Document
+[error]  cannot be applied to ((Seq[String], org.mongodb.scala.bson.collection.immutable.Document))
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(acad_year -> Document("score" -> score ,"result" -> result)))
+[error]                                                                                                             ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:194:28: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Nothing
+[error]       examDetail = Document("name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> Document(s"$acad_year" -> Document("score" -> score ,"result" -> result)))
+[error]                            ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:195:30: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Nothing
+[error]         examDetail = Document("name" -> "raj", "age" -> 10, "grade" -> Document("1" -> "apple"))
+[error]                              ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:187:1: '=' expected.
+[error]     formData.map { data =>
+[error] ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:195:30: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: Int
+[error]         examDetail = Document("name" -> "raj", "age" -> 10, "grade" -> Document("1" -> "apple"))
+[error]                              ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:199:30: type mismatch;
+[error]  found   : Int
+[error]  required: org.mongodb.scala.Document
+[error]     (which expands to)  org.mongodb.scala.bson.collection.immutable.Document
+[error]     examCollection.insertOne(examDetail)
+[error]                              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:195:30: type mismatch;
+[error]  found   : org.mongodb.scala.bson.collection.immutable.Document
+[error]  required: String
+[error]         examDetail = Document("name" -> "raj", "age" -> 10, "grade" -> Document("1" -> "apple"))
+[error]                              ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:199:30: type mismatch;
+[error]  found   : String
+[error]  required: org.mongodb.scala.Document
+[error]     (which expands to)  org.mongodb.scala.bson.collection.immutable.Document
+[error]     examCollection.insertOne(examDetail)
+[error]                              ^
+[error] two errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\views\examList.scala.html:129:67: not found: value branch
+[error]             <option value="none" disabled selected>Select Branch @branch</option>
+[error]                                                                   ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[warn] Canceling execution...
+[debug] Forcing garbage collection...
+[error] Cancelled: run 8080
+[error] Cancelled: run 8080
+[error] Use 'last' for the full log.
+[debug] > Exec(idea-shell, None, None)

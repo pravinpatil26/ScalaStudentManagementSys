@@ -104,6 +104,7 @@ routes.Application.examStudentList(newPage)
                         margin: 10px;
                         display: grid;
                         justify-content: end;
+                        align-items: center;
                         grid-auto-flow: column;
                         grid-gap: 20px;
                     }
@@ -125,6 +126,38 @@ routes.Application.examStudentList(newPage)
 <div class="wrapper">
     <h1 class="mb-1 text-2xl  tracking-tight leading-none text-gray-900 md:text-4xl lg:text-4xl dark:text-black">Student Exam List</h1>
     <div class="btn-select">
+
+        <div class="input-fd">
+            <select id="branch" name="branch" required>
+                <option value="none" disabled selected>Select Branch</option>
+                <option value="CSE">CSE</option>
+                <option value="ECE">ECE</option>
+                <option value="Mech">Mech</option>
+                <option value="Civil">Civil</option>
+                <option value="IT">IT</option>
+            </select>
+        </div>
+
+        <div class="input-">
+            <select id="year" name="year" required>
+                <option value="none" disabled selected>Select Admission Year </option>
+                <option value="2018">2018 </option>
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+
+        <div class="input-field">
+            <select id="acad_year" name="acad_year">
+                <option value="none" disabled selected>Select Academic year</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+        </div>
+
         <div class="relative">
             <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
@@ -157,24 +190,27 @@ routes.Application.examStudentList(newPage)
         <thead>
 
         <th>Name</th>
-        <th>Registration No</th>
         <th>Branch</th>
+        <th>Admission Year</th>
+        <th>Academic Year</th>
+        <th>score</th>
+        <th>Result</th>
 <!--        <th>Admission Year</th>-->
 
         </thead>
         <tbody>
-        @for(d <- paginatedList.items){
-        <tr class="std-row" data-id="@d.prn">
-            @*                      <td>@d._id.get("$oid")</td>*@
-            <td>
-                @d.name.get("firstname")
-                @d.name.get("middlename")
-                @d.name.get("lastname")
-            </td>
-            <td>@d.prn</td>
-            <td>@d.branch</td>
-        </tr>
-        }
+@*        @for(d <- paginatedList.items){*@
+@*        <tr class="std-row" data-id="@d.prn">*@
+@*            *@@*                      <td>@d._id.get("$oid")</td>*@
+@*            <td>*@
+@*                @d.name.get("firstname")*@
+@*                @d.name.get("middlename")*@
+@*                @d.name.get("lastname")*@
+@*            </td>*@
+@*            <td>@d.prn</td>*@
+@*            <td>@d.branch</td>*@
+@*        </tr>*@
+@*        }*@
         </tbody>
     </table>
 
@@ -236,6 +272,7 @@ routes.Application.examStudentList(newPage)
     </div>
 
 </div>
+<script src="assets/javascripts/filter.js"></script>
 <script>
                 let popup = document.getElementsByClassName("popup")[0];
                 let updateBtn = document.getElementById("updateBtn");
@@ -287,15 +324,15 @@ routes.Application.examStudentList(newPage)
 
                 search_btn.addEventListener("click", e => {
                     let q = default_search.value
-                    renderAndFetch(q);
+                    renderAndFetch(`/examSearch?q=${q}`);
                 });
 
-                async function renderAndFetch(q){
-                    let response = await fetch(`/examSearch?q=${q}`, {
+                async function renderAndFetch(url){
+                    let response = await fetch(url, {
                         method: "GET"
                     });
                     let students = await response.json();
-
+                    console.log(students)
 
                     var tbody = document.createElement("tbody")
 
@@ -306,20 +343,25 @@ routes.Application.examStudentList(newPage)
 
                     // create row, remove existing rows and append new ones
                     for(var i=0; i<students.length; i++){
+
                         let id = students[i].id["$oid"]
-                        let {firstname,middlename, lastname} = students[i].name
+                        let name = students[i].name
                         let branch = students[i].branch
-                        let prn = students[i].prn
-<!--                        let year = students[i].year.slice(5,9);-->
+                        let prn = students[i].id["$oid"]
+                        let admission_year = students[i].year
+                        let {year,score,result} = students[i].acad_year.filter(y => y.year === acad_year_value)[0]
+
 
                         let row = tbody.insertRow(i)
                         row.classList.add("std-row");
                         row.setAttribute("data-id", prn)
 
-                        row.insertCell(0).innerHTML = `${firstname} ${middlename} ${lastname}`
-                        row.insertCell(1).innerHTML = prn
-                        row.insertCell(2).innerHTML = branch
-<!--                        row.insertCell(3).innerHTML = year-->
+                        row.insertCell(0).innerHTML = name
+                        row.insertCell(1).innerHTML = branch
+                        row.insertCell(2).innerHTML = admission_year
+                        row.insertCell(3).innerHTML = year
+                        row.insertCell(4).innerHTML = score
+                        row.insertCell(5).innerHTML = result
                         selectRow(row);
 
                         tbody.appendChild(row)

@@ -1,9 +1,8 @@
 
-@(idMap:Map[String,Any],name:Map[String,Any],prn:Int,prev_exam:Map[String,Any],branch:String,mobileno:Int,emailid:String);
+@(id: String, name: String, branch: String, admission_year: String, academic_year: Map[String, String])
 
 
-
-<head>
+<head xmlns="http://www.w3.org/1999/html">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,8 +84,9 @@ form.secActive .form.first{
 .container form .fields{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /*justify-content: space-between;*/
+    flex-wrap: nowrap;
+    column-gap: 30px;
 }
 form .fields .input-field{
     display: flex;
@@ -161,58 +161,42 @@ form .buttons button , .backBtn{
 
 
 </style>
-<body>
-<script>
-    const form = document.querySelector("form"),
-        nextBtn = form.querySelector(".nextBtn"),
-        backBtn = form.querySelector(".backBtn"),
-        allInput = form.querySelectorAll(".first input");
+
+@*<script>*@
+@*    const form = document.querySelector("form"),*@
+@*        // nextBtn = form.querySelector(".nextBtn"),*@
+@*        // backBtn = form.querySelector(".backBtn"),*@
+@*        // allInput = form.querySelectorAll(".first input");*@
 
 
-nextBtn.addEventListener("click", ()=> {
-    allInput.forEach(input => {
-        if(input.value != ""){
-            form.classList.add('secActive');
-        }else{
-            form.classList.remove('secActive');
-        }
-    })
-})
+@*nextBtn.addEventListener("click", ()=> {*@
+@*    allInput.forEach(input => {*@
+@*        if(input.value != ""){*@
+@*            form.classList.add('secActive');*@
+@*        }else{*@
+@*            form.classList.remove('secActive');*@
+@*        }*@
+@*    })*@
+@*})*@
 
-backBtn.addEventListener("click", () => form.classList.remove('secActive'));
-</script>
+@*backBtn.addEventListener("click", () => form.classList.remove('secActive'));*@
+@*</script>*@
 <div class="container">
 <!--    <header>Basic Details</header>-->
     <header>Student Exam Details</header>
 
-    <form action="#">
+    <form action="/insertExamDetail" method="post" enctype="application/x-www-form-urlencoded">
         <div class="form first">
             <div class="details personal">
                 <span class="title">Basic Details</span>
 
                 <div class="fields">
-                    <div class="input-field">
-                        <label>Full Name</label>
-                        <input type="text" placeholder= "First Name" id="firstname" value='@name.get("firstname")' required />
-                    </div>
+
+
+                    <input type="hidden" placeholder="Enter PRN" id="prn" />
 
                     <div class="input-field">
-
-                        <input type="text"  placeholder="Middle Name" id="middlename" value='@name.get("middlename")' required />
-                    </div>
-
-                    <div class="input-field">
-                        <input type="text" placeholder="Last Name"  id="lastname" value='@name.get("lastname")' required>
-                    </div>
-
-                    <div class="input-field">
-                        <label>PRN</label>
-                        <input type="number" placeholder="Enter PRN" id="prn" value=@prn required />                    </div>
-
-                    <div class="input-field">
-                        <label>Branch</label>
-                        <select id="branch" required>
-<!--                            <option disabled selected>Select your Branch</option>-->
+                        <select id="branch" name="branch" required>
                             <option value="none" disabled selected>Select Branch @branch</option>
                             <option value="CSE">CSE</option>
                             <option value="ECE">ECE</option>
@@ -223,27 +207,18 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
                     </div>
 
                     <div class="input-field">
-                        <label>Mobile Number</label>
-                        <input type="text"  placeholder="Enter mobile no." id="mobileno" value=@mobileno size="16"/>
+                        <select id="year" name="year" required>
+                            <option value="none" disabled selected>Select Admission Year </option>
+                            <option value="2018">2018 </option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                        </select>
                     </div>
 
                     <div class="input-field">
-                        <label>Email ID</label>
-                        <input type="email" placeholder="Enter email address" id="emailid"  value=@emailid >
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="details ID">
-                <span class="title">Previous Exam Details</span>
-
-                <div class="fields">
-                    <div class="input-field">
-                        <label>Academic Year</label>
                         <select id="acad_year" name="acad_year">
-                            <!--                            <option disabled selected>Select your Branch</option>-->
-                            <option value="none" disabled selected>Select academic year @prev_exam.get("acad_year")</option>
+                            <option value="none" disabled selected>Select academic year</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -251,10 +226,24 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
                         </select>
                     </div>
 
+            <div class="input-field">
+                    <!-- <label>Branch</label>-->
+                <select id="student_option" name="student" required>
+                    <option value="none" disabled selected>Select Student</option>
+                </select>
+            </div>
+
+                </div>
+            </div>
+
+            <div class="details ID">
+                <span class="title">Exam Details</span>
+
+                <div class="fields">
+
                     <div class="input-field">
-                        <label>Result</label>
                         <select id="result" name="result">
-                            <option value="none" selected disabled hidden>Select result @prev_exam.get("result")</option>
+                            <option value="none" selected disabled hidden>Select result </option>
                             <option value="Result">Result</option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -263,9 +252,7 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
                     </div>
 
                     <div class="input-field">
-                        <label>Score/Marks Obtained</label>
-                        <input type="text"  id="score" placeholder="Enter score" size="10" value='@prev_exam.get("score")'> <br> <br>
-
+                        <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value=''>
                     </div>
 
 
@@ -273,13 +260,11 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
                 <div class="buttons">
                     <div class="backBtn">
-
-                        <span class="btnText">Save</span>
+                        <span type="submit" class="btnText" id="save">Save</span>
                     </div>
 
                     <button class="submit">
                         <span class="btnText">Cancel</span>
-
                     </button>
                 </div>
             </div>
@@ -288,8 +273,80 @@ backBtn.addEventListener("click", () => form.classList.remove('secActive'));
 
     </form>
 </div>
+<script>
+    let student_option = document.querySelector("#student_option");
+    let year = document.querySelector("#year");
+    let branch = document.querySelector("#branch");
+    let saveBtn = document.querySelector("#save");
 
-<!--<script src="check.js"></script>-->
+    let result = document.querySelector("#result");
+    let score = document.querySelector("#score");
+    function reset(){
+        console.log("reset")
+        result.value = ""
+        score.value = ""
+        student_option.value = ""
+    }
+    saveBtn.onclick = (e) => {
+        let form = document.getElementsByTagName("form");
+        let formData = new FormData(form[0]);
+        formData.append("_id", student_option.selectedOptions[0].getAttribute("data-id"))
+        fetch("/insertExamDetail",{
+            body: new URLSearchParams(formData),
+            method: "POST",
+            headers:  {
+                "Content-Type" : "application/x-www-form-urlencoded"
+            }
+
+        })
+        .then(resp => resp.json())
+        .then(data => {reset()})
+
+
+    }
+
+    let branch_value, year_value
+    [branch,year].forEach(el => {
+        el.addEventListener('change', evt => {
+            evt.preventDefault();
+
+            if (evt.target.id === "branch") {
+                branch_value = evt.target.value
+            } else if (evt.target.id === "year"){
+                year_value = evt.target.value
+            }
+
+            branch_value && year_value != undefined ? getStudents(branch_value,year_value): console.log("logg")
+
+        })
+    })
+
+    function getStudents(branch,year) {
+        fetch(`/fetchStudent?branch=${branch}&year=${year}`)
+                .then((resp) => resp.json())
+                .then((data) => (showStudents(data)))
+                .catch((e) => {
+                    console.log("error")
+                })
+    }
+
+    function showStudents(data){
+        let none_el = document.createElement('option');
+        none_el.setAttribute('value', "");
+        none_el.setAttribute('selected', 'true');
+        none_el.innerHTML = "None";
+        for (let i = 0; i < data.length; i++) {
+            console.log(data)
+            option_el = document.createElement('option');
+            option_el.innerHTML = data[i].studentName.first_name + " " + data[i].studentName.last_name;
+            option_el.setAttribute('value', data[i].studentName.first_name + " " +  data[i].studentName.middle_name  + " " + data[i].studentName.last_name);
+            option_el.setAttribute('data-id', data[i].id["$oid"]);
+            student_option.append(option_el);
+        }
+        student_option.insertBefore(none_el, student_option[0]);
+    }
+
+    </script>
 </body>
 </html>
 
