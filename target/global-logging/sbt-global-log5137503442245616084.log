@@ -1,0 +1,667 @@
+[debug] > Exec(run 8080, None, None)
+[debug] Evaluating tasks: Compile / run
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:252:19: diverging implicit expansion for type play.api.libs.json.Reads[play.api.libs.json.Writes[controllers.resp]]
+[error] starting with method oFormatFromReadsAndOWrites in object OFormat
+[error]     Ok(Json.toJson(resp))
+[error]                   ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:239:33: value headk is not a member of Seq[String]
+[error] did you mean head?
+[error]  Note: implicit value respWrites is not applicable here because it comes after the application point and it lacks an explicit result type
+[error]       val score = data("score").headk
+[error]                                 ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:239:33: value headk is not a member of Seq[String]
+[error] did you mean head?
+[error]  Note: implicit value respWrites is not applicable here because it comes after the application point and it lacks an explicit result type
+[error]       val score = data("score").headk
+[error]                                 ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:239:33: value headk is not a member of Seq[String]
+[error] did you mean head?
+[error]  Note: implicit value respWrites is not applicable here because it comes after the application point and it lacks an explicit result type
+[error]       val score = data("score").headk
+[error]                                 ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[warn] In the last 628 seconds, 7.679 (1.2%) were spent in GC. [Heap: 1.10GB free of 1.23GB, max 1.33GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:247:12: This catches all Throwables. If this is really intended, use `case _ : Throwable` to clear this warning.
+[error]       case _ => print("present")
+[error]            ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:248:7: '}' expected but 'case' found.
+[error]       case _: Throwable => {msg = "record present"}
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:266:5: expected class or object definition
+[error]     def examDetailUpdate() = Action{
+[error]     ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:272:1: expected class or object definition
+[error] def view(p:Int)=Action{
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:1: expected class or object definition
+[error] def deleterecord(prn:String)=Action{
+[error] ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:330:3: expected class or object definition
+[error]   def loginConnection()={
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:339:3: expected class or object definition
+[error]   def validatelogin(username:String, password:String)=Action{ implicit request=>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:354:3: expected class or object definition
+[error]   def logout=Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:368:3: expected class or object definition
+[error]   var p: Int=0
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:372:3: expected class or object definition
+[error]   def getValues(firstname:String ,middlename:String,lastname:String,prn:Int,branch:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:418:3: expected class or object definition
+[error]   def updatevalues(prn:Int)=Action{ implicit request=>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:467:3: expected class or object definition
+[error]   def updatepage()=Action{ implicit request=>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:473:3: expected class or object definition
+[error]   def finalUpdate(firstname:String ,middlename:String,lastname:String,prn:Int,branch:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:527:3: expected class or object definition
+[error]   def getAdmissionCollection() = {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:536:3: expected class or object definition
+[error]   def admissionIndex() = Action{ implicit request =>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:546:3: expected class or object definition
+[error]   def admissionGetValues(stu_firstname:String ,stu_middlename:String,stu_lastname:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:610:3: expected class or object definition
+[error]   def admissionFinalDelete(student_aadhaar:String) =Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:630:3: expected class or object definition
+[error]   def admissionView(student_aadhaar: String)=Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:668:3: expected class or object definition
+[error]   def admissionUpdate(stu_firstname:String ,stu_middlename:String,stu_lastname:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:744:3: expected class or object definition
+[error]   def admissionStudentList(currentPage: Int) = Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:772:3: expected class or object definition
+[error]   def admissionSearch() = Action{ implicit request =>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:832:3: expected class or object definition
+[error]   def getStudentCollection() = {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:841:3: expected class or object definition
+[error]   def studentIndex() = Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:848:3: expected class or object definition
+[error]   def studentGetValues(student_first_name:String ,student_mid_name:String,student_last_name:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:917:3: expected class or object definition
+[error]   def studentRedirectDelete()= Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:921:3: expected class or object definition
+[error]   def studentValuesDelete(govt_id:String)= Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:941:3: expected class or object definition
+[error]   def studentView(govt_id:String)= Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:975:3: expected class or object definition
+[error]   def studentUpdate(student_first_name:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:995:3: expected class or object definition
+[error]   def studentUpdateData(student_first_name:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1088:3: expected class or object definition
+[error]   def studentList(currentPage: Int) = Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1115:3: expected class or object definition
+[error]   def studentSearch() = Action{ implicit request =>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1167:3: expected class or object definition
+[error]   def getInstituteCollection() = {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1176:3: expected class or object definition
+[error]   def instituteIndex(): Action[AnyContent] = Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1186:3: expected class or object definition
+[error]   def instituteGetValues(institute_name:String,institute_code:String,institute_email:String,institute_contact:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1207:3: expected class or object definition
+[error]   def instituteUpdate(institute_name:String,institute_code:String,institute_email:String,institute_contact:String,
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1237:3: expected class or object definition
+[error]   def instituteDelete(institute_code:String ): Action[AnyContent] = Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1254:3: expected class or object definition
+[error]   def instituteView(institute_code:String): Action[AnyContent] = Action {
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1281:3: expected class or object definition
+[error]   def instituteList(currentPage: Int) = Action{
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1310:3: expected class or object definition
+[error]   def instituteSearch() = Action{ implicit request =>
+[error]   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:1352:1: eof expected but '}' found.
+[error] }
+[error] ^
+[error] 39 errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:253:20: overloaded method updateOne with alternatives:
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson],options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson])org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson],options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson])org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson,options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson,options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult]
+[error]  cannot be applied to (org.mongodb.scala.bson.conversions.Bson)
+[error]         collection.updateOne(equal("_id", 1))
+[error]                    ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:251:24: overloaded method updateOne with alternatives:
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson],options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson])org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson],options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: Seq[org.mongodb.scala.bson.conversions.Bson])org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson,options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (clientSession: org.mongodb.scala.ClientSession,filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson,options: org.mongodb.scala.model.UpdateOptions)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult] <and>
+[error]   (filter: org.mongodb.scala.bson.conversions.Bson,update: org.mongodb.scala.bson.conversions.Bson)org.mongodb.scala.SingleObservable[org.mongodb.scala.result.UpdateResult]
+[error]  cannot be applied to (org.mongodb.scala.bson.conversions.Bson)
+[error]         examCollection.updateOne(equal("_id", 1))
+[error]                        ^
+[error] one error found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Forcing garbage collection...
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:42: not found: value firstname
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:69: not found: value middlename
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                                                     ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:95: not found: value lastname
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                                                                               ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:41: not found: value acad_year
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:61: not found: value result
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:77: not found: value score
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:520:83: not found: value prn
+[error]     collection.updateOne(equal("prn", p), combine(set("name", details), set("prn",prn),
+[error]                                                                                   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:20: not found: value branch
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:70: not found: value mobileno
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                                                                      ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:94: not found: value emailid
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                                                                                              ^
+[error] 10 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:42: not found: value firstname
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:69: not found: value middlename
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                                                     ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:517:95: not found: value lastname
+[error]    val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
+[error]                                                                                               ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:41: not found: value acad_year
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:61: not found: value result
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:519:77: not found: value score
+[error]     val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
+[error]                                                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:520:83: not found: value prn
+[error]     collection.updateOne(equal("prn", p), combine(set("name", details), set("prn",prn),
+[error]                                                                                   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:20: not found: value branch
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:70: not found: value mobileno
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                                                                      ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:521:94: not found: value emailid
+[error]       set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
+[error]                                                                                              ^
+[error] 10 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 2 Scala sources and 1 Java source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 6 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:495:5: Unmatched closing brace '}' ignored here
+[error]     }
+[error]     ^
+[error] one error found
+[debug] Forcing garbage collection...
+[warn] In the last 8 seconds, 5.108 (66.7%) were spent in GC. [Heap: 0.97GB free of 1.12GB, max 1.33GB] Consider increasing the JVM heap using `-Xmx` or try a different collector, e.g. `-XX:+UseG1GC`, for better performance.
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 2 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:55:25: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object index
+[error]     Ok(views.html.index(demo,demo,m,demo,n,m,n))
+[error]                         ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:23: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object index
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:464:27: no arguments allowed for nullary method apply: (): play.twirl.api.HtmlFormat.Appendable in object index
+[error]       Ok(views.html.index(demo,demo,m,demo,n,m,n))
+[error]                           ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:494:7: Int does not take parameters
+[error]     OK("working")
+[error]       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\views\index.scala.html:200:83: not found: value branch
+[error]                             <option value="none" disabled selected>Select Branch @branch</option>
+[error]                                                                                   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\views\index.scala.html:221:90: not found: value prev_exam
+[error]                             <option value="none" disabled selected>Select academic year @prev_exam.get("acad_year")</option>
+[error]                                                                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\views\index.scala.html:246:90: not found: value prev_exam
+[error]                             <option value="none" selected disabled hidden>Select result @prev_exam.get("result")</option>
+[error]                                                                                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\views\index.scala.html:255:113: not found: value prev_exam
+[error]                         <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value='@prev_exam.get("score")'>
+[error]                                                                                                                 ^
+[error] 8 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:494:7: Int does not take parameters
+[error]     OK("working")
+[error]       ^
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\conf\routes:17:1: value examStudentUpdate is not a member of controllers.Application
+[error] GET /examStudentUpdate                             controllers.Application.examStudentUpdate(id: String)
+[error] one error found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 4 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 1 Scala source and 1 Java source to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[info] compiling 6 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[info] done compiling
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Exporting web-assets:play-scala-hello-world-tutorial
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:52: too many arguments (found 7, expected 5) for method apply: (id: String, name: String, branch: String, admission_year: String, academic_year: Map[String,String]): play.twirl.api.HtmlFormat.Appendable in object index
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+[error]                                                    ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:464:46: too many arguments (found 7, expected 5) for method apply: (id: String, name: String, branch: String, admission_year: String, academic_year: Map[String,String]): play.twirl.api.HtmlFormat.Appendable in object index
+[error]       Ok(views.html.index(demo,demo,m,demo,n,m,n))
+[error]                                              ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:494:7: Int does not take parameters
+[error]     OK(views.html.index(id, name, branch, admission_year, academic_year))
+[error]       ^
+[error] three errors found
+[debug] Forcing garbage collection...
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[info] compiling 5 Scala sources to C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes ...
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:23: type mismatch;
+[error]  found   : scala.collection.immutable.Map[String,String]
+[error]  required: String
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch))
+[error]                       ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:26: type mismatch;
+[error]  found   : scala.collection.immutable.Map[String,String]
+[error]  required: String
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch))
+[error]                          ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:31: type mismatch;
+[error]  found   : Int
+[error]  required: String
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch))
+[error]                               ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:35: type mismatch;
+[error]  found   : scala.collection.immutable.Map[String,String]
+[error]  required: String
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch))
+[error]                                   ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:306:45: type mismatch;
+[error]  found   : String
+[error]  required: Map[String,String]
+[error]   Ok(views.html.index(id,name,prn,prev_exam,branch))
+[error]                                             ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:464:46: too many arguments (found 7, expected 5) for method apply: (id: String, name: String, branch: String, admission_year: String, academic_year: Map[String,String]): play.twirl.api.HtmlFormat.Appendable in object index
+[error]       Ok(views.html.index(demo,demo,m,demo,n,m,n))
+[error]                                              ^
+[error] C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\app\controllers\Application.scala:494:7: Int does not take parameters
+[error]     OK(views.html.index(id, name, branch, admission_year, academic_year))
+[error]       ^
+[error] 7 errors found
+[error] (Compile / compileIncremental) Compilation failed
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true

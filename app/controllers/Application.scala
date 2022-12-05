@@ -2,12 +2,13 @@ package controllers
 
 
 import com.mongodb.client.model.Aggregates.{limit, skip, sort}
+import com.mongodb.client.model.{FindOneAndUpdateOptions, ReturnDocument}
 import model.Helpers.GenericObservable
 import org.mongodb.scala.bson.ObjectId
 import org.mongodb.scala.model.Filters
 import org.mongodb.scala.model.Filters.{and, equal}
 import org.mongodb.scala.model.Indexes.ascending
-import org.mongodb.scala.model.Updates.{combine, set}
+import org.mongodb.scala.model.Updates.{combine, push, set}
 import org.mongodb.scala.{Document, MongoClient, MongoCollection, MongoDatabase}
 import play.api.libs.json.Format.GenericFormat
 import play.api.libs.json.OFormat.oFormatFromReadsAndOWrites
@@ -20,9 +21,12 @@ import scala.collection.mutable.ArrayBuffer
 import scala.collection.mutable.{ArrayBuffer, ListBuffer}
 
 case class AdmissionStudent(_id : Option[Map[String,String]], aadhar: Option[String], name :Option[Map[String,String]], branch: Option[String], year: Option[String])
-case class ExamStudent(_id : Option[Map[String,String]], prn: Option[String], name: Option[Map[String,String]], branch: Option[String])
+case class ExamStudent(_id : Option[Map[String,String]], name: Option[String], branch: Option[String], year: Option[String], acad_year: Option[List[Map[String,String]]])
 case class StudentBasic(_id : Option[Map[String,String]], aadhar: Option[Map[String, String]], name: Option[Map[String,String]], studentDOB: Option[Map[String,String]])
 case class StudentInstitute(_id : Option[Map[String,String]],instituteName: Option[String], instituteContact: Option[String],instituteId:Option[String],instituteAddress: Option[Map[String, String]])
+
+case class ExamStudentFetch(_id : Option[Map[String,String]],studentName: Option[Map[String, String]])
+case class Resp(msg: String)
 
 @Singleton
 class Application @Inject()(cc:ControllerComponents) extends AbstractController (cc) {
@@ -48,7 +52,7 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
     val n:String=null
     val m:Int=0
     //demo1=demo1.empty
-    Ok(views.html.index(demo,demo,m,demo,n,m,n))
+    Ok(views.html.index(id = ???, name = ???, branch = ???, admission_year = ???, academic_year = ???))
   }
 
   def cancel()=Action{
@@ -73,6 +77,86 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
     collection
   }
 
+  def fetchStudent() = Action { implicit request =>
+
+    val branch = request.getQueryString("branch").get
+    val admission_year = request.getQueryString("year").get
+
+    print(s"$branch, $admission_year")
+
+    val collection = getAdmissionCollection()
+
+    val data = collection.find(and(equal("branch", branch), equal("admission_year", admission_year.toInt))).results()
+
+    var jsonMap = data.map(d => {
+      org.json4s.jackson.JsonMethods.parse(d.toJson()).values.asInstanceOf[Map[String, Any]]
+    })
+
+    var students = new ArrayBuffer[ExamStudentFetch]()
+
+    jsonMap.foreach(stu => {
+      students.append((ExamStudentFetch(
+        stu.get("_id").asInstanceOf[Option[Map[String, String]]],
+        stu.get("student_name").asInstanceOf[Option[Map[String, String]]]
+      )))
+    })
+
+    // create json response
+    implicit val studentWrite = new Writes[ExamStudentFetch] {
+      def writes(s: ExamStudentFetch): JsValue = {
+        Json.obj("id" -> s._id,
+          "studentName" -> s.studentName
+        )
+      }
+    }
+
+    Ok(Json.toJson(students))
+  }
+
+  def fetchExamStudent() = Action { implicit request =>
+
+    val branch = request.getQueryString("branch").get
+    val admission_year = request.getQueryString("year").get
+    val acad_year = request.getQueryString("acad_year").get
+
+    print(s"$branch, $admission_year $acad_year")
+
+    val collection = getExamCollection()
+
+    val data = collection.find(and(equal("branch", branch), equal("admission_year", admission_year),equal("academic_year.year", acad_year))).results()
+
+    var jsonMap = data.map(d => {
+      org.json4s.jackson.JsonMethods.parse(d.toJson()).values.asInstanceOf[Map[String, Any]]
+    })
+
+    var students = new ArrayBuffer[ExamStudent]()
+
+    jsonMap.foreach(stu => {
+      students.append((ExamStudent(
+        stu.get("_id").asInstanceOf[Option[Map[String, String]]],
+        stu.get("name").asInstanceOf[Option[String]],
+        stu.get("branch").asInstanceOf[Option[String]],
+        stu.get("admission_year").asInstanceOf[Option[String]],
+        stu.get("academic_year").asInstanceOf[Option[List[Map[String,String]]]],
+      )))
+    })
+
+    // create json response
+    implicit val studentWrite = new Writes[ExamStudent] {
+      def writes(s: ExamStudent): JsValue = {
+        Json.obj("id" -> s._id,
+          "name" -> s.name,
+          "branch" -> s.branch,
+          "year" -> s.year,
+          "acad_year" -> s.acad_year,
+
+        )
+      }
+    }
+
+    Ok(Json.toJson(students))
+  }
+
   def examStudentList(examCurrentPage:Int) = Action{
     val resultsPerPage = 10
     val offset: Int = examCurrentPage * resultsPerPage
@@ -89,10 +173,11 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
 
     jsonMap.foreach(stu => {
       students.append((ExamStudent(
-        stu.get("_id").asInstanceOf[Option[Map[String,String]]],
-        stu.get("prn").asInstanceOf[Option[String]],
-        stu.get("name").asInstanceOf[Option[Map[String,String]]],
-        stu.get("branch").asInstanceOf[Option[String]]
+        stu.get("_id").asInstanceOf[Option[Map[String, String]]],
+        stu.get("name").asInstanceOf[Option[String]],
+        stu.get("branch").asInstanceOf[Option[String]],
+        stu.get("admission_year").asInstanceOf[Option[String]],
+        stu.get("academic_year").asInstanceOf[Option[List[Map[String,String]]]],
       )))
     })
     val totalItems = collection.countDocuments().results()
@@ -118,10 +203,10 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
     jsonMap.foreach(stu => {
       students.append((ExamStudent(
         stu.get("_id").asInstanceOf[Option[Map[String, String]]],
-        stu.get("prn").asInstanceOf[Option[String]],
-        stu.get("name").asInstanceOf[Option[Map[String, String]]],
-        stu.get("branch").asInstanceOf[Option[String]]
-//        stu.get("admission_year").asInstanceOf[Option[String]]
+        stu.get("name").asInstanceOf[Option[String]],
+        stu.get("branch").asInstanceOf[Option[String]],
+        stu.get("admission_year").asInstanceOf[Option[String]],
+        stu.get("academic_year").asInstanceOf[Option[List[Map[String,String]]]],
       )))
     })
 
@@ -129,7 +214,6 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
     implicit val studentWrite = new Writes[ExamStudent] {
       def writes(s: ExamStudent): JsValue = {
         Json.obj("id" -> s._id,
-          "prn" -> s.prn.toString,
           "name" -> s.name,
           "branch" -> s.branch)
 //          "year" -> s.year.toString) // Bug: removing toString causes classCastException
@@ -139,9 +223,59 @@ class Application @Inject()(cc:ControllerComponents) extends AbstractController 
     Ok(Json.toJson(students))
   }
 
+  // Insert exam student details
+
+  def insertExamDetail() = Action { implicit request =>
+    val formData = request.body.asFormUrlEncoded
+    var msg = "Updated"
+    var examDetail = Document()
+
+    formData.map { data =>
+      val _id = data("_id").head
+      val branch = data("branch").head
+      val year = data("year").head
+      val prn = data("student").head
+      val acad_year = data("acad_year").head
+      val result = data("result").head
+      val score = data("score").head
+
+      examDetail = Document("_id" -> new ObjectId(_id), "name" -> prn, "branch" -> branch, "admission_year" -> year, "academic_year" -> List(Document("year" -> s"$acad_year", "score" -> score, "result" -> result)))
+
+    val examCollection = getExamCollection()
 
 
-//  View
+      try {
+      examCollection.insertOne(examDetail).results()
+    } catch {
+
+      case _: Throwable => {
+        msg = "Record modified"
+        val options: FindOneAndUpdateOptions = new FindOneAndUpdateOptions().upsert(true).returnDocument(ReturnDocument.AFTER);
+        examCollection.findOneAndUpdate(equal("_id", new ObjectId(_id)), combine(push("academic_year", Document("year" -> acad_year, "score" -> score, "result" -> result))), options).results()
+      }
+    }
+
+    }
+
+    implicit val respWrites = new Writes[Resp] {
+      def writes(s: Resp): JsValue = {
+        Json.obj("msg" -> s.msg)
+      }
+    }
+
+
+    Ok(Json.toJson(new Resp(msg)))
+  }
+
+  /**
+   *
+   * update exam student records
+   */
+    def examDetailUpdate() = Action{
+      Ok("woring")
+    }
+
+//  view for exam student
 
 def view(p:Int)=Action{
   val uri: String = "mongodb://localhost:27017"
@@ -169,7 +303,7 @@ def view(p:Int)=Action{
   //println(branch1)
   //println(emailid)
   println(jsonMap)
-  Ok(views.html.index(id,name,prn,prev_exam,branch,mobileno,emailid))
+  Ok(views.html.index(id,name,prn,prev_exam,branch))
 
 }
 
@@ -341,57 +475,24 @@ def deleterecord(prn:String)=Action{
   def updatepage()=Action{ implicit request=>
     Ok(views.html.update())
   }
-//
-//
 
-  def finalUpdate(firstname:String ,middlename:String,lastname:String,prn:Int,branch:String,
-                  acad_year:Int,result:String,score:Int,mobileno:Long,emailid:String) =Action{
-    val uri: String = "mongodb://localhost:27017"
-    //   //    System.setProperty("org.mongodb.async.type", "netty")
-    val mongoClient = MongoClient(uri)
-    val db: MongoDatabase = mongoClient.getDatabase("student")
+  def examStudentUpdate(id: String) = Action{
+    val examCollection = getExamCollection()
+    val collection_data = examCollection.find(equal("_id", id)).headResult().toJson()
 
+    val jsonMap = org.json4s.jackson.JsonMethods.parse(collection_data).values.asInstanceOf[Map[String, Any]]
+    println(jsonMap)
 
-    println("Connection created successfully...")
-
-    val collection: MongoCollection[Document] = db.getCollection("studentExamDetails")
-
-    // collection.updateOne({"prn"->prn},{$set: {"name"->}})
-    //    if(collection.find(exists("p",true)))
-    //      {
-    //
-    //      }
-
-    //    collection.updateOne(equal("prn", p), combine(set("name", name), set("age", age)))
-    //collection.find({"prn":p})
+    val _id = jsonMap("_id").asInstanceOf[String]
+    val name = jsonMap("name").asInstanceOf[String]
+    val branch = jsonMap("branch").asInstanceOf[String]
+    val admission_year = jsonMap("admission_year").asInstanceOf[String]
+    val academic_year = jsonMap("academic_year").asInstanceOf[List[Map[String,String]]]
 
 
-
-    //    if(t.eq(true)) {
-    //      collection.updateOne(equal("prn", p), combine(set("name", name), set("age", age))).printResults()
-    //    }
-    //    else{
-    //      Ok("sorry")
-    //    }
-    //}
-    // else
-    //{
-    //    Ok("sorry")
-    // }
-    //collection.countDocuments()
-    //    val j=collection.find(equal("prn",p)).printResults()
-    //    print(j)
-   val details = Document("firstname" -> firstname, "middlename" -> middlename, "lastname" -> lastname)
-    //val branch1=Document("branch"->branch)
-    val prev_year=Document("acad_year"->acad_year,"result"->result,"score"->score)
-    collection.updateOne(equal("prn", p), combine(set("name", details), set("prn",prn),
-      set("branch",branch),set("prev_exam",prev_year),set("mobileno",mobileno),set("emailid",emailid))).printResults()
-    Ok("done")
-  }
-
-
-
-
+//    Ok(views.html.admissionIndex())
+    OK(views.html.index(id, name, branch, admission_year, academic_year))
+    }
 
 
 

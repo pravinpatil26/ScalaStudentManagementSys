@@ -1,2 +1,95 @@
-[debug] Created transactional ClassFileManager with tempDir = D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes.bak
-[debug] Removing the temporary directory used for backing up class files: D:\Scala Projects\divyesh\play_app_sample1\layout-check\target\scala-2.13\classes.bak
+[debug] Created transactional ClassFileManager with tempDir = C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes.bak
+[debug] About to delete class files:
+[debug] 	Resp$.class
+[debug] 	ExamStudent$.class
+[debug] 	Routes.class
+[debug] 	Application$$anon$7.class
+[debug] 	index.class
+[debug] 	Application$$anon$5.class
+[debug] 	Routes$$anonfun$routes$1.class
+[debug] 	Application.class
+[debug] 	StudentInstitute$.class
+[debug] 	ExamStudentFetch.class
+[debug] 	StudentBasic.class
+[debug] 	index$.class
+[debug] 	Application$$anon$2.class
+[debug] 	Resp.class
+[debug] 	ReverseApplication.class
+[debug] 	Application$$anon$4.class
+[debug] 	ExamStudent.class
+[debug] 	Application$$anon$3.class
+[debug] 	Paginator.class
+[debug] 	ExamStudentFetch$.class
+[debug] 	AdmissionStudent.class
+[debug] 	Paginator$.class
+[debug] 	ReverseAssets.class
+[debug] 	Application$$anon$1.class
+[debug] 	Application$$anon$6.class
+[debug] 	ReverseAssets.class
+[debug] 	AdmissionStudent$.class
+[debug] 	StudentBasic$.class
+[debug] 	StudentInstitute.class
+[debug] 	ReverseApplication.class
+[debug] We backup class files:
+[debug] 	Resp$.class
+[debug] 	ExamStudent$.class
+[debug] 	Routes.class
+[debug] 	Application$$anon$7.class
+[debug] 	index.class
+[debug] 	Application$$anon$5.class
+[debug] 	Routes$$anonfun$routes$1.class
+[debug] 	Application.class
+[debug] 	StudentInstitute$.class
+[debug] 	ExamStudentFetch.class
+[debug] 	StudentBasic.class
+[debug] 	index$.class
+[debug] 	Application$$anon$2.class
+[debug] 	Resp.class
+[debug] 	ReverseApplication.class
+[debug] 	Application$$anon$4.class
+[debug] 	ExamStudent.class
+[debug] 	Application$$anon$3.class
+[debug] 	Paginator.class
+[debug] 	ExamStudentFetch$.class
+[debug] 	AdmissionStudent.class
+[debug] 	Paginator$.class
+[debug] 	ReverseAssets.class
+[debug] 	Application$$anon$1.class
+[debug] 	Application$$anon$6.class
+[debug] 	ReverseAssets.class
+[debug] 	AdmissionStudent$.class
+[debug] 	StudentBasic$.class
+[debug] 	StudentInstitute.class
+[debug] 	ReverseApplication.class
+[debug] Rolling back changes to class files.
+[debug] Removing generated classes:
+[debug] Restoring class files: 
+[debug] 	Application.class
+[debug] 	Routes.class
+[debug] 	Resp$.class
+[debug] 	ExamStudent$.class
+[debug] 	AdmissionStudent.class
+[debug] 	Resp.class
+[debug] 	ExamStudentFetch$.class
+[debug] 	ExamStudent.class
+[debug] 	Application$$anon$5.class
+[debug] 	Paginator.class
+[debug] 	Application$$anon$7.class
+[debug] 	index.class
+[debug] 	Paginator$.class
+[debug] 	AdmissionStudent$.class
+[debug] 	ReverseAssets.class
+[debug] 	Routes$$anonfun$routes$1.class
+[debug] 	ReverseApplication.class
+[debug] 	StudentInstitute.class
+[debug] 	Application$$anon$4.class
+[debug] 	StudentBasic$.class
+[debug] 	Application$$anon$3.class
+[debug] 	Application$$anon$6.class
+[debug] 	StudentInstitute$.class
+[debug] 	ExamStudentFetch.class
+[debug] 	StudentBasic.class
+[debug] 	Application$$anon$1.class
+[debug] 	Application$$anon$2.class
+[debug] 	index$.class
+[debug] Removing the temporary directory used for backing up class files: C:\Users\venkatesh_bellale\Documents\ScalaStudentManagementSys\target\scala-2.13\classes.bak
