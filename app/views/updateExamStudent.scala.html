@@ -1,5 +1,5 @@
 
-@(id: String, name: String, branch: String, admission_year: String, academic_year: Map[String, String])
+@(id: Map[String, String], name: String, branch: String, admission_year: String, academic_year: Map[String, String])
 
 
 <head xmlns="http://www.w3.org/1999/html">
@@ -193,11 +193,11 @@ form .buttons button , .backBtn{
                 <div class="fields">
 
 
-                    <input type="hidden" placeholder="Enter PRN" id="prn" />
+                    <input type="hidden" id="prn" name="prn" value=@id.get("$oid")>
 
                     <div class="input-field">
                         <select id="branch" name="branch" required>
-                            <option value="none" disabled selected>Select Branch @branch</option>
+                            <option value="@branch"  selected>@if(branch){@branch} else{select branch}</option>
                             <option value="CSE">CSE</option>
                             <option value="ECE">ECE</option>
                             <option value="Mech">Mech</option>
@@ -208,17 +208,19 @@ form .buttons button , .backBtn{
 
                     <div class="input-field">
                         <select id="year" name="year" required>
-                            <option value="none" disabled selected>Select Admission Year </option>
+                            <option value="@admission_year"  selected>@if(admission_year){@admission_year} else{Select Admission Year} </option>
+                            <option value="2017">2017</option>
                             <option value="2018">2018 </option>
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
                             <option value="2021">2021</option>
+                            <option value="2022">2022</option>
                         </select>
                     </div>
 
                     <div class="input-field">
                         <select id="acad_year" name="acad_year">
-                            <option value="none" disabled selected>Select academic year</option>
+                            <option value="@academic_year.get("year")"  selected>@if(academic_year){@academic_year.get("year")} else{Select academic year}</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -229,7 +231,7 @@ form .buttons button , .backBtn{
             <div class="input-field">
                     <!-- <label>Branch</label>-->
                 <select id="student_option" name="student" required>
-                    <option value="none" disabled selected>Select Student</option>
+                    <option value="@name" selected>@if(name){@name} else {Select Student}</option>
                 </select>
             </div>
 
@@ -243,7 +245,7 @@ form .buttons button , .backBtn{
 
                     <div class="input-field">
                         <select id="result" name="result">
-                            <option value="none" selected disabled hidden>Select result </option>
+                            <option value="@academic_year.get("result")" selected>@if(academic_year.size>0){@academic_year.get("result")} else{Select result}</option>
                             <option value="Result">Result</option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -252,7 +254,7 @@ form .buttons button , .backBtn{
                     </div>
 
                     <div class="input-field">
-                        <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value=''>
+                        <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value=@academic_year.get("score")>
                     </div>
 
 
@@ -260,11 +262,10 @@ form .buttons button , .backBtn{
 
                 <div class="buttons">
                     <div class="backBtn">
-                        <span type="submit" class="btnText" id="save">Save</span>
+                        <span type="submit" class="btnText" id="save">Update</span>
                     </div>
 
-                    <button class="submit">
-                        <span class="btnText">Cancel</span>
+                    <button id="cancle">Cancle
                     </button>
                 </div>
             </div>
@@ -278,6 +279,7 @@ form .buttons button , .backBtn{
     let year = document.querySelector("#year");
     let branch = document.querySelector("#branch");
     let saveBtn = document.querySelector("#save");
+    let cancleBtn = document.querySelector("#cancle");
 
     let result = document.querySelector("#result");
     let score = document.querySelector("#score");
@@ -287,11 +289,13 @@ form .buttons button , .backBtn{
         score.value = ""
         student_option.value = ""
     }
+
     saveBtn.onclick = (e) => {
         let form = document.getElementsByTagName("form");
         let formData = new FormData(form[0]);
-        formData.append("_id", student_option.selectedOptions[0].getAttribute("data-id"))
-        fetch("/insertExamDetail",{
+        let _id = student_option.selectedOptions[0].getAttribute("data-id")
+        _id != undefined ? formData.append("prn", _id) : ""
+        fetch("/updateExam",{
             body: new URLSearchParams(formData),
             method: "POST",
             headers:  {
@@ -301,10 +305,12 @@ form .buttons button , .backBtn{
         })
         .then(resp => resp.json())
         .then(data => {reset()})
-
-
     }
 
+    cancleBtn.onclick = () => {
+        console.log("called")
+        window.location.href = "@routes.Application.examStudentList(0)"
+    }
     let branch_value, year_value
     [branch,year].forEach(el => {
         el.addEventListener('change', evt => {
