@@ -15,15 +15,15 @@ import play.api.templates.PlayMagic._
 import play.api.mvc._
 import play.api.data._
 
-object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template5[String,String,String,String,Map[String, String],play.twirl.api.HtmlFormat.Appendable] {
+object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,_root_.play.twirl.api.Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with _root_.play.twirl.api.Template5[Map[String, String],String,String,String,Map[String, String],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*2.2*/(id: String, name: String, branch: String, admission_year: String, academic_year: Map[String, String]):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*2.2*/(id: Map[String, String], name: String, branch: String, admission_year: String, academic_year: Map[String, String]):play.twirl.api.HtmlFormat.Appendable = {
     _display_ {
       {
 
 
-Seq[Any](format.raw/*2.104*/("""
+Seq[Any](format.raw/*2.117*/("""
 
 
 """),format.raw/*5.1*/("""<head xmlns="http://www.w3.org/1999/html">
@@ -217,11 +217,11 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
                 <div class="fields">
 
 
-                    <input type="hidden" placeholder="Enter PRN" id="prn" />
+                    <input type="hidden" id="prn" name="prn" value="""),_display_(/*196.69*/id/*196.71*/.get("$oid")),format.raw/*196.83*/(""">
 
                     <div class="input-field">
                         <select id="branch" name="branch" required>
-                            <option value="none" disabled selected>Select Branch """),_display_(/*200.83*/branch),format.raw/*200.89*/("""</option>
+                            <option value=""""),_display_(/*200.45*/branch),format.raw/*200.51*/(""""  selected>"""),_display_(/*200.64*/if(branch)/*200.74*/{_display_(_display_(/*200.76*/branch))}/*200.84*/else/*200.88*/{_display_(Seq[Any](format.raw/*200.89*/("""select branch""")))}),format.raw/*200.103*/("""</option>
                             <option value="CSE">CSE</option>
                             <option value="ECE">ECE</option>
                             <option value="Mech">Mech</option>
@@ -232,17 +232,19 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
 
                     <div class="input-field">
                         <select id="year" name="year" required>
-                            <option value="none" disabled selected>Select Admission Year </option>
+                            <option value=""""),_display_(/*211.45*/admission_year),format.raw/*211.59*/(""""  selected>"""),_display_(/*211.72*/if(admission_year)/*211.90*/{_display_(_display_(/*211.92*/admission_year))}/*211.108*/else/*211.112*/{_display_(Seq[Any](format.raw/*211.113*/("""Select Admission Year""")))}),format.raw/*211.135*/(""" """),format.raw/*211.136*/("""</option>
+                            <option value="2017">2017</option>
                             <option value="2018">2018 </option>
                             <option value="2019">2019</option>
                             <option value="2020">2020</option>
                             <option value="2021">2021</option>
+                            <option value="2022">2022</option>
                         </select>
                     </div>
 
                     <div class="input-field">
                         <select id="acad_year" name="acad_year">
-                            <option value="none" disabled selected>Select academic year</option>
+                            <option value=""""),_display_(/*223.45*/academic_year/*223.58*/.get("year")),format.raw/*223.70*/(""""  selected>"""),_display_(/*223.83*/if(academic_year)/*223.100*/{_display_(_display_(/*223.102*/academic_year/*223.115*/.get("year")))}/*223.129*/else/*223.133*/{_display_(Seq[Any](format.raw/*223.134*/("""Select academic year""")))}),format.raw/*223.155*/("""</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -253,7 +255,7 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
             <div class="input-field">
                     <!-- <label>Branch</label>-->
                 <select id="student_option" name="student" required>
-                    <option value="none" disabled selected>Select Student</option>
+                    <option value=""""),_display_(/*234.37*/name),format.raw/*234.41*/("""" selected>"""),_display_(/*234.53*/if(name)/*234.61*/{_display_(_display_(/*234.63*/name))}/*234.69*/else/*234.74*/{_display_(Seq[Any](format.raw/*234.75*/("""Select Student""")))}),format.raw/*234.90*/("""</option>
                 </select>
             </div>
 
@@ -267,7 +269,7 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
 
                     <div class="input-field">
                         <select id="result" name="result">
-                            <option value="none" selected disabled hidden>Select result </option>
+                            <option value=""""),_display_(/*248.45*/academic_year/*248.58*/.get("result")),format.raw/*248.72*/("""" selected>"""),_display_(/*248.84*/if(academic_year.size>0)/*248.108*/{_display_(_display_(/*248.110*/academic_year/*248.123*/.get("result")))}/*248.139*/else/*248.143*/{_display_(Seq[Any](format.raw/*248.144*/("""Select result""")))}),format.raw/*248.158*/("""</option>
                             <option value="Result">Result</option>
                             <option value="Pass">Pass</option>
                             <option value="Fail">Fail</option>
@@ -276,7 +278,7 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
                     </div>
 
                     <div class="input-field">
-                        <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value=''>
+                        <input type="text"  name="score" id="score" placeholder="Enter score" size="10" value="""),_display_(/*257.112*/academic_year/*257.125*/.get("score")),format.raw/*257.138*/(""">
                     </div>
 
 
@@ -305,72 +307,73 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
 
     let result = document.querySelector("#result");
     let score = document.querySelector("#score");
-    function reset()"""),format.raw/*284.21*/("""{"""),format.raw/*284.22*/("""
-        """),format.raw/*285.9*/("""console.log("reset")
+    function reset()"""),format.raw/*286.21*/("""{"""),format.raw/*286.22*/("""
+        """),format.raw/*287.9*/("""console.log("reset")
         result.value = ""
         score.value = ""
         student_option.value = ""
-    """),format.raw/*289.5*/("""}"""),format.raw/*289.6*/("""
-    """),format.raw/*290.5*/("""saveBtn.onclick = (e) => """),format.raw/*290.30*/("""{"""),format.raw/*290.31*/("""
-        """),format.raw/*291.9*/("""let form = document.getElementsByTagName("form");
+    """),format.raw/*291.5*/("""}"""),format.raw/*291.6*/("""
+    """),format.raw/*292.5*/("""saveBtn.onclick = (e) => """),format.raw/*292.30*/("""{"""),format.raw/*292.31*/("""
+        """),format.raw/*293.9*/("""let form = document.getElementsByTagName("form");
         let formData = new FormData(form[0]);
-        formData.append("_id", student_option.selectedOptions[0].getAttribute("data-id"))
-        fetch("/insertExamDetail","""),format.raw/*294.35*/("""{"""),format.raw/*294.36*/("""
-            """),format.raw/*295.13*/("""body: new URLSearchParams(formData),
+        let _id = student_option.selectedOptions[0].getAttribute("data-id")
+        _id != undefined ? formData.append("prn", _id) : ""
+        fetch("/updateExam","""),format.raw/*297.29*/("""{"""),format.raw/*297.30*/("""
+            """),format.raw/*298.13*/("""body: new URLSearchParams(formData),
             method: "POST",
-            headers:  """),format.raw/*297.23*/("""{"""),format.raw/*297.24*/("""
-                """),format.raw/*298.17*/(""""Content-Type" : "application/x-www-form-urlencoded"
-            """),format.raw/*299.13*/("""}"""),format.raw/*299.14*/("""
+            headers:  """),format.raw/*300.23*/("""{"""),format.raw/*300.24*/("""
+                """),format.raw/*301.17*/(""""Content-Type" : "application/x-www-form-urlencoded"
+            """),format.raw/*302.13*/("""}"""),format.raw/*302.14*/("""
 
-        """),format.raw/*301.9*/("""}"""),format.raw/*301.10*/(""")
+        """),format.raw/*304.9*/("""}"""),format.raw/*304.10*/(""")
         .then(resp => resp.json())
-        .then(data => """),format.raw/*303.23*/("""{"""),format.raw/*303.24*/("""reset()"""),format.raw/*303.31*/("""}"""),format.raw/*303.32*/(""")
+        .then(data => """),format.raw/*306.23*/("""{"""),format.raw/*306.24*/("""reset()"""),format.raw/*306.31*/("""}"""),format.raw/*306.32*/(""")
 
 
-    """),format.raw/*306.5*/("""}"""),format.raw/*306.6*/("""
+    """),format.raw/*309.5*/("""}"""),format.raw/*309.6*/("""
 
-    """),format.raw/*308.5*/("""let branch_value, year_value
-    [branch,year].forEach(el => """),format.raw/*309.33*/("""{"""),format.raw/*309.34*/("""
-        """),format.raw/*310.9*/("""el.addEventListener('change', evt => """),format.raw/*310.46*/("""{"""),format.raw/*310.47*/("""
-            """),format.raw/*311.13*/("""evt.preventDefault();
+    """),format.raw/*311.5*/("""let branch_value, year_value
+    [branch,year].forEach(el => """),format.raw/*312.33*/("""{"""),format.raw/*312.34*/("""
+        """),format.raw/*313.9*/("""el.addEventListener('change', evt => """),format.raw/*313.46*/("""{"""),format.raw/*313.47*/("""
+            """),format.raw/*314.13*/("""evt.preventDefault();
 
-            if (evt.target.id === "branch") """),format.raw/*313.45*/("""{"""),format.raw/*313.46*/("""
-                """),format.raw/*314.17*/("""branch_value = evt.target.value
-            """),format.raw/*315.13*/("""}"""),format.raw/*315.14*/(""" """),format.raw/*315.15*/("""else if (evt.target.id === "year")"""),format.raw/*315.49*/("""{"""),format.raw/*315.50*/("""
-                """),format.raw/*316.17*/("""year_value = evt.target.value
-            """),format.raw/*317.13*/("""}"""),format.raw/*317.14*/("""
+            if (evt.target.id === "branch") """),format.raw/*316.45*/("""{"""),format.raw/*316.46*/("""
+                """),format.raw/*317.17*/("""branch_value = evt.target.value
+            """),format.raw/*318.13*/("""}"""),format.raw/*318.14*/(""" """),format.raw/*318.15*/("""else if (evt.target.id === "year")"""),format.raw/*318.49*/("""{"""),format.raw/*318.50*/("""
+                """),format.raw/*319.17*/("""year_value = evt.target.value
+            """),format.raw/*320.13*/("""}"""),format.raw/*320.14*/("""
 
-            """),format.raw/*319.13*/("""branch_value && year_value != undefined ? getStudents(branch_value,year_value): console.log("logg")
+            """),format.raw/*322.13*/("""branch_value && year_value != undefined ? getStudents(branch_value,year_value): console.log("logg")
 
-        """),format.raw/*321.9*/("""}"""),format.raw/*321.10*/(""")
-    """),format.raw/*322.5*/("""}"""),format.raw/*322.6*/(""")
+        """),format.raw/*324.9*/("""}"""),format.raw/*324.10*/(""")
+    """),format.raw/*325.5*/("""}"""),format.raw/*325.6*/(""")
 
-    function getStudents(branch,year) """),format.raw/*324.39*/("""{"""),format.raw/*324.40*/("""
-        """),format.raw/*325.9*/("""fetch(`/fetchStudent?branch=$"""),format.raw/*325.38*/("""{"""),format.raw/*325.39*/("""branch"""),format.raw/*325.45*/("""}"""),format.raw/*325.46*/("""&year=$"""),format.raw/*325.53*/("""{"""),format.raw/*325.54*/("""year"""),format.raw/*325.58*/("""}"""),format.raw/*325.59*/("""`)
+    function getStudents(branch,year) """),format.raw/*327.39*/("""{"""),format.raw/*327.40*/("""
+        """),format.raw/*328.9*/("""fetch(`/fetchStudent?branch=$"""),format.raw/*328.38*/("""{"""),format.raw/*328.39*/("""branch"""),format.raw/*328.45*/("""}"""),format.raw/*328.46*/("""&year=$"""),format.raw/*328.53*/("""{"""),format.raw/*328.54*/("""year"""),format.raw/*328.58*/("""}"""),format.raw/*328.59*/("""`)
                 .then((resp) => resp.json())
                 .then((data) => (showStudents(data)))
-                .catch((e) => """),format.raw/*328.31*/("""{"""),format.raw/*328.32*/("""
-                    """),format.raw/*329.21*/("""console.log("error")
-                """),format.raw/*330.17*/("""}"""),format.raw/*330.18*/(""")
-    """),format.raw/*331.5*/("""}"""),format.raw/*331.6*/("""
+                .catch((e) => """),format.raw/*331.31*/("""{"""),format.raw/*331.32*/("""
+                    """),format.raw/*332.21*/("""console.log("error")
+                """),format.raw/*333.17*/("""}"""),format.raw/*333.18*/(""")
+    """),format.raw/*334.5*/("""}"""),format.raw/*334.6*/("""
 
-    """),format.raw/*333.5*/("""function showStudents(data)"""),format.raw/*333.32*/("""{"""),format.raw/*333.33*/("""
-        """),format.raw/*334.9*/("""let none_el = document.createElement('option');
+    """),format.raw/*336.5*/("""function showStudents(data)"""),format.raw/*336.32*/("""{"""),format.raw/*336.33*/("""
+        """),format.raw/*337.9*/("""let none_el = document.createElement('option');
         none_el.setAttribute('value', "");
         none_el.setAttribute('selected', 'true');
         none_el.innerHTML = "None";
-        for (let i = 0; i < data.length; i++) """),format.raw/*338.47*/("""{"""),format.raw/*338.48*/("""
-            """),format.raw/*339.13*/("""console.log(data)
+        for (let i = 0; i < data.length; i++) """),format.raw/*341.47*/("""{"""),format.raw/*341.48*/("""
+            """),format.raw/*342.13*/("""console.log(data)
             option_el = document.createElement('option');
             option_el.innerHTML = data[i].studentName.first_name + " " + data[i].studentName.last_name;
             option_el.setAttribute('value', data[i].studentName.first_name + " " +  data[i].studentName.middle_name  + " " + data[i].studentName.last_name);
             option_el.setAttribute('data-id', data[i].id["$oid"]);
             student_option.append(option_el);
-        """),format.raw/*345.9*/("""}"""),format.raw/*345.10*/("""
-        """),format.raw/*346.9*/("""student_option.insertBefore(none_el, student_option[0]);
-    """),format.raw/*347.5*/("""}"""),format.raw/*347.6*/("""
+        """),format.raw/*348.9*/("""}"""),format.raw/*348.10*/("""
+        """),format.raw/*349.9*/("""student_option.insertBefore(none_el, student_option[0]);
+    """),format.raw/*350.5*/("""}"""),format.raw/*350.6*/("""
 
-    """),format.raw/*349.5*/("""</script>
+    """),format.raw/*352.5*/("""</script>
 </body>
 </html>
 
@@ -379,9 +382,9 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
     }
   }
 
-  def render(id:String,name:String,branch:String,admission_year:String,academic_year:Map[String, String]): play.twirl.api.HtmlFormat.Appendable = apply(id,name,branch,admission_year,academic_year)
+  def render(id:Map[String, String],name:String,branch:String,admission_year:String,academic_year:Map[String, String]): play.twirl.api.HtmlFormat.Appendable = apply(id,name,branch,admission_year,academic_year)
 
-  def f:((String,String,String,String,Map[String, String]) => play.twirl.api.HtmlFormat.Appendable) = (id,name,branch,admission_year,academic_year) => apply(id,name,branch,admission_year,academic_year)
+  def f:((Map[String, String],String,String,String,Map[String, String]) => play.twirl.api.HtmlFormat.Appendable) = (id,name,branch,admission_year,academic_year) => apply(id,name,branch,admission_year,academic_year)
 
   def ref: this.type = this
 
@@ -390,10 +393,10 @@ form .backBtn i"""),format.raw/*146.16*/("""{"""),format.raw/*146.17*/("""
 
               /*
                   -- GENERATED --
-                  SOURCE: app/views/index.scala.html
-                  HASH: d88f41b3f3cbc0cd2a60d634b3d4b908a94d0478
-                  MATRIX: 770->3|968->105|1000->111|1530->614|1558->615|1591->621|1717->720|1745->721|1774->723|1805->727|1833->728|1866->734|2015->856|2043->857|2072->859|2110->869|2139->870|2172->876|2401->1078|2429->1079|2458->1081|2503->1098|2532->1099|2565->1105|2676->1189|2704->1190|2733->1192|2786->1217|2815->1218|2848->1224|3040->1389|3068->1390|3097->1392|3140->1407|3169->1408|3202->1414|3349->1534|3377->1535|3406->1537|3455->1558|3484->1559|3517->1565|3622->1643|3650->1644|3681->1648|3735->1674|3764->1675|3797->1681|3899->1756|3927->1757|3956->1759|4006->1781|4035->1782|4068->1788|4220->1913|4248->1914|4277->1916|4328->1939|4357->1940|4390->1946|4547->2076|4575->2077|4604->2079|4657->2104|4686->2105|4719->2111|4846->2211|4874->2212|4903->2214|4949->2232|4978->2233|5011->2239|5101->2301|5130->2302|5160->2304|5215->2330|5245->2331|5279->2337|5501->2531|5530->2532|5560->2534|5642->2587|5672->2588|5706->2594|5775->2635|5804->2636|5834->2638|5916->2691|5946->2692|5980->2698|6025->2715|6054->2716|6086->2720|6147->2752|6177->2753|6211->2759|6561->3081|6590->3082|6620->3084|6673->3108|6703->3109|6737->3115|6806->3156|6835->3157|6865->3159|6911->3176|6941->3177|6975->3183|7031->3211|7060->3212|7090->3214|7150->3245|7180->3246|7214->3252|7258->3268|7287->3269|7317->3271|7361->3286|7391->3287|7425->3293|7481->3321|7510->3322|7540->3324|7582->3337|7612->3338|7646->3344|7716->3386|7745->3387|7775->3389|7835->3420|7865->3421|7899->3427|7948->3448|7977->3449|8015->3459|8056->3483|8087->3537|8118->3595|8149->3653|8180->3719|8215->3769|8246->3806|8277->3842|8308->3892|8339->3912|8370->3965|8401->3980|8432->3992|8462->4000|8495->4084|8526->4099|8556->4101|9252->4769|9280->4775|12682->8148|12712->8149|12750->8159|12892->8273|12921->8274|12955->8280|13009->8305|13039->8306|13077->8316|13329->8539|13359->8540|13402->8554|13520->8643|13550->8644|13597->8662|13692->8728|13722->8729|13762->8741|13792->8742|13882->8803|13912->8804|13948->8811|13978->8812|14017->8823|14046->8824|14082->8832|14173->8894|14203->8895|14241->8905|14307->8942|14337->8943|14380->8957|14478->9026|14508->9027|14555->9045|14629->9090|14659->9091|14689->9092|14752->9126|14782->9127|14829->9145|14901->9188|14931->9189|14976->9205|15115->9316|15145->9317|15180->9324|15209->9325|15281->9368|15311->9369|15349->9379|15407->9408|15437->9409|15472->9415|15502->9416|15538->9423|15568->9424|15601->9428|15631->9429|15795->9564|15825->9565|15876->9587|15943->9625|15973->9626|16008->9633|16037->9634|16073->9642|16129->9669|16159->9670|16197->9680|16453->9907|16483->9908|16526->9922|17018->10386|17048->10387|17086->10397|17176->10459|17205->10460|17241->10468
-                  LINES: 21->2|26->2|29->5|43->19|43->19|44->20|48->24|48->24|49->25|49->25|49->25|50->26|55->31|55->31|56->32|56->32|56->32|57->33|65->41|65->41|66->42|66->42|66->42|67->43|71->47|71->47|72->48|72->48|72->48|73->49|81->57|81->57|82->58|82->58|82->58|83->59|88->64|88->64|89->65|89->65|89->65|90->66|93->69|93->69|95->71|95->71|95->71|96->72|99->75|99->75|100->76|100->76|100->76|101->77|107->83|107->83|108->84|108->84|108->84|109->85|114->90|114->90|115->91|115->91|115->91|116->92|120->96|120->96|121->97|121->97|121->97|122->98|125->101|125->101|126->102|126->102|126->102|127->103|136->112|136->112|137->113|138->114|138->114|139->115|140->116|140->116|141->117|142->118|142->118|143->119|144->120|144->120|146->122|146->122|146->122|147->123|161->137|161->137|162->138|162->138|162->138|163->139|165->141|165->141|166->142|166->142|166->142|167->143|168->144|168->144|169->145|170->146|170->146|171->147|172->148|172->148|173->149|173->149|173->149|174->150|175->151|175->151|176->152|176->152|176->152|177->153|179->155|179->155|180->156|180->156|180->156|181->157|182->158|182->158|187->163|189->165|190->166|191->167|192->168|193->169|196->172|197->173|198->174|199->175|200->176|201->177|202->178|203->179|204->180|206->182|207->183|208->184|224->200|224->200|308->284|308->284|309->285|313->289|313->289|314->290|314->290|314->290|315->291|318->294|318->294|319->295|321->297|321->297|322->298|323->299|323->299|325->301|325->301|327->303|327->303|327->303|327->303|330->306|330->306|332->308|333->309|333->309|334->310|334->310|334->310|335->311|337->313|337->313|338->314|339->315|339->315|339->315|339->315|339->315|340->316|341->317|341->317|343->319|345->321|345->321|346->322|346->322|348->324|348->324|349->325|349->325|349->325|349->325|349->325|349->325|349->325|349->325|349->325|352->328|352->328|353->329|354->330|354->330|355->331|355->331|357->333|357->333|357->333|358->334|362->338|362->338|363->339|369->345|369->345|370->346|371->347|371->347|373->349
+                  SOURCE: app/views/updateExamStudent.scala.html
+                  HASH: 02356bed37e29fe8b80e4da08518f6377870aede
+                  MATRIX: 783->3|994->118|1026->124|1556->627|1584->628|1617->634|1743->733|1771->734|1800->736|1831->740|1859->741|1892->747|2041->869|2069->870|2098->872|2136->882|2165->883|2198->889|2427->1091|2455->1092|2484->1094|2529->1111|2558->1112|2591->1118|2702->1202|2730->1203|2759->1205|2812->1230|2841->1231|2874->1237|3066->1402|3094->1403|3123->1405|3166->1420|3195->1421|3228->1427|3375->1547|3403->1548|3432->1550|3481->1571|3510->1572|3543->1578|3648->1656|3676->1657|3707->1661|3761->1687|3790->1688|3823->1694|3925->1769|3953->1770|3982->1772|4032->1794|4061->1795|4094->1801|4246->1926|4274->1927|4303->1929|4354->1952|4383->1953|4416->1959|4573->2089|4601->2090|4630->2092|4683->2117|4712->2118|4745->2124|4872->2224|4900->2225|4929->2227|4975->2245|5004->2246|5037->2252|5127->2314|5156->2315|5186->2317|5241->2343|5271->2344|5305->2350|5527->2544|5556->2545|5586->2547|5668->2600|5698->2601|5732->2607|5801->2648|5830->2649|5860->2651|5942->2704|5972->2705|6006->2711|6051->2728|6080->2729|6112->2733|6173->2765|6203->2766|6237->2772|6587->3094|6616->3095|6646->3097|6699->3121|6729->3122|6763->3128|6832->3169|6861->3170|6891->3172|6937->3189|6967->3190|7001->3196|7057->3224|7086->3225|7116->3227|7176->3258|7206->3259|7240->3265|7284->3281|7313->3282|7343->3284|7387->3299|7417->3300|7451->3306|7507->3334|7536->3335|7566->3337|7608->3350|7638->3351|7672->3357|7742->3399|7771->3400|7801->3402|7861->3433|7891->3434|7925->3440|7974->3461|8003->3462|8041->3472|8082->3496|8113->3550|8144->3608|8175->3666|8206->3732|8241->3782|8272->3819|8303->3855|8334->3905|8365->3925|8396->3978|8427->3993|8458->4005|8488->4013|8521->4097|8552->4112|8582->4114|9068->4572|9080->4574|9114->4586|9307->4751|9335->4757|9376->4770|9396->4780|9427->4782|9446->4790|9460->4794|9500->4795|9547->4809|10121->5355|10157->5369|10198->5382|10226->5400|10257->5402|10285->5418|10300->5422|10341->5423|10396->5445|10427->5446|11073->6064|11096->6077|11130->6089|11171->6102|11199->6119|11231->6121|11255->6134|11281->6148|11296->6152|11337->6153|11391->6174|11923->6678|11949->6682|11989->6694|12007->6702|12038->6704|12055->6710|12069->6715|12109->6716|12156->6731|12578->7125|12601->7138|12637->7152|12677->7164|12712->7188|12744->7190|12768->7203|12796->7219|12811->7223|12852->7224|12899->7238|13360->7670|13384->7683|13420->7696|14286->8533|14316->8534|14354->8544|14496->8658|14525->8659|14559->8665|14613->8690|14643->8691|14681->8701|14974->8965|15004->8966|15047->8980|15165->9069|15195->9070|15242->9088|15337->9154|15367->9155|15407->9167|15437->9168|15527->9229|15557->9230|15593->9237|15623->9238|15662->9249|15691->9250|15727->9258|15818->9320|15848->9321|15886->9331|15952->9368|15982->9369|16025->9383|16123->9452|16153->9453|16200->9471|16274->9516|16304->9517|16334->9518|16397->9552|16427->9553|16474->9571|16546->9614|16576->9615|16621->9631|16760->9742|16790->9743|16825->9750|16854->9751|16926->9794|16956->9795|16994->9805|17052->9834|17082->9835|17117->9841|17147->9842|17183->9849|17213->9850|17246->9854|17276->9855|17440->9990|17470->9991|17521->10013|17588->10051|17618->10052|17653->10059|17682->10060|17718->10068|17774->10095|17804->10096|17842->10106|18098->10333|18128->10334|18171->10348|18663->10812|18693->10813|18731->10823|18821->10885|18850->10886|18886->10894
+                  LINES: 21->2|26->2|29->5|43->19|43->19|44->20|48->24|48->24|49->25|49->25|49->25|50->26|55->31|55->31|56->32|56->32|56->32|57->33|65->41|65->41|66->42|66->42|66->42|67->43|71->47|71->47|72->48|72->48|72->48|73->49|81->57|81->57|82->58|82->58|82->58|83->59|88->64|88->64|89->65|89->65|89->65|90->66|93->69|93->69|95->71|95->71|95->71|96->72|99->75|99->75|100->76|100->76|100->76|101->77|107->83|107->83|108->84|108->84|108->84|109->85|114->90|114->90|115->91|115->91|115->91|116->92|120->96|120->96|121->97|121->97|121->97|122->98|125->101|125->101|126->102|126->102|126->102|127->103|136->112|136->112|137->113|138->114|138->114|139->115|140->116|140->116|141->117|142->118|142->118|143->119|144->120|144->120|146->122|146->122|146->122|147->123|161->137|161->137|162->138|162->138|162->138|163->139|165->141|165->141|166->142|166->142|166->142|167->143|168->144|168->144|169->145|170->146|170->146|171->147|172->148|172->148|173->149|173->149|173->149|174->150|175->151|175->151|176->152|176->152|176->152|177->153|179->155|179->155|180->156|180->156|180->156|181->157|182->158|182->158|187->163|189->165|190->166|191->167|192->168|193->169|196->172|197->173|198->174|199->175|200->176|201->177|202->178|203->179|204->180|206->182|207->183|208->184|220->196|220->196|220->196|224->200|224->200|224->200|224->200|224->200|224->200|224->200|224->200|224->200|235->211|235->211|235->211|235->211|235->211|235->211|235->211|235->211|235->211|235->211|247->223|247->223|247->223|247->223|247->223|247->223|247->223|247->223|247->223|247->223|247->223|258->234|258->234|258->234|258->234|258->234|258->234|258->234|258->234|258->234|272->248|272->248|272->248|272->248|272->248|272->248|272->248|272->248|272->248|272->248|272->248|281->257|281->257|281->257|310->286|310->286|311->287|315->291|315->291|316->292|316->292|316->292|317->293|321->297|321->297|322->298|324->300|324->300|325->301|326->302|326->302|328->304|328->304|330->306|330->306|330->306|330->306|333->309|333->309|335->311|336->312|336->312|337->313|337->313|337->313|338->314|340->316|340->316|341->317|342->318|342->318|342->318|342->318|342->318|343->319|344->320|344->320|346->322|348->324|348->324|349->325|349->325|351->327|351->327|352->328|352->328|352->328|352->328|352->328|352->328|352->328|352->328|352->328|355->331|355->331|356->332|357->333|357->333|358->334|358->334|360->336|360->336|360->336|361->337|365->341|365->341|366->342|372->348|372->348|373->349|374->350|374->350|376->352
                   -- GENERATED --
               */
           
